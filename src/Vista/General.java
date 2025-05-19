@@ -115,8 +115,8 @@ public class General extends javax.swing.JFrame {
 
     private void mostrarArbitrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarArbitrosActionPerformed
         this.setVisible(false);
-        ListaArbitros vistaCargarArbitros=new ListaArbitros(this);
-        vistaCargarArbitros.setVisible(true);
+      //  ListaArbitros vistaCargarArbitros=new ListaArbitros(this);
+       // vistaCargarArbitros.setVisible(true);
     }//GEN-LAST:event_mostrarArbitrosActionPerformed
 
     private void mostrarJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mostrarJugadoresActionPerformed
