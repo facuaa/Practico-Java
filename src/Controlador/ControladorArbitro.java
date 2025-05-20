@@ -16,9 +16,8 @@ public class ControladorArbitro {
     List <Arbitro> listaArbitros; 
     Arbitro arbitro; 
 
-    public ControladorArbitro(List<Arbitro> listaArbitros, Arbitro arbitro) {
+    public ControladorArbitro(List<Arbitro> listaArbitros) {
         this.listaArbitros = listaArbitros;
-        this.arbitro = arbitro;
     }
  
     public ControladorArbitro() {
