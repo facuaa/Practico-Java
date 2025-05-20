@@ -3,9 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Vista;
+import Controlador.ControladorArbitro;
 import Controlador.ControladorJugador;
 import Modelo.Jugador;
 import java.awt.Color;
+import java.time.DateTimeException;
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.swing.JOptionPane;
@@ -414,14 +417,14 @@ public class RegistroJugador extends javax.swing.JFrame {
         lblErrorNombre.setText("");
         lblErrorApellido.setText("");
         lblErrorNacionalidad.setText("");
-        lblErrorTarjetasTotales.setText("");
+        //lblErrorTarjetasTotales.setText("");
         lblErrorFecha.setText("");
 
         //Se ponen las casillas blancas
         txtDia.setBackground(Color.WHITE);
         txtNombre.setBackground(Color.WHITE);
         txtNacionalidad.setBackground(Color.WHITE);
-        txtTarjetasTotales.setBackground(Color.WHITE);
+        //txtTarjetasTotales.setBackground(Color.WHITE);
 
         //Validacion de casillas vacias y contenido correcto
         //Nombre
@@ -454,16 +457,16 @@ public class RegistroJugador extends javax.swing.JFrame {
             txtNacionalidad.setBackground(Color.pink);
         }
         //tarjetas Amarillas
-        if(tarjetasTotales.isEmpty()){
+       /* if(tarjetasTotales.isEmpty()){
             lblErrorTarjetasTotales.setText("El nombre no puede estar vacío.");
             txtNombre.setBackground(Color.pink);
             valido=false;
-        }
+        }*/
         //validación de fecha
 
         //Controlers para tarjetas
 
-        try{
+      /*  try{
             TarjetasTotales= Integer.parseInt(tarjetasTotales);
             if(TarjetasTotales<0 || TarjetasTotales>100){
                 txtTarjetasTotales.setBackground(Color.PINK);
@@ -478,7 +481,7 @@ public class RegistroJugador extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this,"Corrija las casillas en rojo");
             return;
         }
-
+        */
         //Si todo esta bien, cargar info a jugador
         //DIOSSSSSSS NICO LPM FIJATE COMO MRD NOMBRAS A LAS FUNCIONESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
         ControladorArbitro controller= new ControladorArbitro();
@@ -498,7 +501,7 @@ public class RegistroJugador extends javax.swing.JFrame {
         txtApellido.setText("");
         txtNombre.setText("");
         txtNacionalidad.setText("");
-        txtTarjetasTotales.setText("");
+        //txtTarjetasTotales.setText("");
     }//GEN-LAST:event_botonCargarActionPerformed
 
     private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed

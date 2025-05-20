@@ -19,7 +19,7 @@ import java.time.LocalDate;
  * @author facu
  */
 public class RegistroArbitro extends javax.swing.JFrame {
-
+private Dashboard menuPrincipal;
     /**
      * Creates new form RegistroArbitro
      */
@@ -41,6 +41,10 @@ public RegistroArbitro() {
     txtDia.addKeyListener(soloNumeros);
     txtMes.addKeyListener(soloNumeros);
     txtAnio.addKeyListener(soloNumeros);
+}
+public RegistroArbitro(Dashboard m){
+    initComponents();
+    this.menuPrincipal=m;
 }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -66,7 +70,7 @@ public RegistroArbitro() {
         jLabel11 = new javax.swing.JLabel();
         txtTarjetasTotales = new javax.swing.JTextField();
         botonCargar = new javax.swing.JButton();
-        botonSalir = new javax.swing.JButton();
+        btnMenu = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel12 = new javax.swing.JLabel();
         BoxInternacional = new javax.swing.JComboBox<>();
@@ -130,7 +134,12 @@ public RegistroArbitro() {
             }
         });
 
-        botonSalir.setText("Salir");
+        btnMenu.setText("Menu");
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuActionPerformed(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("Es internacional? ");
@@ -236,7 +245,7 @@ public RegistroArbitro() {
                                                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                                     .addGap(5, 5, 5)
-                                                    .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                     .addComponent(botonCargar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addGap(22, 22, 22))))))))
@@ -304,7 +313,7 @@ public RegistroArbitro() {
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonCargar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -481,6 +490,11 @@ try {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtMesActionPerformed
 
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+      this.setVisible(false);
+      menuPrincipal.setVisible(true);
+    }//GEN-LAST:event_btnMenuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -519,7 +533,7 @@ try {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JComboBox<String> BoxInternacional;
     private javax.swing.JButton botonCargar;
-    private javax.swing.JButton botonSalir;
+    private javax.swing.JButton btnMenu;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

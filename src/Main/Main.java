@@ -5,7 +5,7 @@
 package Main;
 import Modelo.Arbitro;
 import Modelo.Jugador;
-import Vista.General;
+import Vista.Dashboard;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -15,7 +15,8 @@ public class Main {
        List<Arbitro> listaArbitro=new ArrayList<>();
        List<Jugador>listaJugador = new ArrayList<>();
        
-       General vistaGeneral =new General();
+        Dashboard vistaGeneral =new Dashboard();
+        
        vistaGeneral.setVisible(true);
        
        
