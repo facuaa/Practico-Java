@@ -36,16 +36,19 @@ public void colocarNacionalidad(String n){
 this.arbitro.setNacionalidad(n);
 }
  
-public void setColocarTarjetasTotales(int n){
+public void colocarTarjetasTotales(int n){
 this.arbitro.setTarjetasTotales(n);
 }
-public void setInternacional(boolean n){
+public void colocarInternacional(boolean n){
 this.arbitro.setInternacional(n);
 }
-public void ColocarArbitroLista(){
+public void colocarArbitroLista(){
 listaArbitros.add(arbitro);
 }
 //
+
+
+
 //Filtra los arbitros internacionales
 public List arbitroInternacional(boolean i){
 List<Arbitro> arbitroInt=new ArrayList<>();
