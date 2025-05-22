@@ -85,6 +85,7 @@ public RegistroArbitro(Dashboard m){
         lblErrorFecha = new javax.swing.JLabel();
         lblErrorNacionalidad = new javax.swing.JLabel();
         lblErrorTarjetasTotales = new javax.swing.JLabel();
+        canvas1 = new java.awt.Canvas();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 255));
@@ -251,6 +252,10 @@ public RegistroArbitro(Dashboard m){
                                                     .addGap(22, 22, 22))))))))
                         .addGap(0, 180, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(204, 204, 204))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(49, 49, 49)
@@ -308,7 +313,9 @@ public RegistroArbitro(Dashboard m){
                 .addGap(12, 12, 12)
                 .addComponent(jLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BoxInternacional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(BoxInternacional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 141, Short.MAX_VALUE)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -343,6 +350,27 @@ public RegistroArbitro(Dashboard m){
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMesActionPerformed
+
+    private void txtAnioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAnioActionPerformed
+
+    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApellidoActionPerformed
+
+    private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNacionalidadActionPerformed
+
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+        this.setVisible(false);
+        menuPrincipal.setVisible(true);
+    }//GEN-LAST:event_btnMenuActionPerformed
+
     private void botonCargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarActionPerformed
         String nombre= txtNombre.getText().trim();
         String apellido = txtApellido.getText().trim();
@@ -354,25 +382,24 @@ public RegistroArbitro(Dashboard m){
         String anioStr = txtAnio.getText();
         int TarjetasTotales=0;
 
-       // FECHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-if (diaStr.isEmpty() || mesStr.isEmpty() || anioStr.isEmpty()) {
-    JOptionPane.showMessageDialog(this, "Por favor, complete la fecha de nacimiento.");
-    return;
-}
+        // FECHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        if (diaStr.isEmpty() || mesStr.isEmpty() || anioStr.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, complete la fecha de nacimiento.");
+            return;
+        }
 
-int dia = Integer.parseInt(diaStr);
-int mes = Integer.parseInt(mesStr);
-int anio = Integer.parseInt(anioStr);
+        int dia = Integer.parseInt(diaStr);
+        int mes = Integer.parseInt(mesStr);
+        int anio = Integer.parseInt(anioStr);
 
-
-try {
-    LocalDate fechaNacimiento = LocalDate.of(anio, mes, dia);//Libreria para ver si funca o no la fecha cargada, mas bien verifica
-    // Si no lanza excepción, la fecha es válida
-    System.out.println("Fecha válida: " + fechaNacimiento);
-} catch (DateTimeException ex) {
-    JOptionPane.showMessageDialog(this, "Fecha de nacimiento inválida.");
-    return;
-}
+        try {
+            LocalDate fechaNacimiento = LocalDate.of(anio, mes, dia);//Libreria para ver si funca o no la fecha cargada, mas bien verifica
+            // Si no lanza excepción, la fecha es válida
+            System.out.println("Fecha válida: " + fechaNacimiento);
+        } catch (DateTimeException ex) {
+            JOptionPane.showMessageDialog(this, "Fecha de nacimiento inválida.");
+            return;
+        }
 
         //se eliminan errores anteriores
         lblErrorNombre.setText("");
@@ -380,7 +407,7 @@ try {
         lblErrorNacionalidad.setText("");
         lblErrorTarjetasTotales.setText("");
         lblErrorFecha.setText("");
-        
+
         //Se ponen las casillas blancas
         txtDia.setBackground(Color.WHITE);
         txtNombre.setBackground(Color.WHITE);
@@ -426,7 +453,7 @@ try {
         //validación de fecha
 
         //Controlers para tarjetas
-        
+
         try{
             TarjetasTotales= Integer.parseInt(tarjetasTotales);
             if(TarjetasTotales<0 || TarjetasTotales>100){
@@ -450,8 +477,7 @@ try {
         controller.colocarApellido(apellido);
         controller.colocarNacionalidad(nacionalidad);
         controller.colocarTarjetasTotales(TarjetasTotales);
-        
-        
+
         //insertar jugador a la lista
         controller.colocarArbitroLista();
         JOptionPane.showMessageDialog(this, "Se cargo el jugador correctamente");
@@ -473,27 +499,6 @@ try {
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreActionPerformed
-
-    private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNacionalidadActionPerformed
-
-    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtApellidoActionPerformed
-
-    private void txtAnioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAnioActionPerformed
-
-    private void txtMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtMesActionPerformed
-
-    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-      this.setVisible(false);
-      menuPrincipal.setVisible(true);
-    }//GEN-LAST:event_btnMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -531,9 +536,10 @@ try {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JComboBox<String> BoxInternacional;
+    private javax.swing.JComboBox<String> BoxInternacional;
     private javax.swing.JButton botonCargar;
     private javax.swing.JButton btnMenu;
+    private java.awt.Canvas canvas1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -549,17 +555,17 @@ try {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    public javax.swing.JLabel lblErrorApellido;
-    public javax.swing.JLabel lblErrorFecha;
-    public javax.swing.JLabel lblErrorNacionalidad;
-    public javax.swing.JLabel lblErrorNombre;
-    public javax.swing.JLabel lblErrorTarjetasTotales;
-    public javax.swing.JTextField txtAnio;
-    public javax.swing.JTextField txtApellido;
-    public javax.swing.JTextField txtDia;
-    public javax.swing.JTextField txtMes;
-    public javax.swing.JTextField txtNacionalidad;
-    public javax.swing.JTextField txtNombre;
-    public javax.swing.JTextField txtTarjetasTotales;
+    private javax.swing.JLabel lblErrorApellido;
+    private javax.swing.JLabel lblErrorFecha;
+    private javax.swing.JLabel lblErrorNacionalidad;
+    private javax.swing.JLabel lblErrorNombre;
+    private javax.swing.JLabel lblErrorTarjetasTotales;
+    private javax.swing.JTextField txtAnio;
+    private javax.swing.JTextField txtApellido;
+    private javax.swing.JTextField txtDia;
+    private javax.swing.JTextField txtMes;
+    private javax.swing.JTextField txtNacionalidad;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtTarjetasTotales;
     // End of variables declaration//GEN-END:variables
 }
