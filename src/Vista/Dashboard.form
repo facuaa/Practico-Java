@@ -679,7 +679,7 @@
                                                               <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                                                               <Component id="botonSalir" min="-2" pref="85" max="-2" attributes="0"/>
                                                               <EmptySpace max="32767" attributes="0"/>
-                                                              <Component id="botonCargar" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <Component id="botonCargarJugador" min="-2" pref="85" max="-2" attributes="0"/>
                                                               <EmptySpace min="22" pref="22" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" alignment="1" attributes="0">
@@ -807,7 +807,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="botonSalir" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                                  <Component id="botonCargar" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="botonCargarJugador" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -907,12 +907,12 @@
                         <Property name="text" type="java.lang.String" value="Club"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JButton" name="botonCargar">
+                    <Component class="javax.swing.JButton" name="botonCargarJugador">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Cargar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCargarActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCargarJugadorActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="botonSalir">
@@ -1210,7 +1210,7 @@
                                                                   <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                                                                   <Component id="btnMenu" min="-2" pref="85" max="-2" attributes="0"/>
                                                                   <EmptySpace max="32767" attributes="0"/>
-                                                                  <Component id="botonCargar2" min="-2" pref="85" max="-2" attributes="0"/>
+                                                                  <Component id="botonCargarArbitro" min="-2" pref="85" max="-2" attributes="0"/>
                                                                   <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
@@ -1303,12 +1303,12 @@
                                   <Component id="BoxInternacional" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="canvas1" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="88" max="32767" attributes="0"/>
+                              <EmptySpace pref="94" max="32767" attributes="0"/>
                               <Component id="jSeparator9" min="-2" pref="9" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="btnMenu" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                                  <Component id="botonCargar2" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="botonCargarArbitro" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -1417,12 +1417,12 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JButton" name="botonCargar2">
+                    <Component class="javax.swing.JButton" name="botonCargarArbitro">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Cargar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCargar2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCargarArbitroActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JButton" name="btnMenu">

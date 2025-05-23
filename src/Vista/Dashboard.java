@@ -5,12 +5,12 @@
 package Vista;
 
 import Controlador.ControladorArbitro;
+import Controlador.ControladorJugador;
 import Modelo.Arbitro;
 import Modelo.Jugador;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
-import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
@@ -19,14 +19,18 @@ import javax.swing.JOptionPane;
  * @author petu
  */
 public class Dashboard extends javax.swing.JFrame {
-   
+   private ControladorJugador controladorJugador;
+   private ControladorArbitro controladorArbitro;
     /**
      * Creates new form Dashboard
      */
     public Dashboard() {
         initComponents();
     }
-        public Dashboard(List<Arbitro> m ,List<Jugador> j) {
+        public Dashboard(ControladorJugador m,ControladorArbitro p ) {
+             initComponents();
+             this.controladorJugador=m;
+             this.controladorArbitro=p;
        this.panelIngresoJugador.setVisible(false);
     }
 
@@ -79,7 +83,7 @@ public class Dashboard extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        botonCargar = new javax.swing.JButton();
+        botonCargarJugador = new javax.swing.JButton();
         botonSalir = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         jLabel12 = new javax.swing.JLabel();
@@ -115,7 +119,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         txtTarjetasTotales = new javax.swing.JTextField();
-        botonCargar2 = new javax.swing.JButton();
+        botonCargarArbitro = new javax.swing.JButton();
         btnMenu = new javax.swing.JButton();
         jSeparator9 = new javax.swing.JSeparator();
         jLabel40 = new javax.swing.JLabel();
@@ -486,10 +490,10 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel11.setText("Club");
 
-        botonCargar.setText("Cargar");
-        botonCargar.addActionListener(new java.awt.event.ActionListener() {
+        botonCargarJugador.setText("Cargar");
+        botonCargarJugador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCargarActionPerformed(evt);
+                botonCargarJugadorActionPerformed(evt);
             }
         });
 
@@ -653,7 +657,7 @@ public class Dashboard extends javax.swing.JFrame {
                                                 .addGap(17, 17, 17)
                                                 .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(botonCargar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(botonCargarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(22, 22, 22))
                                             .addGroup(PanelIngresoLayout.createSequentialGroup()
                                                 .addGap(15, 15, 15)
@@ -750,7 +754,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonCargar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonCargarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
             .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelIngresoLayout.createSequentialGroup()
@@ -817,10 +821,10 @@ public class Dashboard extends javax.swing.JFrame {
 
         txtTarjetasTotales.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
 
-        botonCargar2.setText("Cargar");
-        botonCargar2.addActionListener(new java.awt.event.ActionListener() {
+        botonCargarArbitro.setText("Cargar");
+        botonCargarArbitro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonCargar2ActionPerformed(evt);
+                botonCargarArbitroActionPerformed(evt);
             }
         });
 
@@ -937,7 +941,7 @@ public class Dashboard extends javax.swing.JFrame {
                                                     .addGap(5, 5, 5)
                                                     .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(botonCargar2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(botonCargarArbitro, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addGap(22, 22, 22))))))))
                         .addGap(0, 186, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -1005,12 +1009,12 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(BoxInternacional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonCargar2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonCargarArbitro, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
@@ -1143,7 +1147,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnMenuActionPerformed
 
-    private void botonCargar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargar2ActionPerformed
+    private void botonCargarArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarArbitroActionPerformed
         String nombre= txtNombre.getText().trim();
         String apellido = txtApellido.getText().trim();
         String nacionalidad=txtNacionalidad.getText().trim();
@@ -1244,14 +1248,13 @@ public class Dashboard extends javax.swing.JFrame {
 
         //Si todo esta bien, cargar info a jugador
         //DIOSSSSSSS NICO LPM FIJATE COMO MRD NOMBRAS A LAS FUNCIONESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
-        ControladorArbitro controller= new ControladorArbitro();
-        controller.colocarNombre(nombre);
-        controller.colocarApellido(apellido);
-        controller.colocarNacionalidad(nacionalidad);
-        controller.colocarTarjetasTotales(TarjetasTotales);
+        controladorArbitro.colocarNombre(nombre);
+        controladorArbitro.colocarApellido(apellido);
+        controladorArbitro.colocarNacionalidad(nacionalidad);
+        controladorArbitro.colocarTarjetasTotales(TarjetasTotales);
 
         //insertar jugador a la lista
-        controller.colocarArbitroLista();
+        controladorArbitro.AgregarArbitroALista();
         JOptionPane.showMessageDialog(this, "Se cargo el jugador correctamente");
 
         //borrar texto
@@ -1262,7 +1265,7 @@ public class Dashboard extends javax.swing.JFrame {
         txtNombre.setText("");
         txtNacionalidad.setText("");
         txtTarjetasTotales.setText("");
-    }//GEN-LAST:event_botonCargar2ActionPerformed
+    }//GEN-LAST:event_botonCargarArbitroActionPerformed
 
     private void txtDia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDia2ActionPerformed
         // TODO add your handling code here:
@@ -1353,8 +1356,11 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNacionalidadActionPerformed
 
-    private void botonCargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarActionPerformed
+    private void botonCargarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarJugadorActionPerformed
         String nombre= txtNombre.getText().trim();
+        if(nombre == null){
+        JOptionPane.showMessageDialog(this, "Forro coloca un nombre");
+        }
         String apellido = txtApellido.getText().trim();
         String nacionalidad=txtNacionalidad.getText().trim();
         boolean valido= true;
@@ -1443,13 +1449,14 @@ public class Dashboard extends javax.swing.JFrame {
 
         //Si todo esta bien, cargar info a jugador
         //DIOSSSSSSS NICO LPM FIJATE COMO MRD NOMBRAS A LAS FUNCIONESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
-        ControladorArbitro controller= new ControladorArbitro();
-        controller.colocarNombre(nombre);
-        controller.colocarApellido(apellido);
-        controller.colocarNacionalidad(nacionalidad);
+        
+        controladorJugador.colocarNombre(nombre);
+        System.out.println("holaaaaa");
+        controladorJugador.colocarApellido(apellido);
+        controladorJugador.colocarNacionalidad(nacionalidad);
 
         //insertar jugador a la lista
-        controller.colocarArbitroLista();
+        controladorJugador.AgregarJugadorALista();
         JOptionPane.showMessageDialog(this, "Se cargo el jugador correctamente");
 
         //borrar texto
@@ -1460,7 +1467,7 @@ public class Dashboard extends javax.swing.JFrame {
         txtNombre.setText("");
         txtNacionalidad.setText("");
         //txtTarjetasTotales.setText("");
-    }//GEN-LAST:event_botonCargarActionPerformed
+    }//GEN-LAST:event_botonCargarJugadorActionPerformed
 
     private void txtCantidadAmarillasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadAmarillasKeyTyped
         char caracter = evt.getKeyChar();
@@ -1542,14 +1549,14 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
-    private javax.swing.JComboBox<String> BoxEquipos1;
-    private javax.swing.JComboBox<String> BoxInternacional;
-    private javax.swing.JComboBox<String> BoxPosiciones;
+    public javax.swing.JComboBox<String> BoxEquipos1;
+    public javax.swing.JComboBox<String> BoxInternacional;
+    public javax.swing.JComboBox<String> BoxPosiciones;
     private javax.swing.JPanel MostrarJugadores;
     private javax.swing.JPanel PanelInformacion;
     private javax.swing.JPanel PanelIngreso;
-    private javax.swing.JButton botonCargar;
-    private javax.swing.JButton botonCargar2;
+    private javax.swing.JButton botonCargarArbitro;
+    private javax.swing.JButton botonCargarJugador;
     private javax.swing.JButton botonSalir;
     private javax.swing.JButton botonVistaEquipos;
     private javax.swing.JButton botonVistaEquipos1;
@@ -1609,33 +1616,33 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JTable jTable2;
-    private javax.swing.JLabel lblErrorApellido;
-    private javax.swing.JLabel lblErrorApellido2;
-    private javax.swing.JLabel lblErrorFecha;
-    private javax.swing.JLabel lblErrorNacionalidad;
-    private javax.swing.JLabel lblErrorNacionalidad2;
-    private javax.swing.JLabel lblErrorNombre;
-    private javax.swing.JLabel lblErrorNombre2;
-    private javax.swing.JLabel lblErrorTarjetasTotales;
+    public javax.swing.JLabel lblErrorApellido;
+    public javax.swing.JLabel lblErrorApellido2;
+    public javax.swing.JLabel lblErrorFecha;
+    public javax.swing.JLabel lblErrorNacionalidad;
+    public javax.swing.JLabel lblErrorNacionalidad2;
+    public javax.swing.JLabel lblErrorNombre;
+    public javax.swing.JLabel lblErrorNombre2;
+    public javax.swing.JLabel lblErrorTarjetasTotales;
     private javax.swing.JPanel panelIngresoArbitro;
     private javax.swing.JPanel panelIngresoJugador;
     private javax.swing.JPanel panelMenu;
     private javax.swing.JPanel panelMenu1;
-    private javax.swing.JTextField txtAnio;
-    private javax.swing.JTextField txtAnio2;
-    private javax.swing.JTextField txtApellido;
-    private javax.swing.JTextField txtApellido2;
-    private javax.swing.JTextField txtCantidadAmarillas;
-    private javax.swing.JTextField txtCantidadGoles;
-    private javax.swing.JTextField txtCantidadRojas;
-    private javax.swing.JTextField txtDia;
-    private javax.swing.JTextField txtDia2;
-    private javax.swing.JTextField txtMes;
-    private javax.swing.JTextField txtMes2;
-    private javax.swing.JTextField txtNacionalidad;
-    private javax.swing.JTextField txtNacionalidad2;
-    private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtNombre2;
-    private javax.swing.JTextField txtTarjetasTotales;
+    public javax.swing.JTextField txtAnio;
+    public javax.swing.JTextField txtAnio2;
+    public javax.swing.JTextField txtApellido;
+    public javax.swing.JTextField txtApellido2;
+    public javax.swing.JTextField txtCantidadAmarillas;
+    public javax.swing.JTextField txtCantidadGoles;
+    public javax.swing.JTextField txtCantidadRojas;
+    public javax.swing.JTextField txtDia;
+    public javax.swing.JTextField txtDia2;
+    public javax.swing.JTextField txtMes;
+    public javax.swing.JTextField txtMes2;
+    public javax.swing.JTextField txtNacionalidad;
+    public javax.swing.JTextField txtNacionalidad2;
+    public javax.swing.JTextField txtNombre;
+    public javax.swing.JTextField txtNombre2;
+    public javax.swing.JTextField txtTarjetasTotales;
     // End of variables declaration//GEN-END:variables
 }
