@@ -39,14 +39,32 @@ public class Dashboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelMenu1 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        btnJugadores2 = new javax.swing.JButton();
+        btnArbitros1 = new javax.swing.JButton();
+        botonVistaEquipos1 = new javax.swing.JButton();
+        jLabel19 = new javax.swing.JLabel();
+        btnJugadores3 = new javax.swing.JButton();
+        jLabel20 = new javax.swing.JLabel();
+        jSeparator5 = new javax.swing.JSeparator();
+        btnArbitros2 = new javax.swing.JButton();
         Background = new javax.swing.JPanel();
         panelMenu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnJugadores = new javax.swing.JButton();
         btnArbitros = new javax.swing.JButton();
         botonVistaEquipos = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        btnJugadores1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        btnArbitros3 = new javax.swing.JButton();
+        jSeparator6 = new javax.swing.JSeparator();
+        jLabel21 = new javax.swing.JLabel();
+        jSeparator10 = new javax.swing.JSeparator();
         jPanel5 = new javax.swing.JPanel();
-        panelPrecentacion = new javax.swing.JPanel();
+        PanelInformacion = new javax.swing.JPanel();
         panelIngresoJugador = new javax.swing.JPanel();
         PanelIngreso = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -114,6 +132,151 @@ public class Dashboard extends javax.swing.JFrame {
         lblErrorNacionalidad2 = new javax.swing.JLabel();
         lblErrorTarjetasTotales = new javax.swing.JLabel();
         canvas1 = new java.awt.Canvas();
+        MostrarJugadores = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+
+        panelMenu1.setBackground(new java.awt.Color(255, 255, 255));
+        panelMenu1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
+
+        jLabel18.setBackground(new java.awt.Color(204, 255, 255));
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel18.setText("Bienvenidos");
+
+        btnJugadores2.setBackground(new java.awt.Color(204, 255, 255));
+        btnJugadores2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnJugadores2.setForeground(new java.awt.Color(51, 51, 51));
+        btnJugadores2.setText("Mostrar Jugadores");
+        btnJugadores2.setBorder(null);
+        btnJugadores2.setBorderPainted(false);
+        btnJugadores2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJugadores2ActionPerformed(evt);
+            }
+        });
+
+        btnArbitros1.setBackground(new java.awt.Color(204, 255, 255));
+        btnArbitros1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnArbitros1.setForeground(new java.awt.Color(51, 51, 51));
+        btnArbitros1.setText("Mostrar Arbitros");
+        btnArbitros1.setBorder(null);
+        btnArbitros1.setBorderPainted(false);
+        btnArbitros1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnArbitros1ActionPerformed(evt);
+            }
+        });
+
+        botonVistaEquipos1.setBackground(new java.awt.Color(204, 255, 255));
+        botonVistaEquipos1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        botonVistaEquipos1.setForeground(new java.awt.Color(51, 51, 51));
+        botonVistaEquipos1.setText("Equipos");
+        botonVistaEquipos1.setBorder(null);
+        botonVistaEquipos1.setBorderPainted(false);
+        botonVistaEquipos1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVistaEquipos1ActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel19.setText("Arbitro");
+
+        btnJugadores3.setBackground(new java.awt.Color(204, 255, 255));
+        btnJugadores3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnJugadores3.setForeground(new java.awt.Color(51, 51, 51));
+        btnJugadores3.setText("Cargar Jugador");
+        btnJugadores3.setBorder(null);
+        btnJugadores3.setBorderPainted(false);
+        btnJugadores3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJugadores3ActionPerformed(evt);
+            }
+        });
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel20.setText("Jugador");
+
+        btnArbitros2.setBackground(new java.awt.Color(204, 255, 255));
+        btnArbitros2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnArbitros2.setForeground(new java.awt.Color(51, 51, 51));
+        btnArbitros2.setText("Cargar Arbitro");
+        btnArbitros2.setBorder(null);
+        btnArbitros2.setBorderPainted(false);
+        btnArbitros2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnArbitros2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelMenu1Layout = new javax.swing.GroupLayout(panelMenu1);
+        panelMenu1.setLayout(panelMenu1Layout);
+        panelMenu1Layout.setHorizontalGroup(
+            panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(botonVistaEquipos1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelMenu1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenu1Layout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
+                    .addComponent(btnJugadores2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnArbitros1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panelMenu1Layout.createSequentialGroup()
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jSeparator5))
+                .addContainerGap())
+            .addGroup(panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelMenu1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(btnJugadores3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelMenu1Layout.createSequentialGroup()
+                    .addGap(16, 16, 16)
+                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(346, Short.MAX_VALUE)))
+            .addGroup(panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelMenu1Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(btnArbitros2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        panelMenu1Layout.setVerticalGroup(
+            panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMenu1Layout.createSequentialGroup()
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(133, 133, 133)
+                .addComponent(btnJugadores2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                .addComponent(btnArbitros1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(botonVistaEquipos1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(110, 110, 110))
+            .addGroup(panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelMenu1Layout.createSequentialGroup()
+                    .addGap(167, 167, 167)
+                    .addComponent(btnJugadores3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(449, Short.MAX_VALUE)))
+            .addGroup(panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelMenu1Layout.createSequentialGroup()
+                    .addGap(117, 117, 117)
+                    .addComponent(jLabel20)
+                    .addContainerGap(515, Short.MAX_VALUE)))
+            .addGroup(panelMenu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenu1Layout.createSequentialGroup()
+                    .addContainerGap(373, Short.MAX_VALUE)
+                    .addComponent(btnArbitros2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(229, 229, 229)))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1150, 700));
@@ -121,15 +284,18 @@ public class Dashboard extends javax.swing.JFrame {
         Background.setBackground(new java.awt.Color(225, 223, 223));
         Background.setForeground(new java.awt.Color(255, 255, 255));
 
-        panelMenu.setBackground(new java.awt.Color(255, 255, 255));
+        panelMenu.setBackground(new java.awt.Color(213, 212, 212));
         panelMenu.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
 
         jLabel1.setBackground(new java.awt.Color(204, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("LOGO");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setText("Bienvenidos");
 
         btnJugadores.setBackground(new java.awt.Color(204, 255, 255));
-        btnJugadores.setText("Jugadores");
+        btnJugadores.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnJugadores.setForeground(new java.awt.Color(51, 51, 51));
+        btnJugadores.setText("Mostrar Jugadores");
         btnJugadores.setBorder(null);
         btnJugadores.setBorderPainted(false);
         btnJugadores.addActionListener(new java.awt.event.ActionListener() {
@@ -139,7 +305,9 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
         btnArbitros.setBackground(new java.awt.Color(204, 255, 255));
-        btnArbitros.setText("Arbitros");
+        btnArbitros.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnArbitros.setForeground(new java.awt.Color(51, 51, 51));
+        btnArbitros.setText("Cargar Arbitro");
         btnArbitros.setBorder(null);
         btnArbitros.setBorderPainted(false);
         btnArbitros.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +317,9 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
         botonVistaEquipos.setBackground(new java.awt.Color(204, 255, 255));
-        botonVistaEquipos.setText("Equipos");
+        botonVistaEquipos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        botonVistaEquipos.setForeground(new java.awt.Color(51, 51, 51));
+        botonVistaEquipos.setText("Etc");
         botonVistaEquipos.setBorder(null);
         botonVistaEquipos.setBorderPainted(false);
         botonVistaEquipos.addActionListener(new java.awt.event.ActionListener() {
@@ -158,46 +328,122 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel2.setText("Arbitro");
+
+        btnJugadores1.setBackground(new java.awt.Color(204, 255, 255));
+        btnJugadores1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnJugadores1.setForeground(new java.awt.Color(51, 51, 51));
+        btnJugadores1.setText("Cargar Jugador");
+        btnJugadores1.setBorder(null);
+        btnJugadores1.setBorderPainted(false);
+        btnJugadores1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnJugadores1ActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel3.setText("Jugador");
+
+        jSeparator4.setForeground(new java.awt.Color(153, 153, 153));
+
+        btnArbitros3.setBackground(new java.awt.Color(204, 255, 255));
+        btnArbitros3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnArbitros3.setForeground(new java.awt.Color(51, 51, 51));
+        btnArbitros3.setText("Mostrar Arbitro");
+        btnArbitros3.setBorder(null);
+        btnArbitros3.setBorderPainted(false);
+        btnArbitros3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnArbitros3ActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel21.setText("Otros");
+
         javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
         panelMenu.setLayout(panelMenuLayout);
         panelMenuLayout.setHorizontalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnJugadores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(btnArbitros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(botonVistaEquipos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
+                .addGap(0, 177, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panelMenuLayout.createSequentialGroup()
+                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnJugadores1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnJugadores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnArbitros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnArbitros3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panelMenuLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator4)
+                            .addComponent(jSeparator6)
+                            .addComponent(jSeparator10)
+                            .addGroup(panelMenuLayout.createSequentialGroup()
+                                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelMenuLayout.createSequentialGroup()
+                                        .addGap(6, 6, 6)
+                                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addComponent(botonVistaEquipos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(panelMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelMenuLayout.setVerticalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelMenuLayout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
-                .addComponent(btnJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(19, 19, 19)
+                .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(btnArbitros, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(botonVistaEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnJugadores1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnArbitros, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnArbitros3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonVistaEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(260, 260, 260))
         );
 
         jPanel5.setBackground(new java.awt.Color(255, 0, 51));
         jPanel5.setLayout(new java.awt.CardLayout());
 
-        javax.swing.GroupLayout panelPrecentacionLayout = new javax.swing.GroupLayout(panelPrecentacion);
-        panelPrecentacion.setLayout(panelPrecentacionLayout);
-        panelPrecentacionLayout.setHorizontalGroup(
-            panelPrecentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout PanelInformacionLayout = new javax.swing.GroupLayout(PanelInformacion);
+        PanelInformacion.setLayout(PanelInformacionLayout);
+        PanelInformacionLayout.setHorizontalGroup(
+            PanelInformacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 628, Short.MAX_VALUE)
         );
-        panelPrecentacionLayout.setVerticalGroup(
-            panelPrecentacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 694, Short.MAX_VALUE)
+        PanelInformacionLayout.setVerticalGroup(
+            PanelInformacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 700, Short.MAX_VALUE)
         );
 
-        jPanel5.add(panelPrecentacion, "card3");
+        jPanel5.add(PanelInformacion, "PanelInfo");
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("/");
@@ -518,14 +764,15 @@ public class Dashboard extends javax.swing.JFrame {
         panelIngresoJugadorLayout.setHorizontalGroup(
             panelIngresoJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelIngresoJugadorLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(PanelIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PanelIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         panelIngresoJugadorLayout.setVerticalGroup(
             panelIngresoJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelIngresoJugadorLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(PanelIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(PanelIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 38, Short.MAX_VALUE))
         );
 
         jPanel5.add(panelIngresoJugador, "cargarJugador");
@@ -758,7 +1005,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(BoxInternacional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -785,6 +1032,43 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel5.add(panelIngresoArbitro, "cargarArbitro");
 
+        jTable2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "Apellido", "Nacimiento", "Nacionalidad", "TarjetasTotales", "Internacional"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        javax.swing.GroupLayout MostrarJugadoresLayout = new javax.swing.GroupLayout(MostrarJugadores);
+        MostrarJugadores.setLayout(MostrarJugadoresLayout);
+        MostrarJugadoresLayout.setHorizontalGroup(
+            MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 628, Short.MAX_VALUE)
+            .addGroup(MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MostrarJugadoresLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        MostrarJugadoresLayout.setVerticalGroup(
+            MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 700, Short.MAX_VALUE)
+            .addGroup(MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MostrarJugadoresLayout.createSequentialGroup()
+                    .addGap(107, 107, 107)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
+                    .addGap(108, 108, 108)))
+        );
+
+        jPanel5.add(MostrarJugadores, "MostrarJugadores");
+
         javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
         Background.setLayout(BackgroundLayout);
         BackgroundLayout.setHorizontalGroup(
@@ -793,7 +1077,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(panelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 628, Short.MAX_VALUE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE))
         );
         BackgroundLayout.setVerticalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -819,240 +1103,45 @@ public class Dashboard extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugadoresActionPerformed
-       CardLayout cl = (CardLayout) jPanel5.getLayout();
-        cl.show(jPanel5, "cargarJugador");
-    }//GEN-LAST:event_btnJugadoresActionPerformed
-
-    private void botonVistaEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVistaEquiposActionPerformed
+    private void btnJugadores2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugadores2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonVistaEquiposActionPerformed
+    }//GEN-LAST:event_btnJugadores2ActionPerformed
 
-    private void btnArbitrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbitrosActionPerformed
-        CardLayout cl = (CardLayout) jPanel5.getLayout();
-        cl.show(jPanel5, "cargarArbitro");
-    }//GEN-LAST:event_btnArbitrosActionPerformed
-
-    private void BoxEquipos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoxEquipos1ActionPerformed
+    private void btnArbitros1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbitros1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BoxEquipos1ActionPerformed
+    }//GEN-LAST:event_btnArbitros1ActionPerformed
 
-    private void BoxPosicionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoxPosicionesActionPerformed
+    private void botonVistaEquipos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVistaEquipos1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BoxPosicionesActionPerformed
+    }//GEN-LAST:event_botonVistaEquipos1ActionPerformed
 
-    private void txtMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMesActionPerformed
+    private void btnJugadores3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugadores3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtMesActionPerformed
+    }//GEN-LAST:event_btnJugadores3ActionPerformed
 
-    private void txtAnioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnioActionPerformed
+    private void btnArbitros2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbitros2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAnioActionPerformed
+    }//GEN-LAST:event_btnArbitros2ActionPerformed
 
-    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
+    private void txtMes2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMes2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtApellidoActionPerformed
+    }//GEN-LAST:event_txtMes2ActionPerformed
 
-    private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
+    private void txtAnio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnio2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNacionalidadActionPerformed
+    }//GEN-LAST:event_txtAnio2ActionPerformed
 
-    private void botonCargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarActionPerformed
-        String nombre= txtNombre.getText().trim();
-        String apellido = txtApellido.getText().trim();
-        String nacionalidad=txtNacionalidad.getText().trim();
-        boolean valido= true;
-        int dia = Integer.parseInt(txtCantidadAmarillas.getText());
-        int mes = Integer.parseInt(txtMes.getText());
-        int anio = Integer.parseInt(txtAnio.getText());
-
-        
-if (dia < 1 || dia > 30) {
-    JOptionPane.showMessageDialog(this, "El Dia Debe Ser Valido Ej:(1, 2, ... , 30)");
-}
-
-if (mes < 1 || mes > 12) {
-    JOptionPane.showMessageDialog(this, "El Mes Debe Ser Valido Ej:(Enero,..., Diciembre)");
-}
-
-if (anio < 1940 || mes >= 2025) {
-    JOptionPane.showMessageDialog(this, "El Anio Debe Ser Valido Ej:(1940,...,2025)");
-}
-
-
-
-
-
-
-
-        //se eliminan errores anteriores
-        lblErrorNombre.setText("");
-        lblErrorApellido.setText("");
-        lblErrorNacionalidad.setText("");
-        //lblErro
-        //Se ponen las casillas blancas
-        txtCantidadAmarillas.setBackground(Color.WHITE);
-        txtNombre.setBackground(Color.WHITE);
-        txtNacionalidad.setBackground(Color.WHITE);
-
-        //Validacion de casillas vacias y contenido correcto
-        /* //Nombre
-        if(nombre.isEmpty()){//si la casillas esta vacia
-            lblErrorNombre.setText("El nombre no puede estar vacío.");//aparece un label con mensaje
-            txtNombre.setBackground(Color.pink);//y se marca la casilla en rojo
-            valido=false;
-        } else if(!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){//regex
-            lblErrorNombre.setText("Nombre inválido.Solo letras");
-            txtNombre.setBackground(Color.pink);
-            valido=false;
-        }
-        //Apellido
-        if(apellido.isEmpty()){
-            lblErrorApellido.setText("El nombre no puede estar vacío.");
-            txtNombre.setBackground(Color.pink);
-            valido=false;
-        } else if(!apellido.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){
-            lblErrorApellido.setText("Apellido inválido. Solo letras");
-            txtDia.setBackground(Color.PINK);
-            valido=false;
-        }
-        //Nacionalidad
-        if(nacionalidad.isEmpty()){
-            lblErrorNacionalidad.setText("El nombre no puede estar vacío.");
-            txtNacionalidad.setBackground(Color.pink);
-            valido=false;
-        } else if(!nacionalidad.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]")){
-            lblErrorNacionalidad.setText("El nombre no puede estar vacío.");
-            txtNacionalidad.setBackground(Color.pink);
-        }
-        //tarjetas Amarillas
-        /* if(tarjetasTotales.isEmpty()){
-            lblErrorTarjetasTotales.setText("El nombre no puede estar vacío.");
-            txtNombre.setBackground(Color.pink);
-            valido=false;
-        }*/
-        //validación de fecha
-
-        //Controlers para tarjetas
-
-        /*  try{
-            TarjetasTotales= Integer.parseInt(tarjetasTotales);
-            if(TarjetasTotales<0 || TarjetasTotales>100){
-                txtTarjetasTotales.setBackground(Color.PINK);
-                valido= false;
-            }
-        }catch(NumberFormatException ex){
-            txtTarjetasTotales.setBackground(Color.PINK);
-            valido = false;
-        }
-
-        if(!valido){
-            JOptionPane.showMessageDialog(this,"Corrija las casillas en rojo");
-            return;
-        }
-        */
-        
-        //Si todo esta bien, cargar info a jugador
-        //DIOSSSSSSS NICO LPM FIJATE COMO MRD NOMBRAS A LAS FUNCIONESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
-        ControladorArbitro controller= new ControladorArbitro();
-        controller.colocarNombre(nombre);
-        controller.colocarApellido(apellido);
-        controller.colocarNacionalidad(nacionalidad);
-       
-
-        //insertar jugador a la lista
-        controller.colocarArbitroLista();
-        JOptionPane.showMessageDialog(this, "Se cargo el jugador correctamente");
-
-        //borrar texto
-        txtCantidadAmarillas.setText("");
-        txtMes.setText("");
-        txtAnio.setText("");
-        txtApellido.setText("");
-        txtNombre.setText("");
-        txtNacionalidad.setText("");
-        //txtTarjetasTotales.setText("");
-    }//GEN-LAST:event_botonCargarActionPerformed
-
-    private void txtCantidadAmarillasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadAmarillasActionPerformed
+    private void txtApellido2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellido2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCantidadAmarillasActionPerformed
+    }//GEN-LAST:event_txtApellido2ActionPerformed
 
-    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+    private void txtNacionalidad2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidad2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombreActionPerformed
+    }//GEN-LAST:event_txtNacionalidad2ActionPerformed
 
-    private void txtCantidadAmarillasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadAmarillasKeyTyped
-        char caracter = evt.getKeyChar();
-       if (!Character.isDigit(caracter) && caracter != KeyEvent.VK_BACK_SPACE) {
-        evt.consume();
-    }
-    }//GEN-LAST:event_txtCantidadAmarillasKeyTyped
+    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
 
-    private void txtMesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMesKeyTyped
-        char caracter= evt.getKeyChar();
-        if(!Character.isDigit(caracter) && caracter!= KeyEvent.VK_BACK_SPACE){
-        evt.consume();
-        }
-        if(txtMes.getText().length()>=2 && caracter != KeyEvent.VK_BACK_SPACE){
-        evt.consume();
-        }
-    }//GEN-LAST:event_txtMesKeyTyped
-
-    private void txtAnioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnioKeyTyped
-       char caracter = evt.getKeyChar();
-       if(!Character.isDigit(caracter) && caracter != KeyEvent.VK_BACK_SPACE){
-       evt.consume();
-       }
-       if(txtAnio.getText().length()>=4 && caracter != KeyEvent.VK_BACK_SPACE){
-       evt.consume();
-       }
-       
-    }//GEN-LAST:event_txtAnioKeyTyped
-
-    private void txtDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDiaActionPerformed
-
-    private void txtDiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDiaKeyTyped
-        char caracter= evt.getKeyChar();
-        if(!Character.isDigit(caracter) && caracter!= KeyEvent.VK_BACK_SPACE){
-        evt.consume();
-        }
-        if(txtDia.getText().length()>=2 && caracter != KeyEvent.VK_BACK_SPACE){
-        evt.consume();
-        }
-    }//GEN-LAST:event_txtDiaKeyTyped
-
-    private void txtCantidadRojasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadRojasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCantidadRojasActionPerformed
-
-    private void txtCantidadRojasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadRojasKeyTyped
-        char caracter= evt.getKeyChar();
-        if(!Character.isDigit(caracter) && caracter!= KeyEvent.VK_BACK_SPACE){
-        evt.consume();
-        }
-    }//GEN-LAST:event_txtCantidadRojasKeyTyped
-
-    private void txtCantidadGolesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadGolesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCantidadGolesActionPerformed
-
-    private void txtCantidadGolesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadGolesKeyTyped
-        char caracter = evt.getKeyChar();
-       if (!Character.isDigit(caracter) && caracter != KeyEvent.VK_BACK_SPACE) {
-        evt.consume();
-    }
-    }//GEN-LAST:event_txtCantidadGolesKeyTyped
-
-    private void txtNombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre2ActionPerformed
-
-    private void txtDia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDia2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtDia2ActionPerformed
+    }//GEN-LAST:event_btnMenuActionPerformed
 
     private void botonCargar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargar2ActionPerformed
         String nombre= txtNombre.getText().trim();
@@ -1074,7 +1163,7 @@ if (anio < 1940 || mes >= 2025) {
         int dia = Integer.parseInt(diaStr);
         int mes = Integer.parseInt(mesStr);
         int anio = Integer.parseInt(anioStr);
-/*
+        /*
         try {
             LocalDate fechaNacimiento = LocalDate.of(anio, mes, dia);//Libreria para ver si funca o no la fecha cargada, mas bien verifica
             // Si no lanza excepción, la fecha es válida
@@ -1175,25 +1264,243 @@ if (anio < 1940 || mes >= 2025) {
         txtTarjetasTotales.setText("");
     }//GEN-LAST:event_botonCargar2ActionPerformed
 
-    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
-
-    }//GEN-LAST:event_btnMenuActionPerformed
-
-    private void txtNacionalidad2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidad2ActionPerformed
+    private void txtDia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDia2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNacionalidad2ActionPerformed
+    }//GEN-LAST:event_txtDia2ActionPerformed
 
-    private void txtApellido2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellido2ActionPerformed
+    private void txtNombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtApellido2ActionPerformed
+    }//GEN-LAST:event_txtNombre2ActionPerformed
 
-    private void txtAnio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnio2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAnio2ActionPerformed
+    private void txtCantidadGolesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadGolesKeyTyped
+        char caracter = evt.getKeyChar();
+        if (!Character.isDigit(caracter) && caracter != KeyEvent.VK_BACK_SPACE) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtCantidadGolesKeyTyped
 
-    private void txtMes2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMes2ActionPerformed
+    private void txtCantidadGolesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadGolesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtMes2ActionPerformed
+    }//GEN-LAST:event_txtCantidadGolesActionPerformed
+
+    private void txtCantidadRojasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadRojasKeyTyped
+        char caracter= evt.getKeyChar();
+        if(!Character.isDigit(caracter) && caracter!= KeyEvent.VK_BACK_SPACE){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtCantidadRojasKeyTyped
+
+    private void txtCantidadRojasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadRojasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCantidadRojasActionPerformed
+
+    private void txtDiaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDiaKeyTyped
+        char caracter= evt.getKeyChar();
+        if(!Character.isDigit(caracter) && caracter!= KeyEvent.VK_BACK_SPACE){
+            evt.consume();
+        }
+        if(txtDia.getText().length()>=2 && caracter != KeyEvent.VK_BACK_SPACE){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtDiaKeyTyped
+
+    private void txtDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDiaActionPerformed
+
+    private void BoxEquipos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoxEquipos1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BoxEquipos1ActionPerformed
+
+    private void BoxPosicionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoxPosicionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BoxPosicionesActionPerformed
+
+    private void txtMesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMesKeyTyped
+        char caracter= evt.getKeyChar();
+        if(!Character.isDigit(caracter) && caracter!= KeyEvent.VK_BACK_SPACE){
+            evt.consume();
+        }
+        if(txtMes.getText().length()>=2 && caracter != KeyEvent.VK_BACK_SPACE){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtMesKeyTyped
+
+    private void txtMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMesActionPerformed
+
+    private void txtAnioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnioKeyTyped
+        char caracter = evt.getKeyChar();
+        if(!Character.isDigit(caracter) && caracter != KeyEvent.VK_BACK_SPACE){
+            evt.consume();
+        }
+        if(txtAnio.getText().length()>=4 && caracter != KeyEvent.VK_BACK_SPACE){
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_txtAnioKeyTyped
+
+    private void txtAnioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAnioActionPerformed
+
+    private void txtApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtApellidoActionPerformed
+
+    private void txtNacionalidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNacionalidadActionPerformed
+
+    private void botonCargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarActionPerformed
+        String nombre= txtNombre.getText().trim();
+        String apellido = txtApellido.getText().trim();
+        String nacionalidad=txtNacionalidad.getText().trim();
+        boolean valido= true;
+        int dia = Integer.parseInt(txtCantidadAmarillas.getText());
+        int mes = Integer.parseInt(txtMes.getText());
+        int anio = Integer.parseInt(txtAnio.getText());
+
+        if (dia < 1 || dia > 30) {
+            JOptionPane.showMessageDialog(this, "El Dia Debe Ser Valido Ej:(1, 2, ... , 30)");
+        }
+
+        if (mes < 1 || mes > 12) {
+            JOptionPane.showMessageDialog(this, "El Mes Debe Ser Valido Ej:(Enero,..., Diciembre)");
+        }
+
+        if (anio < 1940 || mes >= 2025) {
+            JOptionPane.showMessageDialog(this, "El Anio Debe Ser Valido Ej:(1940,...,2025)");
+        }
+
+        //se eliminan errores anteriores
+        lblErrorNombre.setText("");
+        lblErrorApellido.setText("");
+        lblErrorNacionalidad.setText("");
+        //lblErro
+        //Se ponen las casillas blancas
+        txtCantidadAmarillas.setBackground(Color.WHITE);
+        txtNombre.setBackground(Color.WHITE);
+        txtNacionalidad.setBackground(Color.WHITE);
+
+        //Validacion de casillas vacias y contenido correcto
+        /* //Nombre
+        if(nombre.isEmpty()){//si la casillas esta vacia
+            lblErrorNombre.setText("El nombre no puede estar vacío.");//aparece un label con mensaje
+            txtNombre.setBackground(Color.pink);//y se marca la casilla en rojo
+            valido=false;
+        } else if(!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){//regex
+            lblErrorNombre.setText("Nombre inválido.Solo letras");
+            txtNombre.setBackground(Color.pink);
+            valido=false;
+        }
+        //Apellido
+        if(apellido.isEmpty()){
+            lblErrorApellido.setText("El nombre no puede estar vacío.");
+            txtNombre.setBackground(Color.pink);
+            valido=false;
+        } else if(!apellido.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){
+            lblErrorApellido.setText("Apellido inválido. Solo letras");
+            txtDia.setBackground(Color.PINK);
+            valido=false;
+        }
+        //Nacionalidad
+        if(nacionalidad.isEmpty()){
+            lblErrorNacionalidad.setText("El nombre no puede estar vacío.");
+            txtNacionalidad.setBackground(Color.pink);
+            valido=false;
+        } else if(!nacionalidad.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]")){
+            lblErrorNacionalidad.setText("El nombre no puede estar vacío.");
+            txtNacionalidad.setBackground(Color.pink);
+        }
+        //tarjetas Amarillas
+        /* if(tarjetasTotales.isEmpty()){
+            lblErrorTarjetasTotales.setText("El nombre no puede estar vacío.");
+            txtNombre.setBackground(Color.pink);
+            valido=false;
+        }*/
+        //validación de fecha
+
+        //Controlers para tarjetas
+
+        /*  try{
+            TarjetasTotales= Integer.parseInt(tarjetasTotales);
+            if(TarjetasTotales<0 || TarjetasTotales>100){
+                txtTarjetasTotales.setBackground(Color.PINK);
+                valido= false;
+            }
+        }catch(NumberFormatException ex){
+            txtTarjetasTotales.setBackground(Color.PINK);
+            valido = false;
+        }
+
+        if(!valido){
+            JOptionPane.showMessageDialog(this,"Corrija las casillas en rojo");
+            return;
+        }
+        */
+
+        //Si todo esta bien, cargar info a jugador
+        //DIOSSSSSSS NICO LPM FIJATE COMO MRD NOMBRAS A LAS FUNCIONESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+        ControladorArbitro controller= new ControladorArbitro();
+        controller.colocarNombre(nombre);
+        controller.colocarApellido(apellido);
+        controller.colocarNacionalidad(nacionalidad);
+
+        //insertar jugador a la lista
+        controller.colocarArbitroLista();
+        JOptionPane.showMessageDialog(this, "Se cargo el jugador correctamente");
+
+        //borrar texto
+        txtCantidadAmarillas.setText("");
+        txtMes.setText("");
+        txtAnio.setText("");
+        txtApellido.setText("");
+        txtNombre.setText("");
+        txtNacionalidad.setText("");
+        //txtTarjetasTotales.setText("");
+    }//GEN-LAST:event_botonCargarActionPerformed
+
+    private void txtCantidadAmarillasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadAmarillasKeyTyped
+        char caracter = evt.getKeyChar();
+        if (!Character.isDigit(caracter) && caracter != KeyEvent.VK_BACK_SPACE) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtCantidadAmarillasKeyTyped
+
+    private void txtCantidadAmarillasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadAmarillasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCantidadAmarillasActionPerformed
+
+    private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void btnArbitros3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbitros3ActionPerformed
+              CardLayout cl = (CardLayout) jPanel5.getLayout();
+        cl.show(jPanel5, "MostrarJugadores");
+    }//GEN-LAST:event_btnArbitros3ActionPerformed
+
+    private void btnJugadores1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugadores1ActionPerformed
+        CardLayout cl = (CardLayout) jPanel5.getLayout();
+        cl.show(jPanel5, "cargarJugador");
+    }//GEN-LAST:event_btnJugadores1ActionPerformed
+
+    private void botonVistaEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVistaEquiposActionPerformed
+
+    }//GEN-LAST:event_botonVistaEquiposActionPerformed
+
+    private void btnArbitrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbitrosActionPerformed
+
+        CardLayout cl = (CardLayout) jPanel5.getLayout();
+        cl.show(jPanel5, "cargarArbitro");
+    }//GEN-LAST:event_btnArbitrosActionPerformed
+
+    private void btnJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugadoresActionPerformed
+         CardLayout cl = (CardLayout) jPanel5.getLayout();
+        cl.show(jPanel5, "MostrarJugadores");
+    }//GEN-LAST:event_btnJugadoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1235,16 +1542,25 @@ if (anio < 1940 || mes >= 2025) {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
-    public javax.swing.JComboBox<String> BoxEquipos1;
-    public javax.swing.JComboBox<String> BoxInternacional;
-    public javax.swing.JComboBox<String> BoxPosiciones;
+    private javax.swing.JComboBox<String> BoxEquipos1;
+    private javax.swing.JComboBox<String> BoxInternacional;
+    private javax.swing.JComboBox<String> BoxPosiciones;
+    private javax.swing.JPanel MostrarJugadores;
+    private javax.swing.JPanel PanelInformacion;
     private javax.swing.JPanel PanelIngreso;
     private javax.swing.JButton botonCargar;
     private javax.swing.JButton botonCargar2;
     private javax.swing.JButton botonSalir;
     private javax.swing.JButton botonVistaEquipos;
+    private javax.swing.JButton botonVistaEquipos1;
     private javax.swing.JButton btnArbitros;
+    private javax.swing.JButton btnArbitros1;
+    private javax.swing.JButton btnArbitros2;
+    private javax.swing.JButton btnArbitros3;
     private javax.swing.JButton btnJugadores;
+    private javax.swing.JButton btnJugadores1;
+    private javax.swing.JButton btnJugadores2;
+    private javax.swing.JButton btnJugadores3;
     private javax.swing.JButton btnMenu;
     private java.awt.Canvas canvas1;
     private javax.swing.JLabel jLabel1;
@@ -1256,6 +1572,12 @@ if (anio < 1940 || mes >= 2025) {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
@@ -1275,39 +1597,45 @@ if (anio < 1940 || mes >= 2025) {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    public javax.swing.JLabel lblErrorApellido;
-    public javax.swing.JLabel lblErrorApellido2;
-    public javax.swing.JLabel lblErrorFecha;
-    public javax.swing.JLabel lblErrorNacionalidad;
-    public javax.swing.JLabel lblErrorNacionalidad2;
-    public javax.swing.JLabel lblErrorNombre;
-    public javax.swing.JLabel lblErrorNombre2;
-    public javax.swing.JLabel lblErrorTarjetasTotales;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JLabel lblErrorApellido;
+    private javax.swing.JLabel lblErrorApellido2;
+    private javax.swing.JLabel lblErrorFecha;
+    private javax.swing.JLabel lblErrorNacionalidad;
+    private javax.swing.JLabel lblErrorNacionalidad2;
+    private javax.swing.JLabel lblErrorNombre;
+    private javax.swing.JLabel lblErrorNombre2;
+    private javax.swing.JLabel lblErrorTarjetasTotales;
     private javax.swing.JPanel panelIngresoArbitro;
     private javax.swing.JPanel panelIngresoJugador;
     private javax.swing.JPanel panelMenu;
-    private javax.swing.JPanel panelPrecentacion;
-    public javax.swing.JTextField txtAnio;
-    public javax.swing.JTextField txtAnio2;
-    public javax.swing.JTextField txtApellido;
-    public javax.swing.JTextField txtApellido2;
-    public javax.swing.JTextField txtCantidadAmarillas;
-    public javax.swing.JTextField txtCantidadGoles;
-    public javax.swing.JTextField txtCantidadRojas;
-    public javax.swing.JTextField txtDia;
-    public javax.swing.JTextField txtDia2;
-    public javax.swing.JTextField txtMes;
-    public javax.swing.JTextField txtMes2;
-    public javax.swing.JTextField txtNacionalidad;
-    public javax.swing.JTextField txtNacionalidad2;
-    public javax.swing.JTextField txtNombre;
-    public javax.swing.JTextField txtNombre2;
-    public javax.swing.JTextField txtTarjetasTotales;
+    private javax.swing.JPanel panelMenu1;
+    private javax.swing.JTextField txtAnio;
+    private javax.swing.JTextField txtAnio2;
+    private javax.swing.JTextField txtApellido;
+    private javax.swing.JTextField txtApellido2;
+    private javax.swing.JTextField txtCantidadAmarillas;
+    private javax.swing.JTextField txtCantidadGoles;
+    private javax.swing.JTextField txtCantidadRojas;
+    private javax.swing.JTextField txtDia;
+    private javax.swing.JTextField txtDia2;
+    private javax.swing.JTextField txtMes;
+    private javax.swing.JTextField txtMes2;
+    private javax.swing.JTextField txtNacionalidad;
+    private javax.swing.JTextField txtNacionalidad2;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNombre2;
+    private javax.swing.JTextField txtTarjetasTotales;
     // End of variables declaration//GEN-END:variables
 }
