@@ -1364,7 +1364,7 @@ public class Dashboard extends javax.swing.JFrame {
         String apellido = txtApellido.getText().trim();
         String nacionalidad=txtNacionalidad.getText().trim();
         boolean valido= true;
-        int dia = Integer.parseInt(txtCantidadAmarillas.getText());
+        int dia = Integer.parseInt(txtDia.getText());
         int mes = Integer.parseInt(txtMes.getText());
         int anio = Integer.parseInt(txtAnio.getText());
 
@@ -1461,11 +1461,14 @@ public class Dashboard extends javax.swing.JFrame {
 
         //borrar texto
         txtCantidadAmarillas.setText("");
+        txtDia.setText("");
         txtMes.setText("");
         txtAnio.setText("");
         txtApellido.setText("");
         txtNombre.setText("");
         txtNacionalidad.setText("");
+        txtCantidadGoles.setText("");
+        txtCantidadRojas.setText("");
         //txtTarjetasTotales.setText("");
     }//GEN-LAST:event_botonCargarJugadorActionPerformed
 
@@ -1547,6 +1550,7 @@ public class Dashboard extends javax.swing.JFrame {
         
     }
 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     public javax.swing.JComboBox<String> BoxEquipos1;
