@@ -1511,7 +1511,7 @@ public class Dashboard extends javax.swing.JFrame {
          CardLayout cl = (CardLayout) jPanel5.getLayout();
         cl.show(jPanel5, "MostrarJugadores");
     }//GEN-LAST:event_btnJugadoresActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */

@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Main;
+import Controlador.ControladorArbitro;
+import Controlador.ControladorJugador;
 import Modelo.Arbitro;
 import Modelo.Jugador;
 import Vista.Dashboard;
@@ -14,13 +16,11 @@ public class Main {
     public static void main(String[] args) {
        List<Arbitro> listaArbitro=new ArrayList<>();
        List<Jugador>listaJugador = new ArrayList<>();
-       
-        Dashboard vistaGeneral =new Dashboard();
-        
+        ControladorJugador controladorJugador=new ControladorJugador(listaJugador);
+        ControladorArbitro controladorArbitro=new ControladorArbitro(listaArbitro);
+        Dashboard vistaGeneral =new Dashboard(controladorJugador,controladorArbitro);
        vistaGeneral.setVisible(true);
        
-       
     }
-        //
     
 }

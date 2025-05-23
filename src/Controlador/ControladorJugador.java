@@ -14,7 +14,7 @@ import java.util.List;
 public class ControladorJugador {
   //private List<Arbitro> arbitro;
 private List<Jugador> listaJugadores;
-private Jugador jugador;
+private Jugador jugador=new Jugador();
 
 public ControladorJugador() {
 }

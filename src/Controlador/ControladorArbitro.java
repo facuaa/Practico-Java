@@ -14,11 +14,10 @@ import java.util.List;
  */
 public class ControladorArbitro {
     List <Arbitro> listaArbitros; 
-    Arbitro arbitro; 
+    Arbitro arbitro=new Arbitro(); 
 
-    public ControladorArbitro(List<Arbitro> listaArbitros, Arbitro arbitro) {
+    public ControladorArbitro(List<Arbitro> listaArbitros) {
         this.listaArbitros = listaArbitros;
-        this.arbitro = arbitro;
     }
  
     public ControladorArbitro() {
@@ -42,11 +41,10 @@ this.arbitro.setTarjetasTotales(n);
 public void colocarInternacional(boolean n){
 this.arbitro.setInternacional(n);
 }
-public void colocarArbitroLista(){
+public void AgregarArbitroALista(){
 listaArbitros.add(arbitro);
 }
 //
-
 
 
 //Filtra los arbitros internacionales
