@@ -11,8 +11,10 @@ import Modelo.Jugador;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -138,7 +140,7 @@ public class Dashboard extends javax.swing.JFrame {
         canvas1 = new java.awt.Canvas();
         MostrarJugadores = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tablaJugadores = new javax.swing.JTable();
 
         panelMenu1.setBackground(new java.awt.Color(255, 255, 255));
         panelMenu1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
@@ -449,6 +451,10 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel5.add(PanelInformacion, "PanelInfo");
 
+        panelIngresoJugador.setPreferredSize(new java.awt.Dimension(919, 660));
+
+        PanelIngreso.setPreferredSize(new java.awt.Dimension(919, 660));
+
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("/");
 
@@ -749,7 +755,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtCantidadRojas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -760,7 +766,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(PanelIngresoLayout.createSequentialGroup()
                     .addGap(34, 34, 34)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(583, Short.MAX_VALUE)))
+                    .addContainerGap(589, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout panelIngresoJugadorLayout = new javax.swing.GroupLayout(panelIngresoJugador);
@@ -774,9 +780,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
         panelIngresoJugadorLayout.setVerticalGroup(
             panelIngresoJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelIngresoJugadorLayout.createSequentialGroup()
-                .addComponent(PanelIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 38, Short.MAX_VALUE))
+            .addComponent(PanelIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jPanel5.add(panelIngresoJugador, "cargarJugador");
@@ -1036,19 +1040,19 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel5.add(panelIngresoArbitro, "cargarArbitro");
 
-        jTable2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tablaJugadores.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tablaJugadores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "Apellido", "Nacimiento", "Nacionalidad", "TarjetasTotales", "Internacional"
+                "Nombre", "Apellido", "Nacimiento", "Nacionalidad", "Club", "Posicion", "Goles", "TarjetasAmarillas", "TarjetasRojas"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tablaJugadores);
 
         javax.swing.GroupLayout MostrarJugadoresLayout = new javax.swing.GroupLayout(MostrarJugadores);
         MostrarJugadores.setLayout(MostrarJugadoresLayout);
@@ -1506,12 +1510,38 @@ public class Dashboard extends javax.swing.JFrame {
         CardLayout cl = (CardLayout) jPanel5.getLayout();
         cl.show(jPanel5, "cargarArbitro");
     }//GEN-LAST:event_btnArbitrosActionPerformed
-
+private List<Jugador> m;
     private void btnJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugadoresActionPerformed
-         CardLayout cl = (CardLayout) jPanel5.getLayout();
+
+        ActualizarTablaJugadores((ArrayList<Jugador>) controladorJugador.pasarListaJugador());
+        CardLayout cl = (CardLayout) jPanel5.getLayout();
         cl.show(jPanel5, "MostrarJugadores");
     }//GEN-LAST:event_btnJugadoresActionPerformed
     
+    //funcion tabla jugadores 
+   public void ActualizarTablaJugadores(ArrayList<Jugador> Lista){
+        DefaultTableModel modelo = (DefaultTableModel) tablaJugadores.getModel();
+        // vacias la tabla
+        modelo.setRowCount(0);
+        
+        // a lo largo de toda la lista, voy agregando filas
+        
+        for (Jugador est : Lista) {
+            // creo fila
+            Object [] fila = new Object[modelo.getColumnCount()];
+            fila[0] = est.getNombre();
+            fila[1] = est.getApellido();
+            fila[2]= est.getNacimiento();
+            fila[3]=est.getNacionalidad();
+            fila[4]=est.getClubActual();
+            fila[5]=est.getPosicion();
+            fila[6]=est.getGoles();
+            fila[7]=est.getTarjetasAmarillas();
+            fila[8]=est.getTarjetasRojas();
+            //completo la fila ...
+            modelo.addRow(fila);
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -1549,7 +1579,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
         
     }
-
+   
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
@@ -1619,7 +1649,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JTable jTable2;
     public javax.swing.JLabel lblErrorApellido;
     public javax.swing.JLabel lblErrorApellido2;
     public javax.swing.JLabel lblErrorFecha;
@@ -1632,6 +1661,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JPanel panelIngresoJugador;
     private javax.swing.JPanel panelMenu;
     private javax.swing.JPanel panelMenu1;
+    private javax.swing.JTable tablaJugadores;
     public javax.swing.JTextField txtAnio;
     public javax.swing.JTextField txtAnio2;
     public javax.swing.JTextField txtApellido;

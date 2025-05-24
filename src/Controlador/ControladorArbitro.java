@@ -14,13 +14,16 @@ import java.util.List;
  */
 public class ControladorArbitro {
     List <Arbitro> listaArbitros; 
-    Arbitro arbitro=new Arbitro(); 
+    private Arbitro arbitro;
 
     public ControladorArbitro(List<Arbitro> listaArbitros) {
         this.listaArbitros = listaArbitros;
+        this.arbitro=new Arbitro();
     }
  
     public ControladorArbitro() {
+        this.listaArbitros=new ArrayList<>();
+        this.arbitro=new Arbitro();
     }
     public void colocarNombre(String n){
 this.arbitro.setNombre(n);
@@ -43,6 +46,7 @@ this.arbitro.setInternacional(n);
 }
 public void AgregarArbitroALista(){
 listaArbitros.add(arbitro);
+this.arbitro=new Arbitro();
 }
 //
 

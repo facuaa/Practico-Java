@@ -14,13 +14,17 @@ import java.util.List;
 public class ControladorJugador {
   //private List<Arbitro> arbitro;
 private List<Jugador> listaJugadores;
-private Jugador jugador=new Jugador();
+private Jugador jugador;
 
 public ControladorJugador() {
 }
 //
 public ControladorJugador( List<Jugador> jugador) {
 this.listaJugadores =jugador;
+this.jugador=new Jugador();
+}
+public List<Jugador> pasarListaJugador(){
+    return listaJugadores;
 }
 //jugadores
 public void colocarNombre(String n){
@@ -54,6 +58,7 @@ this.jugador.setTarjetasRojas(n);
 //metodo que guarda el jugador de la clase a la lista de la clase //get
 public void AgregarJugadorALista(){
 listaJugadores.add(jugador);
+this.jugador=new Jugador();
 }
 //contar cantidad de jugadores de un equipo 
 public int contarCantidadDeJugadores (List<Jugador> a, String busq){
