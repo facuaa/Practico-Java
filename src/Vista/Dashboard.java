@@ -95,17 +95,21 @@ public class Dashboard extends javax.swing.JFrame {
         txtMes = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        lblErrorNombre = new javax.swing.JLabel();
-        lblErrorApellido = new javax.swing.JLabel();
-        lblErrorNacionalidad = new javax.swing.JLabel();
+        MensajeErrorNombre = new javax.swing.JLabel();
+        MensajeErrorApellido = new javax.swing.JLabel();
+        MensajeErrorNacionalidad = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         BoxPosiciones = new javax.swing.JComboBox<>();
-        BoxEquipos1 = new javax.swing.JComboBox<>();
+        BoxEquipo = new javax.swing.JComboBox<>();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         txtDia = new javax.swing.JTextField();
         txtCantidadRojas = new javax.swing.JTextField();
         txtCantidadGoles = new javax.swing.JTextField();
+        MensajeErrorFecha = new javax.swing.JLabel();
+        MensajeErrorGoles = new javax.swing.JLabel();
+        MensajeErrorAmarillas = new javax.swing.JLabel();
+        MensajeErrorRojas = new javax.swing.JLabel();
         panelIngresoArbitro = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
@@ -442,7 +446,7 @@ public class Dashboard extends javax.swing.JFrame {
         PanelInformacion.setLayout(PanelInformacionLayout);
         PanelInformacionLayout.setHorizontalGroup(
             PanelInformacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 628, Short.MAX_VALUE)
+            .addGap(0, 931, Short.MAX_VALUE)
         );
         PanelInformacionLayout.setVerticalGroup(
             PanelInformacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -548,14 +552,14 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel14.setText("/");
 
-        lblErrorNombre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblErrorNombre.setText("\" \"");
+        MensajeErrorNombre.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorNombre.setText("\" \"");
 
-        lblErrorApellido.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblErrorApellido.setText("\" \"");
+        MensajeErrorApellido.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorApellido.setText("\" \"");
 
-        lblErrorNacionalidad.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblErrorNacionalidad.setText("\" \"");
+        MensajeErrorNacionalidad.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorNacionalidad.setText("\" \"");
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel15.setText("Posicion");
@@ -567,12 +571,17 @@ public class Dashboard extends javax.swing.JFrame {
                 BoxPosicionesActionPerformed(evt);
             }
         });
+        BoxPosiciones.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                BoxPosicionesKeyTyped(evt);
+            }
+        });
 
-        BoxEquipos1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        BoxEquipos1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "River Plate", "Boca Juniors", "Independiente", "Racing Club", "San Lorenzo", "Velez Sarsfield", "Rosario Central", "Newells Old Boys", "Estudiantes de La Plata", "Huracan" }));
-        BoxEquipos1.addActionListener(new java.awt.event.ActionListener() {
+        BoxEquipo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        BoxEquipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "River Plate", "Boca Juniors", "Independiente", "Racing Club", "San Lorenzo", "Velez Sarsfield", "Rosario Central", "Newells Old Boys", "Estudiantes de La Plata", "Huracan" }));
+        BoxEquipo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BoxEquipos1ActionPerformed(evt);
+                BoxEquipoActionPerformed(evt);
             }
         });
 
@@ -615,6 +624,18 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
+        MensajeErrorFecha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorFecha.setText("\" \"");
+
+        MensajeErrorGoles.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorGoles.setText("\" \"");
+
+        MensajeErrorAmarillas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorAmarillas.setText("\" \"");
+
+        MensajeErrorRojas.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorRojas.setText("\" \"");
+
         javax.swing.GroupLayout PanelIngresoLayout = new javax.swing.GroupLayout(PanelIngreso);
         PanelIngreso.setLayout(PanelIngresoLayout);
         PanelIngresoLayout.setHorizontalGroup(
@@ -647,15 +668,16 @@ public class Dashboard extends javax.swing.JFrame {
                                                 .addComponent(jLabel4)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(txtAnio, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(lblErrorNombre))
+                                            .addComponent(MensajeErrorNombre)
+                                            .addComponent(MensajeErrorFecha))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel7)
                                             .addComponent(jLabel9)
                                             .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(lblErrorApellido)
-                                            .addComponent(lblErrorNacionalidad)))
+                                            .addComponent(MensajeErrorApellido)
+                                            .addComponent(MensajeErrorNacionalidad)))
                                     .addGroup(PanelIngresoLayout.createSequentialGroup()
                                         .addComponent(jLabel10)
                                         .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -669,26 +691,33 @@ public class Dashboard extends javax.swing.JFrame {
                                                 .addGap(15, 15, 15)
                                                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jLabel12)
-                                                    .addComponent(BoxEquipos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(BoxEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(txtCantidadGoles, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(txtCantidadGoles, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addGroup(PanelIngresoLayout.createSequentialGroup()
+                                                        .addGap(6, 6, 6)
+                                                        .addComponent(MensajeErrorGoles)))
                                                 .addGap(58, 58, 58)
                                                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jLabel17)
                                                     .addComponent(BoxPosiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(txtCantidadAmarillas, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                    .addComponent(txtCantidadAmarillas, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(MensajeErrorAmarillas))
                                                 .addGap(0, 0, Short.MAX_VALUE))))))))
                     .addGroup(PanelIngresoLayout.createSequentialGroup()
-                        .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanelIngresoLayout.createSequentialGroup()
-                                .addGap(352, 352, 352)
-                                .addComponent(jLabel16))
-                            .addGroup(PanelIngresoLayout.createSequentialGroup()
-                                .addGap(306, 306, 306)
-                                .addComponent(txtCantidadRojas, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(352, 352, 352)
+                        .addComponent(jLabel16)
+                        .addGap(0, 468, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(PanelIngresoLayout.createSequentialGroup()
+                .addGap(308, 308, 308)
+                .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelIngresoLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(MensajeErrorRojas))
+                    .addComponent(txtCantidadRojas, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelIngresoLayout.createSequentialGroup()
                     .addGap(49, 49, 49)
@@ -715,8 +744,8 @@ public class Dashboard extends javax.swing.JFrame {
                             .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblErrorNombre)
-                    .addComponent(lblErrorApellido))
+                    .addComponent(MensajeErrorNombre)
+                    .addComponent(MensajeErrorApellido))
                 .addGap(22, 22, 22)
                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
@@ -730,8 +759,10 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(txtNacionalidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblErrorNacionalidad)
-                .addGap(49, 49, 49)
+                .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(MensajeErrorNacionalidad)
+                    .addComponent(MensajeErrorFecha))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel10)
@@ -741,7 +772,7 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BoxEquipos1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BoxEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BoxPosiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -751,11 +782,17 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtCantidadGoles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCantidadAmarillas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MensajeErrorAmarillas)
+                    .addComponent(MensajeErrorGoles))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel16)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txtCantidadRojas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(MensajeErrorRojas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1013,7 +1050,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(BoxInternacional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1040,7 +1077,8 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel5.add(panelIngresoArbitro, "cargarArbitro");
 
-        tablaJugadores.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        tablaJugadores.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tablaJugadores.setForeground(new java.awt.Color(51, 51, 51));
         tablaJugadores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null},
@@ -1051,18 +1089,26 @@ public class Dashboard extends javax.swing.JFrame {
             new String [] {
                 "Nombre", "Apellido", "Nacimiento", "Nacionalidad", "Club", "Posicion", "Goles", "TarjetasAmarillas", "TarjetasRojas"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(tablaJugadores);
 
         javax.swing.GroupLayout MostrarJugadoresLayout = new javax.swing.GroupLayout(MostrarJugadores);
         MostrarJugadores.setLayout(MostrarJugadoresLayout);
         MostrarJugadoresLayout.setHorizontalGroup(
             MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 628, Short.MAX_VALUE)
+            .addGap(0, 931, Short.MAX_VALUE)
             .addGroup(MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(MostrarJugadoresLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 919, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         MostrarJugadoresLayout.setVerticalGroup(
@@ -1182,9 +1228,9 @@ public class Dashboard extends javax.swing.JFrame {
         }*/
 
         //se eliminan errores anteriores
-        lblErrorNombre.setText("");
-        lblErrorApellido.setText("");
-        lblErrorNacionalidad.setText("");
+        MensajeErrorNombre.setText("");
+        MensajeErrorApellido.setText("");
+        MensajeErrorNacionalidad.setText("");
         lblErrorTarjetasTotales.setText("");
         lblErrorFecha.setText("");
 
@@ -1197,31 +1243,31 @@ public class Dashboard extends javax.swing.JFrame {
         //Validacion de casillas vacias y contenido correcto
         //Nombre
         if(nombre.isEmpty()){//si la casillas esta vacia
-            lblErrorNombre.setText("El nombre no puede estar vacío.");//aparece un label con mensaje
+            MensajeErrorNombre.setText("El nombre no puede estar vacío.");//aparece un label con mensaje
             txtNombre.setBackground(Color.pink);//y se marca la casilla en rojo
             valido=false;
         } else if(!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){//regex
-            lblErrorNombre.setText("Nombre inválido.Solo letras");
+            MensajeErrorNombre.setText("Nombre inválido.Solo letras");
             txtNombre.setBackground(Color.pink);
             valido=false;
         }
         //Apellido
         if(apellido.isEmpty()){
-            lblErrorApellido.setText("El nombre no puede estar vacío.");
+            MensajeErrorApellido.setText("El nombre no puede estar vacío.");
             txtNombre.setBackground(Color.pink);
             valido=false;
         } else if(!apellido.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){
-            lblErrorApellido.setText("Apellido inválido. Solo letras");
+            MensajeErrorApellido.setText("Apellido inválido. Solo letras");
             txtDia.setBackground(Color.PINK);
             valido=false;
         }
         //Nacionalidad
         if(nacionalidad.isEmpty()){
-            lblErrorNacionalidad.setText("El nombre no puede estar vacío.");
+            MensajeErrorNacionalidad.setText("El nombre no puede estar vacío.");
             txtNacionalidad.setBackground(Color.pink);
             valido=false;
         } else if(!nacionalidad.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]")){
-            lblErrorNacionalidad.setText("El nombre no puede estar vacío.");
+            MensajeErrorNacionalidad.setText("El nombre no puede estar vacío.");
             txtNacionalidad.setBackground(Color.pink);
         }
         //tarjetas Amarillas
@@ -1315,9 +1361,9 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDiaActionPerformed
 
-    private void BoxEquipos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoxEquipos1ActionPerformed
+    private void BoxEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoxEquipoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BoxEquipos1ActionPerformed
+    }//GEN-LAST:event_BoxEquipoActionPerformed
 
     private void BoxPosicionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoxPosicionesActionPerformed
         // TODO add your handling code here:
@@ -1361,101 +1407,183 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNacionalidadActionPerformed
 
     private void botonCargarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarJugadorActionPerformed
-        String nombre= txtNombre.getText().trim();
-        if(nombre == null){
-        JOptionPane.showMessageDialog(this, "Forro coloca un nombre");
-        }
-        String apellido = txtApellido.getText().trim();
-        String nacionalidad=txtNacionalidad.getText().trim();
-        boolean valido= true;
-        int dia = Integer.parseInt(txtDia.getText());
-        int mes = Integer.parseInt(txtMes.getText());
-        int anio = Integer.parseInt(txtAnio.getText());
-
-        if (dia < 1 || dia > 30) {
-            JOptionPane.showMessageDialog(this, "El Dia Debe Ser Valido Ej:(1, 2, ... , 30)");
-        }
-
-        if (mes < 1 || mes > 12) {
-            JOptionPane.showMessageDialog(this, "El Mes Debe Ser Valido Ej:(Enero,..., Diciembre)");
-        }
-
-        if (anio < 1940 || mes >= 2025) {
-            JOptionPane.showMessageDialog(this, "El Anio Debe Ser Valido Ej:(1940,...,2025)");
-        }
-
-        //se eliminan errores anteriores
-        lblErrorNombre.setText("");
-        lblErrorApellido.setText("");
-        lblErrorNacionalidad.setText("");
-        //lblErro
-        //Se ponen las casillas blancas
-        txtCantidadAmarillas.setBackground(Color.WHITE);
-        txtNombre.setBackground(Color.WHITE);
-        txtNacionalidad.setBackground(Color.WHITE);
-
-        //Validacion de casillas vacias y contenido correcto
-        /* //Nombre
-        if(nombre.isEmpty()){//si la casillas esta vacia
-            lblErrorNombre.setText("El nombre no puede estar vacío.");//aparece un label con mensaje
-            txtNombre.setBackground(Color.pink);//y se marca la casilla en rojo
-            valido=false;
-        } else if(!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){//regex
-            lblErrorNombre.setText("Nombre inválido.Solo letras");
-            txtNombre.setBackground(Color.pink);
-            valido=false;
-        }
-        //Apellido
-        if(apellido.isEmpty()){
-            lblErrorApellido.setText("El nombre no puede estar vacío.");
-            txtNombre.setBackground(Color.pink);
-            valido=false;
-        } else if(!apellido.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){
-            lblErrorApellido.setText("Apellido inválido. Solo letras");
-            txtDia.setBackground(Color.PINK);
-            valido=false;
-        }
-        //Nacionalidad
-        if(nacionalidad.isEmpty()){
-            lblErrorNacionalidad.setText("El nombre no puede estar vacío.");
-            txtNacionalidad.setBackground(Color.pink);
-            valido=false;
-        } else if(!nacionalidad.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]")){
-            lblErrorNacionalidad.setText("El nombre no puede estar vacío.");
-            txtNacionalidad.setBackground(Color.pink);
-        }
-        //tarjetas Amarillas
-        /* if(tarjetasTotales.isEmpty()){
-            lblErrorTarjetasTotales.setText("El nombre no puede estar vacío.");
-            txtNombre.setBackground(Color.pink);
-            valido=false;
-        }*/
-        //validación de fecha
-
-        //Controlers para tarjetas
-
-        /*  try{
-            TarjetasTotales= Integer.parseInt(tarjetasTotales);
-            if(TarjetasTotales<0 || TarjetasTotales>100){
-                txtTarjetasTotales.setBackground(Color.PINK);
-                valido= false;
-            }
-        }catch(NumberFormatException ex){
-            txtTarjetasTotales.setBackground(Color.PINK);
-            valido = false;
-        }
-
-        if(!valido){
-            JOptionPane.showMessageDialog(this,"Corrija las casillas en rojo");
-            return;
-        }
-        */
-
-        //Si todo esta bien, cargar info a jugador
-        //DIOSSSSSSS NICO LPM FIJATE COMO MRD NOMBRAS A LAS FUNCIONESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+        String nombre= txtNombre.getText();
+        String apellido = txtApellido.getText();
+        String nacionalidad=txtNacionalidad.getText();
+        boolean validacion= true;
         
+        if(nombre.isEmpty()){
+        MensajeErrorNombre.setText("Ingrese Nombre Valido");
+        txtNombre.setBackground(Color.pink);
+        validacion= false;
+        }else{
+        MensajeErrorNombre.setText("");
+        txtNombre.setBackground(Color.WHITE);
+        }
+            
+        if(apellido.isEmpty()){
+        MensajeErrorApellido.setText("Ingrese Apellido Valido");
+        txtApellido.setBackground(Color.pink);
+        validacion=false;
+        }else{
+        MensajeErrorApellido.setText("");
+        txtApellido.setBackground(Color.WHITE);
+        }
+        
+        if(nacionalidad.isEmpty()){
+        MensajeErrorNacionalidad.setText("Ingrese Nacionalidad Valida");
+        txtNacionalidad.setBackground(Color.pink);
+        validacion= false;
+        }else{
+        MensajeErrorNacionalidad.setText("");
+        txtNacionalidad.setBackground(Color.WHITE);
+        }
+        
+
+
+        
+        
+ //======================================== FECHA ========================================
+String diaTexto = txtDia.getText().trim();
+if (diaTexto.isEmpty()) {
+    MensajeErrorFecha.setText("Fecha inválida: día vacío");
+    txtDia.setBackground(Color.PINK);
+    validacion = false;
+} else {
+    try {
+        int dia = Integer.parseInt(diaTexto);
+        if (dia < 1 || dia > 30) {
+            MensajeErrorFecha.setText("Día inválido (1-30)");
+            txtDia.setBackground(Color.PINK);
+            validacion = false;
+        } else {
+            txtDia.setBackground(Color.WHITE);
+        }
+    } catch (NumberFormatException e) {
+        MensajeErrorFecha.setText("Día debe ser numérico");
+        txtDia.setBackground(Color.PINK);
+        validacion = false;
+    }
+}
+
+
+String mesTexto = txtMes.getText().trim();
+if (mesTexto.isEmpty()) {
+    MensajeErrorFecha.setText("Fecha inválida: mes vacío");
+    txtMes.setBackground(Color.PINK);
+    validacion = false;
+} else {
+    try {
+        int MES = Integer.parseInt(mesTexto);
+        if (MES < 1 || MES > 12) {
+            MensajeErrorFecha.setText("Mes inválido Ej:(Enero,...,Diciembre)");
+            txtMes.setBackground(Color.PINK);
+            validacion = false;
+        } else {
+            txtMes.setBackground(Color.WHITE);
+        }
+    } catch (NumberFormatException e) {
+        MensajeErrorFecha.setText("Mes debe ser numérico");
+        txtMes.setBackground(Color.PINK);
+        validacion = false;
+    }
+}
+
+
+String anioTexto = txtAnio.getText().trim();
+if (anioTexto.isEmpty()) {
+    MensajeErrorFecha.setText("Año inválido: campo vacío");
+    txtAnio.setBackground(Color.PINK);
+    validacion = false;
+} else {
+    try {
+        int anio = Integer.parseInt(anioTexto);
+        if (anio < 1940 || anio > 2023) {
+            MensajeErrorFecha.setText("Año inválido (1940-2023)");
+            txtAnio.setBackground(Color.PINK);
+            validacion = false;
+        } else {
+            txtAnio.setBackground(Color.WHITE);
+        }
+    } catch (NumberFormatException e) {
+        MensajeErrorFecha.setText("Año Debe Ser Numérico");
+        txtAnio.setBackground(Color.PINK);
+        validacion = false;
+    }
+}
+
+    String goles = txtCantidadGoles.getText().trim();
+if (goles.isEmpty()) {
+    MensajeErrorGoles.setText("Inserte Una cantidad Numerica De Goles");
+    txtCantidadGoles.setBackground(Color.PINK);
+    validacion = false;
+} else {
+    try {
+       int cantGoles = Integer.parseInt(goles);
+        txtCantidadGoles.setBackground(Color.WHITE);
+        MensajeErrorGoles.setText("");
+    } catch (NumberFormatException e) {
+        MensajeErrorGoles.setText("La Cantidad De goles debe ser numérico");
+        txtCantidadGoles.setBackground(Color.PINK);
+        validacion = false;
+    }
+}
+    String amarillas = txtCantidadAmarillas.getText().trim();
+if (amarillas.isEmpty()) {
+    MensajeErrorAmarillas.setText("Inserte Una cantidad Numerica De Tarjetas");
+    txtCantidadAmarillas.setBackground(Color.PINK);
+    validacion = false;
+} else {
+    try {
+       int cantAmarillas = Integer.parseInt(amarillas);
+        txtCantidadAmarillas.setBackground(Color.WHITE);
+        MensajeErrorAmarillas.setText("");
+    } catch (NumberFormatException e) {
+        MensajeErrorAmarillas.setText("La Cantidad De Ta. Amarillas Debe Ser Numérico");
+        txtCantidadAmarillas.setBackground(Color.PINK);
+        validacion = false;
+    }
+}
+
+    String rojas = txtCantidadRojas.getText().trim();
+if (rojas.isEmpty()) {
+    MensajeErrorRojas.setText("Inserte Una cantidad Numerica De Tarjetas");
+    txtCantidadRojas.setBackground(Color.PINK);
+    validacion = false;
+} else {
+    try {
+       int cantRojas = Integer.parseInt(amarillas);
+        txtCantidadRojas.setBackground(Color.WHITE);
+        MensajeErrorRojas.setText("");
+    } catch (NumberFormatException e) {
+        MensajeErrorRojas.setText("La Cantidad De Ta. Roja Debe Ser Numérico");
+        txtCantidadRojas.setBackground(Color.PINK);
+        validacion = false;
+    }
+}
+        if(!validacion){
+        JOptionPane.showMessageDialog(this, "Error en la carga");
+        return;
+        }
+        //se eliminan errores anteriores
+        MensajeErrorNombre.setText("");
+        MensajeErrorApellido.setText("");
+        MensajeErrorNacionalidad.setText("");
+
+        
+        
+        String a= BoxPosiciones.getItemAt(WIDTH);
+        String b= BoxEquipo.getItemAt(WIDTH);
+        String c=diaTexto+"/"+mesTexto+"/"+anioTexto ;
+       // int fecha= Integer.parseInt(c);
+
         controladorJugador.colocarNombre(nombre);
-        System.out.println("holaaaaa");
+        controladorJugador.colocarGoles(goles);
+        controladorJugador.colocarNacimiento(c);
+        controladorJugador.colocarClubActual(b);
+        controladorJugador.colocarTarjetasAmarillas(amarillas);
+        controladorJugador.colocarTarjrtasRojas(rojas);
+        controladorJugador.colocarPosicion(a);
         controladorJugador.colocarApellido(apellido);
         controladorJugador.colocarNacionalidad(nacionalidad);
 
@@ -1517,6 +1645,10 @@ private List<Jugador> m;
         CardLayout cl = (CardLayout) jPanel5.getLayout();
         cl.show(jPanel5, "MostrarJugadores");
     }//GEN-LAST:event_btnJugadoresActionPerformed
+
+    private void BoxPosicionesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BoxPosicionesKeyTyped
+      char c= evt.getKeyChar();
+    }//GEN-LAST:event_BoxPosicionesKeyTyped
     
     //funcion tabla jugadores 
    public void ActualizarTablaJugadores(ArrayList<Jugador> Lista){
@@ -1583,9 +1715,16 @@ private List<Jugador> m;
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
-    public javax.swing.JComboBox<String> BoxEquipos1;
+    public javax.swing.JComboBox<String> BoxEquipo;
     public javax.swing.JComboBox<String> BoxInternacional;
     public javax.swing.JComboBox<String> BoxPosiciones;
+    public javax.swing.JLabel MensajeErrorAmarillas;
+    public javax.swing.JLabel MensajeErrorApellido;
+    public javax.swing.JLabel MensajeErrorFecha;
+    public javax.swing.JLabel MensajeErrorGoles;
+    public javax.swing.JLabel MensajeErrorNacionalidad;
+    public javax.swing.JLabel MensajeErrorNombre;
+    public javax.swing.JLabel MensajeErrorRojas;
     private javax.swing.JPanel MostrarJugadores;
     private javax.swing.JPanel PanelInformacion;
     private javax.swing.JPanel PanelIngreso;
@@ -1649,12 +1788,9 @@ private List<Jugador> m;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    public javax.swing.JLabel lblErrorApellido;
     public javax.swing.JLabel lblErrorApellido2;
     public javax.swing.JLabel lblErrorFecha;
-    public javax.swing.JLabel lblErrorNacionalidad;
     public javax.swing.JLabel lblErrorNacionalidad2;
-    public javax.swing.JLabel lblErrorNombre;
     public javax.swing.JLabel lblErrorNombre2;
     public javax.swing.JLabel lblErrorTarjetasTotales;
     private javax.swing.JPanel panelIngresoArbitro;

@@ -45,13 +45,13 @@ this.jugador.setClubActual(n);
 public void colocarPosicion(String n){
 this.jugador.setPosicion(n);
 }
-public void colocarGoles(int n){
+public void colocarGoles(String n){
 this.jugador.setGoles(n);
 }
-public void colocarTarjetasAmarillas(int n){
+public void colocarTarjetasAmarillas(String n){
 this.jugador.setTarjetasAmarillas(n);
 }
-public void colocarTarjrtasRojas(int n){
+public void colocarTarjrtasRojas(String n){
 this.jugador.setTarjetasRojas(n);
 }
 
@@ -73,7 +73,7 @@ return cont;
 }
  
 //jugadores que superan cierta cantidad de goles 
-public List cantidadGolesJugador(int g){
+/*public List cantidadGolesJugador(int g){
     int cont;
     List<Jugador> listaJugadoresConGoles= new ArrayList<>();
     for(Jugador jugadorActual : listaJugadores){
@@ -82,9 +82,9 @@ public List cantidadGolesJugador(int g){
        }  
     }
     return listaJugadoresConGoles;
-}
+}*/
 //Jugador con mas expulsiones
-public Jugador JugadorMasExpulsiones(List<Jugador> m){
+/*public Jugador JugadorMasExpulsiones(List<Jugador> m){
     Jugador jug=new Jugador();
  for(int i=0;i<=m.size();i++){
      if(m.get(i).getTarjetasRojas() > jug.getTarjetasRojas()){
@@ -92,7 +92,7 @@ public Jugador JugadorMasExpulsiones(List<Jugador> m){
      }
  }
     return jug;
-}
+}*/
 
 //cantidad de jugadores por posicion
 public int catidadJugadoresPosicion(String pos){

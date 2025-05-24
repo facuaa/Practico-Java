@@ -589,7 +589,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="628" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="931" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
@@ -667,7 +667,8 @@
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Component id="txtAnio" min="-2" pref="40" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <Component id="lblErrorNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="MensajeErrorNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="MensajeErrorFecha" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="32767" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -675,8 +676,8 @@
                                                           <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
                                                           <Component id="txtNacionalidad" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                                           <Component id="txtApellido" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                                          <Component id="lblErrorApellido" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="lblErrorNacionalidad" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="MensajeErrorApellido" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="MensajeErrorNacionalidad" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
@@ -693,9 +694,13 @@
                                                               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" attributes="0">
                                                                   <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="BoxEquipos1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="BoxEquipo" alignment="0" min="-2" max="-2" attributes="0"/>
                                                                   <Component id="jLabel11" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
                                                                   <Component id="txtCantidadGoles" min="-2" pref="182" max="-2" attributes="0"/>
+                                                                  <Group type="102" attributes="0">
+                                                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                                                      <Component id="MensajeErrorGoles" min="-2" max="-2" attributes="0"/>
+                                                                  </Group>
                                                               </Group>
                                                               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -703,6 +708,7 @@
                                                                   <Component id="BoxPosiciones" alignment="0" min="-2" max="-2" attributes="0"/>
                                                                   <Component id="jLabel15" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
                                                                   <Component id="txtCantidadAmarillas" min="-2" pref="182" max="-2" attributes="0"/>
+                                                                  <Component id="MensajeErrorAmarillas" alignment="0" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                           </Group>
@@ -713,20 +719,23 @@
                                       </Group>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="352" max="-2" attributes="0"/>
-                                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="306" max="-2" attributes="0"/>
-                                              <Component id="txtCantidadRojas" min="-2" pref="182" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="352" max="-2" attributes="0"/>
+                                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="468" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="308" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="MensajeErrorRojas" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="txtCantidadRojas" min="-2" pref="182" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -762,8 +771,8 @@
                                   </Group>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblErrorNombre" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblErrorApellido" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MensajeErrorNombre" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MensajeErrorApellido" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -780,8 +789,11 @@
                                   <Component id="txtDia" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblErrorNacionalidad" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="MensajeErrorNacionalidad" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MensajeErrorFecha" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
                               <Component id="jSeparator2" min="-2" pref="3" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
@@ -792,7 +804,7 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="BoxEquipos1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="BoxEquipo" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="BoxPosiciones" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -805,11 +817,18 @@
                                   <Component id="txtCantidadGoles" alignment="0" min="-2" max="-2" attributes="0"/>
                                   <Component id="txtCantidadAmarillas" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="MensajeErrorAmarillas" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MensajeErrorGoles" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="txtCantidadRojas" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="66" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="MensajeErrorRojas" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace pref="43" max="32767" attributes="0"/>
                               <Component id="jSeparator3" min="-2" pref="9" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -987,7 +1006,7 @@
                         <Property name="text" type="java.lang.String" value="/"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="lblErrorNombre">
+                    <Component class="javax.swing.JLabel" name="MensajeErrorNombre">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -998,7 +1017,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="lblErrorApellido">
+                    <Component class="javax.swing.JLabel" name="MensajeErrorApellido">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -1009,7 +1028,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="lblErrorNacionalidad">
+                    <Component class="javax.swing.JLabel" name="MensajeErrorNacionalidad">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -1050,13 +1069,14 @@
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BoxPosicionesActionPerformed"/>
+                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="BoxPosicionesKeyTyped"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JComboBox" name="BoxEquipos1">
+                    <Component class="javax.swing.JComboBox" name="BoxEquipo">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="14" style="1"/>
@@ -1077,7 +1097,7 @@
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BoxEquipos1ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BoxEquipoActionPerformed"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -1123,6 +1143,50 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCantidadGolesActionPerformed"/>
                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtCantidadGolesKeyTyped"/>
                       </Events>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MensajeErrorFecha">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="12" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="&quot; &quot;"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MensajeErrorGoles">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="12" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="&quot; &quot;"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MensajeErrorAmarillas">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="12" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="&quot; &quot;"/>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="MensajeErrorRojas">
+                      <Properties>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Segoe UI" size="12" style="1"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="&quot; &quot;"/>
+                      </Properties>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
@@ -1310,7 +1374,7 @@
                                   <Component id="BoxInternacional" alignment="1" min="-2" max="-2" attributes="0"/>
                                   <Component id="canvas1" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="94" max="32767" attributes="0"/>
+                              <EmptySpace pref="88" max="32767" attributes="0"/>
                               <Component id="jSeparator9" min="-2" pref="9" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -1583,11 +1647,11 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="628" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="931" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" pref="616" max="32767" attributes="0"/>
+                              <Component id="jScrollPane2" pref="919" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1617,19 +1681,22 @@
                     <Component class="javax.swing.JTable" name="tablaJugadores">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Segoe UI" size="18" style="1"/>
+                          <Font name="Segoe UI" size="14" style="1"/>
+                        </Property>
+                        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                          <Color blue="33" green="33" red="33" type="rgb"/>
                         </Property>
                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                           <Table columnCount="9" rowCount="4">
-                            <Column editable="true" title="Nombre" type="java.lang.Object"/>
-                            <Column editable="true" title="Apellido" type="java.lang.Object"/>
-                            <Column editable="true" title="Nacimiento" type="java.lang.Object"/>
-                            <Column editable="true" title="Nacionalidad" type="java.lang.Object"/>
-                            <Column editable="true" title="Club" type="java.lang.Object"/>
-                            <Column editable="true" title="Posicion" type="java.lang.Object"/>
-                            <Column editable="true" title="Goles" type="java.lang.Object"/>
-                            <Column editable="true" title="TarjetasAmarillas" type="java.lang.Object"/>
-                            <Column editable="true" title="TarjetasRojas" type="java.lang.Object"/>
+                            <Column editable="false" title="Nombre" type="java.lang.Object"/>
+                            <Column editable="false" title="Apellido" type="java.lang.Object"/>
+                            <Column editable="false" title="Nacimiento" type="java.lang.Object"/>
+                            <Column editable="false" title="Nacionalidad" type="java.lang.Object"/>
+                            <Column editable="false" title="Club" type="java.lang.Object"/>
+                            <Column editable="false" title="Posicion" type="java.lang.Object"/>
+                            <Column editable="false" title="Goles" type="java.lang.Object"/>
+                            <Column editable="false" title="TarjetasAmarillas" type="java.lang.Object"/>
+                            <Column editable="false" title="TarjetasRojas" type="java.lang.Object"/>
                           </Table>
                         </Property>
                       </Properties>

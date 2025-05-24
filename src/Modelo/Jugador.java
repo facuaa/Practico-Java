@@ -5,11 +5,11 @@
 package Modelo;
 public class Jugador extends Persona{
     private String clubActual, posicion;
-    private int goles, tarjetasAmarillas, tarjetasRojas;
+    private String goles, tarjetasAmarillas, tarjetasRojas;
     
     public Jugador(){
     }
-    public Jugador(String nom, String apel, String fecha, String nac, String club, String posicion,int goles, int tarAmarillas, int tarRojas){
+    public Jugador(String nom, String apel, String fecha, String nac, String club, String posicion,String goles, String tarAmarillas, String tarRojas){
     super(nom,apel,fecha,nac);
     this.clubActual=club;
     this.posicion=posicion;
@@ -34,27 +34,27 @@ public class Jugador extends Persona{
         this.posicion = posicion;
     }
 
-    public int getGoles() {
+    public String getGoles() {
         return goles;
     }
 
-    public void setGoles(int goles) {
+    public void setGoles(String goles) {
         this.goles = goles;
     }
 
-    public int getTarjetasAmarillas() {
+    public String getTarjetasAmarillas() {
         return tarjetasAmarillas;
     }
 
-    public void setTarjetasAmarillas(int tarjetasAmarillas) {
+    public void setTarjetasAmarillas(String tarjetasAmarillas) {
         this.tarjetasAmarillas = tarjetasAmarillas;
     }
 
-    public int getTarjetasRojas() {
+    public String getTarjetasRojas() {
         return tarjetasRojas;
     }
 
-    public void setTarjetasRojas(int tarjetasRojas) {
+    public void setTarjetasRojas(String tarjetasRojas) {
         this.tarjetasRojas = tarjetasRojas;
     }
 
