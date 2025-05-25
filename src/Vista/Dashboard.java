@@ -30,6 +30,7 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         initComponents();
         this.setExtendedState(this.MAXIMIZED_BOTH);
+       
     }
         public Dashboard(ControladorJugador m,ControladorArbitro p ) {
              initComponents();
@@ -38,7 +39,6 @@ public class Dashboard extends javax.swing.JFrame {
              this.controladorArbitro=p;
        this.panelIngresoJugador.setVisible(false);
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -119,8 +119,8 @@ public class Dashboard extends javax.swing.JFrame {
         jSeparator7 = new javax.swing.JSeparator();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        txtNombre2 = new javax.swing.JTextField();
-        txtDia2 = new javax.swing.JTextField();
+        txtNombre1 = new javax.swing.JTextField();
+        txtDiaA = new javax.swing.JTextField();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
@@ -129,25 +129,28 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel39 = new javax.swing.JLabel();
         txtTarjetasTotales = new javax.swing.JTextField();
         botonCargarArbitro = new javax.swing.JButton();
-        btnMenu = new javax.swing.JButton();
+        btnSalir = new javax.swing.JButton();
         jSeparator9 = new javax.swing.JSeparator();
         jLabel40 = new javax.swing.JLabel();
         BoxInternacional = new javax.swing.JComboBox<>();
-        txtNacionalidad2 = new javax.swing.JTextField();
-        txtApellido2 = new javax.swing.JTextField();
-        txtAnio2 = new javax.swing.JTextField();
-        txtMes2 = new javax.swing.JTextField();
+        txtNacionalidad1 = new javax.swing.JTextField();
+        txtApellido1 = new javax.swing.JTextField();
+        txtAnioA = new javax.swing.JTextField();
+        txtMesA = new javax.swing.JTextField();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
-        lblErrorNombre2 = new javax.swing.JLabel();
-        lblErrorApellido2 = new javax.swing.JLabel();
-        lblErrorFecha = new javax.swing.JLabel();
-        lblErrorNacionalidad2 = new javax.swing.JLabel();
-        lblErrorTarjetasTotales = new javax.swing.JLabel();
+        MensajeErrorNombreA = new javax.swing.JLabel();
+        MensajeErrorApellidoA = new javax.swing.JLabel();
+        MensajeErrorFechaA = new javax.swing.JLabel();
+        MensajeErrorNacionalidadA = new javax.swing.JLabel();
+        MensajeErrorTarTotales = new javax.swing.JLabel();
         canvas1 = new java.awt.Canvas();
         MostrarJugadores = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tablaJugadores = new javax.swing.JTable();
+        MostrarArbitro = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        mostrarArbitro = new javax.swing.JTable();
 
         panelMenu1.setBackground(new java.awt.Color(255, 255, 255));
         panelMenu1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
@@ -382,7 +385,7 @@ public class Dashboard extends javax.swing.JFrame {
         panelMenuLayout.setHorizontalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
-                .addGap(0, 177, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(panelMenuLayout.createSequentialGroup()
                 .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -431,7 +434,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(btnArbitros, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnArbitros3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
@@ -451,7 +454,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
         PanelInformacionLayout.setVerticalGroup(
             PanelInformacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+            .addGap(0, 1044, Short.MAX_VALUE)
         );
 
         jPanel5.add(PanelInformacion, "PanelInfo");
@@ -839,15 +842,20 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel34.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel34.setText("Nombre");
 
-        txtNombre2.addActionListener(new java.awt.event.ActionListener() {
+        txtNombre1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNombre2ActionPerformed(evt);
+                txtNombre1ActionPerformed(evt);
             }
         });
 
-        txtDia2.addActionListener(new java.awt.event.ActionListener() {
+        txtDiaA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtDia2ActionPerformed(evt);
+                txtDiaAActionPerformed(evt);
+            }
+        });
+        txtDiaA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtDiaAKeyTyped(evt);
             }
         });
 
@@ -867,6 +875,11 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel39.setText("Tarjetas totales");
 
         txtTarjetasTotales.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtTarjetasTotales.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtTarjetasTotalesKeyTyped(evt);
+            }
+        });
 
         botonCargarArbitro.setText("Cargar");
         botonCargarArbitro.addActionListener(new java.awt.event.ActionListener() {
@@ -875,10 +888,10 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        btnMenu.setText("Menu");
-        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenuActionPerformed(evt);
+                btnSalirActionPerformed(evt);
             }
         });
 
@@ -887,27 +900,37 @@ public class Dashboard extends javax.swing.JFrame {
 
         BoxInternacional.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Si", "No" }));
 
-        txtNacionalidad2.addActionListener(new java.awt.event.ActionListener() {
+        txtNacionalidad1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNacionalidad2ActionPerformed(evt);
+                txtNacionalidad1ActionPerformed(evt);
             }
         });
 
-        txtApellido2.addActionListener(new java.awt.event.ActionListener() {
+        txtApellido1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtApellido2ActionPerformed(evt);
+                txtApellido1ActionPerformed(evt);
             }
         });
 
-        txtAnio2.addActionListener(new java.awt.event.ActionListener() {
+        txtAnioA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAnio2ActionPerformed(evt);
+                txtAnioAActionPerformed(evt);
+            }
+        });
+        txtAnioA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtAnioAKeyTyped(evt);
             }
         });
 
-        txtMes2.addActionListener(new java.awt.event.ActionListener() {
+        txtMesA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtMes2ActionPerformed(evt);
+                txtMesAActionPerformed(evt);
+            }
+        });
+        txtMesA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtMesAKeyTyped(evt);
             }
         });
 
@@ -917,33 +940,36 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel42.setText("/");
 
-        lblErrorNombre2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblErrorNombre2.setText("\" \"");
+        MensajeErrorNombreA.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorNombreA.setText("\" \"");
 
-        lblErrorApellido2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblErrorApellido2.setText("\" \"");
+        MensajeErrorApellidoA.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorApellidoA.setText("\" \"");
 
-        lblErrorFecha.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblErrorFecha.setText("\" \"");
+        MensajeErrorFechaA.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorFechaA.setText("\" \"");
 
-        lblErrorNacionalidad2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblErrorNacionalidad2.setText("\" \"");
+        MensajeErrorNacionalidadA.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorNacionalidadA.setText("\" \"");
 
-        lblErrorTarjetasTotales.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        lblErrorTarjetasTotales.setText("\" \"");
+        MensajeErrorTarTotales.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        MensajeErrorTarTotales.setText("\" \"");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(204, 204, 204))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(39, 39, 39)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator9)
+                    .addComponent(jSeparator8)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator8, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
-                            .addComponent(jSeparator7)
+                            .addComponent(jSeparator9)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -952,50 +978,51 @@ public class Dashboard extends javax.swing.JFrame {
                                         .addGap(78, 78, 78)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel36)
                                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(txtDia2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtDiaA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jLabel42)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(txtMes2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtMesA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jLabel32)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(txtAnio2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(lblErrorNombre2)
-                                            .addComponent(lblErrorFecha))
+                                                .addComponent(txtAnioA, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(MensajeErrorNombreA)
+                                            .addComponent(MensajeErrorFechaA))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel35)
                                             .addComponent(jLabel37)
-                                            .addComponent(txtNacionalidad2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(txtApellido2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(lblErrorApellido2)
-                                            .addComponent(lblErrorNacionalidad2)))
+                                            .addComponent(txtNacionalidad1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(txtApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(MensajeErrorApellidoA)
+                                            .addComponent(MensajeErrorNacionalidadA)))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(jLabel38)
                                         .addGap(102, 102, 102)
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblErrorTarjetasTotales)
-                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addComponent(txtTarjetasTotales, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(BoxInternacional, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel40)
-                                                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                                    .addGap(5, 5, 5)
-                                                    .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(botonCargarArbitro, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(22, 22, 22))))))))
-                        .addGap(0, 186, Short.MAX_VALUE)))
-                .addContainerGap())
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGap(5, 5, 5)
+                                                .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(224, 224, 224)
+                                                .addComponent(botonCargarArbitro, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(MensajeErrorTarTotales)
+                                                    .addComponent(txtTarjetasTotales, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(BoxInternacional, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addComponent(jLabel40)
+                                                    .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 208, Short.MAX_VALUE)))
+                        .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(204, 204, 204))
+                .addContainerGap()
+                .addComponent(jSeparator7))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addGap(49, 49, 49)
@@ -1005,8 +1032,8 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
-                .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81)
+                .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -1018,30 +1045,30 @@ public class Dashboard extends javax.swing.JFrame {
                             .addComponent(jLabel35))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtNombre2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtApellido2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtNombre1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtApellido1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblErrorNombre2)
-                    .addComponent(lblErrorApellido2))
+                    .addComponent(MensajeErrorNombreA)
+                    .addComponent(MensajeErrorApellidoA))
                 .addGap(22, 22, 22)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel36)
                     .addComponent(jLabel37))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtDia2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDiaA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMes2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMesA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtAnio2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNacionalidad2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtAnioA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNacionalidad1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblErrorFecha)
-                    .addComponent(lblErrorNacionalidad2))
-                .addGap(79, 79, 79)
-                .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MensajeErrorFechaA)
+                    .addComponent(MensajeErrorNacionalidadA))
+                .addGap(80, 80, 80)
+                .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel38)
@@ -1049,7 +1076,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtTarjetasTotales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblErrorTarjetasTotales)
+                .addComponent(MensajeErrorTarTotales)
                 .addGap(12, 12, 12)
                 .addComponent(jLabel40)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1060,7 +1087,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonCargarArbitro, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1110,24 +1137,53 @@ public class Dashboard extends javax.swing.JFrame {
         MostrarJugadores.setLayout(MostrarJugadoresLayout);
         MostrarJugadoresLayout.setHorizontalGroup(
             MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 931, Short.MAX_VALUE)
+            .addGap(0, 628, Short.MAX_VALUE)
             .addGroup(MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(MostrarJugadoresLayout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 919, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 616, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         MostrarJugadoresLayout.setVerticalGroup(
             MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+            .addGap(0, 1044, Short.MAX_VALUE)
             .addGroup(MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(MostrarJugadoresLayout.createSequentialGroup()
                     .addGap(107, 107, 107)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
                     .addGap(108, 108, 108)))
         );
 
         jPanel5.add(MostrarJugadores, "MostrarJugadores");
+
+        mostrarArbitro.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Nombre", "Apellido", "Nacionalidad", "Nacimiento", "Cantidad De Tarjetas", "Internacional"
+            }
+        ));
+        jScrollPane1.setViewportView(mostrarArbitro);
+
+        javax.swing.GroupLayout MostrarArbitroLayout = new javax.swing.GroupLayout(MostrarArbitro);
+        MostrarArbitro.setLayout(MostrarArbitroLayout);
+        MostrarArbitroLayout.setHorizontalGroup(
+            MostrarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE)
+        );
+        MostrarArbitroLayout.setVerticalGroup(
+            MostrarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MostrarArbitroLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(628, Short.MAX_VALUE))
+        );
+
+        jPanel5.add(MostrarArbitro, "MostrarArbitro");
 
         javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
         Background.setLayout(BackgroundLayout);
@@ -1183,132 +1239,163 @@ public class Dashboard extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnArbitros2ActionPerformed
 
-    private void txtMes2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMes2ActionPerformed
+    private void txtMesAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMesAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtMes2ActionPerformed
+    }//GEN-LAST:event_txtMesAActionPerformed
 
-    private void txtAnio2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnio2ActionPerformed
+    private void txtAnioAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAnioAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAnio2ActionPerformed
+    }//GEN-LAST:event_txtAnioAActionPerformed
 
-    private void txtApellido2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellido2ActionPerformed
+    private void txtApellido1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtApellido1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtApellido2ActionPerformed
+    }//GEN-LAST:event_txtApellido1ActionPerformed
 
-    private void txtNacionalidad2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidad2ActionPerformed
+    private void txtNacionalidad1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacionalidad1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNacionalidad2ActionPerformed
+    }//GEN-LAST:event_txtNacionalidad1ActionPerformed
 
-    private void btnMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuActionPerformed
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
 
-    }//GEN-LAST:event_btnMenuActionPerformed
+    }//GEN-LAST:event_btnSalirActionPerformed
 
     private void botonCargarArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarArbitroActionPerformed
-        String nombre= txtNombre.getText().trim();
-        String apellido = txtApellido.getText().trim();
-        String nacionalidad=txtNacionalidad.getText().trim();
-        String tarjetasTotales= txtTarjetasTotales.getText().trim();
-        boolean valido= true;
-        String diaStr = txtDia.getText();
-        String mesStr = txtMes.getText();
-        String anioStr = txtAnio.getText();
-        int TarjetasTotales=0;
-
-        // FECHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        if (diaStr.isEmpty() || mesStr.isEmpty() || anioStr.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor, complete la fecha de nacimiento.");
-            return;
+        String nombre= txtNombre1.getText();
+        String apellido = txtApellido1.getText();
+        String nacionalidad=txtNacionalidad1.getText();
+        boolean validacion= true;
+        
+        if(nombre.isEmpty()){
+        MensajeErrorNombreA.setText("Ingrese Nombre Valido");
+        txtNombre1.setBackground(Color.pink);
+        validacion= false;
+        }else{
+        MensajeErrorNombreA.setText("");
+        txtNombre1.setBackground(Color.WHITE);
         }
-
-        int dia = Integer.parseInt(diaStr);
-        int mes = Integer.parseInt(mesStr);
-        int anio = Integer.parseInt(anioStr);
-        /*
-        try {
-            LocalDate fechaNacimiento = LocalDate.of(anio, mes, dia);//Libreria para ver si funca o no la fecha cargada, mas bien verifica
-            // Si no lanza excepción, la fecha es válida
-            System.out.println("Fecha válida: " + fechaNacimiento);
-        } catch (DateTimeException ex) {
-            JOptionPane.showMessageDialog(this, "Fecha de nacimiento inválida.");
-            return;
-        }*/
-
-        //se eliminan errores anteriores
-        MensajeErrorNombre.setText("");
-        MensajeErrorApellido.setText("");
-        MensajeErrorNacionalidad.setText("");
-        lblErrorTarjetasTotales.setText("");
-        lblErrorFecha.setText("");
-
-        //Se ponen las casillas blancas
-        txtDia.setBackground(Color.WHITE);
-        txtNombre.setBackground(Color.WHITE);
-        txtNacionalidad.setBackground(Color.WHITE);
-        txtTarjetasTotales.setBackground(Color.WHITE);
-
-        //Validacion de casillas vacias y contenido correcto
-        //Nombre
-        if(nombre.isEmpty()){//si la casillas esta vacia
-            MensajeErrorNombre.setText("El nombre no puede estar vacío.");//aparece un label con mensaje
-            txtNombre.setBackground(Color.pink);//y se marca la casilla en rojo
-            valido=false;
-        } else if(!nombre.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){//regex
-            MensajeErrorNombre.setText("Nombre inválido.Solo letras");
-            txtNombre.setBackground(Color.pink);
-            valido=false;
-        }
-        //Apellido
+            
         if(apellido.isEmpty()){
-            MensajeErrorApellido.setText("El nombre no puede estar vacío.");
-            txtNombre.setBackground(Color.pink);
-            valido=false;
-        } else if(!apellido.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]+")){
-            MensajeErrorApellido.setText("Apellido inválido. Solo letras");
-            txtDia.setBackground(Color.PINK);
-            valido=false;
+        MensajeErrorApellidoA.setText("Ingrese Apellido Valido");
+        txtApellido1.setBackground(Color.pink);
+        validacion=false;
+        }else{
+        MensajeErrorApellidoA.setText("");
+        txtApellido1.setBackground(Color.WHITE);
         }
-        //Nacionalidad
+        
         if(nacionalidad.isEmpty()){
-            MensajeErrorNacionalidad.setText("El nombre no puede estar vacío.");
-            txtNacionalidad.setBackground(Color.pink);
-            valido=false;
-        } else if(!nacionalidad.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ\\s]")){
-            MensajeErrorNacionalidad.setText("El nombre no puede estar vacío.");
-            txtNacionalidad.setBackground(Color.pink);
+        MensajeErrorNacionalidadA.setText("Ingrese Nacionalidad Valida");
+        txtNacionalidad1.setBackground(Color.pink);
+        validacion= false;
+        }else{
+        MensajeErrorNacionalidadA.setText("");
+        txtNacionalidad1.setBackground(Color.WHITE);
         }
-        //tarjetas Amarillas
-        if(tarjetasTotales.isEmpty()){
-            lblErrorTarjetasTotales.setText("El nombre no puede estar vacío.");
-            txtNombre.setBackground(Color.pink);
-            valido=false;
+        
+        String diaTexto = txtDiaA.getText().trim();
+if (diaTexto.isEmpty()) {
+    MensajeErrorFechaA.setText("Fecha inválida: día vacío");
+    txtDiaA.setBackground(Color.PINK);
+    validacion = false;
+} else {
+    try {
+        int dia = Integer.parseInt(diaTexto);
+        if (dia < 1 || dia > 30) {
+            MensajeErrorFechaA.setText("Día inválido (1-30)");
+            txtDiaA.setBackground(Color.PINK);
+            validacion = false;
+        } else {
+            txtDiaA.setBackground(Color.WHITE);
         }
-        //validación de fecha
+    } catch (NumberFormatException e) {
+        MensajeErrorFechaA.setText("Día debe ser numérico");
+        txtDiaA.setBackground(Color.PINK);
+        validacion = false;
+    }
+}
 
-        //Controlers para tarjetas
 
-        try{
-            TarjetasTotales= Integer.parseInt(tarjetasTotales);
-            if(TarjetasTotales<0 || TarjetasTotales>100){
-                txtTarjetasTotales.setBackground(Color.PINK);
-                valido= false;
-            }
-        }catch(NumberFormatException ex){
-            txtTarjetasTotales.setBackground(Color.PINK);
-            valido = false;
+String mesTexto = txtMesA.getText().trim();
+if (mesTexto.isEmpty()) {
+    MensajeErrorFechaA.setText("Fecha inválida: mes vacío");
+    txtMesA.setBackground(Color.PINK);
+    validacion = false;
+} else {
+    try {
+        int MES = Integer.parseInt(mesTexto);
+        if (MES < 1 || MES > 12) {
+            MensajeErrorFechaA.setText("Mes inválido Ej:(Enero,...,Diciembre)");
+            txtMesA.setBackground(Color.PINK);
+            validacion = false;
+        } else {
+            txtMesA.setBackground(Color.WHITE);
         }
+    } catch (NumberFormatException e) {
+        MensajeErrorFechaA.setText("Mes debe ser numérico");
+        txtMesA.setBackground(Color.PINK);
+        validacion = false;
+    }
+}
 
-        if(!valido){
-            JOptionPane.showMessageDialog(this,"Corrija las casillas en rojo");
-            return;
+
+String anioTexto = txtAnioA.getText().trim();
+if (anioTexto.isEmpty()) {
+    MensajeErrorFechaA.setText("Año inválido: campo vacío");
+    txtAnioA.setBackground(Color.PINK);
+    validacion = false;
+} else {
+    try {
+        int anio = Integer.parseInt(anioTexto);
+        if (anio < 1940 || anio > 2023) {
+            MensajeErrorFechaA.setText("Año inválido (1940-2023)");
+            txtAnioA.setBackground(Color.PINK);
+            validacion = false;
+        } else {
+            txtAnioA.setBackground(Color.WHITE);
         }
+    } catch (NumberFormatException e) {
+        MensajeErrorFechaA.setText("Año Debe Ser Numérico");
+        txtAnioA.setBackground(Color.PINK);
+        validacion = false;
+    }
+}
+String cantTarjetasTexto = txtTarjetasTotales.getText().trim();
+if (cantTarjetasTexto.isEmpty()) {
+    MensajeErrorTarTotales.setText("Error: campo vacío");
+    txtTarjetasTotales.setBackground(Color.PINK);
+    validacion = false;
+} else {
+    try {
+        int cantT = Integer.parseInt(cantTarjetasTexto);
+        
+     
+    } catch (NumberFormatException e) {
+       MensajeErrorTarTotales.setText("Cantidad de Tarjetas Debe Ser Numérico");
+       txtTarjetasTotales.setBackground(Color.PINK);
+        validacion = false;
+    }
+}
+        if(!validacion){
+        JOptionPane.showMessageDialog(this, "Error en la carga");
+        return;
+        }
+       
+        String a = (String) BoxInternacional.getSelectedItem();
+        boolean a1;
+        if (a.equals("Si")) {
+          a1 = true;
+           } else {
+          a1 = false;}
+            
+        String fecha= txtDiaA+"/"+txtMesA+"/"+txtAnioA;
+        int cantT = Integer.parseInt(cantTarjetasTexto);
 
-        //Si todo esta bien, cargar info a jugador
-        //DIOSSSSSSS NICO LPM FIJATE COMO MRD NOMBRAS A LAS FUNCIONESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
-        controladorArbitro.colocarNombre(nombre);
         controladorArbitro.colocarApellido(apellido);
+        controladorArbitro.colocarNombre(nombre);
+        controladorArbitro.colocarInternacional(a1);
+        controladorArbitro.colocarNacimiento(fecha);
+        controladorArbitro.colocarTarjetasTotales(cantT);
         controladorArbitro.colocarNacionalidad(nacionalidad);
-        controladorArbitro.colocarTarjetasTotales(TarjetasTotales);
-
         //insertar jugador a la lista
         controladorArbitro.AgregarArbitroALista();
         JOptionPane.showMessageDialog(this, "Se cargo el jugador correctamente");
@@ -1323,13 +1410,13 @@ public class Dashboard extends javax.swing.JFrame {
         txtTarjetasTotales.setText("");
     }//GEN-LAST:event_botonCargarArbitroActionPerformed
 
-    private void txtDia2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDia2ActionPerformed
+    private void txtDiaAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDiaAActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtDia2ActionPerformed
+    }//GEN-LAST:event_txtDiaAActionPerformed
 
-    private void txtNombre2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre2ActionPerformed
+    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre2ActionPerformed
+    }//GEN-LAST:event_txtNombre1ActionPerformed
 
     private void txtCantidadGolesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadGolesKeyTyped
         char caracter = evt.getKeyChar();
@@ -1636,7 +1723,7 @@ if (rojas.isEmpty()) {
 
     private void btnArbitros3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbitros3ActionPerformed
         CardLayout cl = (CardLayout) jPanel5.getLayout();
-        cl.show(jPanel5, "MostrarJugadores");
+        cl.show(jPanel5, "MostrarArbitro");
     }//GEN-LAST:event_btnArbitros3ActionPerformed
 
     private void btnJugadores1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugadores1ActionPerformed
@@ -1649,9 +1736,8 @@ if (rojas.isEmpty()) {
     }//GEN-LAST:event_botonVistaEquiposActionPerformed
 
     private void btnArbitrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbitrosActionPerformed
-
-        CardLayout cl = (CardLayout) jPanel5.getLayout();
-        cl.show(jPanel5, "cargarArbitro");
+    CardLayout cl = (CardLayout) jPanel5.getLayout();
+     cl.show(jPanel5, "cargarArbitro");
     }//GEN-LAST:event_btnArbitrosActionPerformed
 private List<Jugador> m;
     private void btnJugadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJugadoresActionPerformed
@@ -1673,7 +1759,9 @@ private List<Jugador> m;
         txtApellido.setText("");
         txtNombre.setText("");
         txtNacionalidad.setText("");
-        txtTarjetasTotales.setText("");
+        txtCantidadGoles.setText("");
+        txtCantidadAmarillas.setText("");
+        txtCantidadRojas.setText("");
         //Lo mismo pero con los mensajes de error
         MensajeErrorAmarillas.setText("");
         MensajeErrorApellido.setText("");
@@ -1698,6 +1786,44 @@ private List<Jugador> m;
         CardLayout cl = (CardLayout) jPanel5.getLayout();
         cl.show(jPanel5, "PanelInfo");
     }//GEN-LAST:event_botonSalirActionPerformed
+
+    private void txtDiaAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDiaAKeyTyped
+        char caracter = evt.getKeyChar();
+        if(!Character.isDigit(caracter) && caracter!= KeyEvent.VK_BACK_SPACE){
+            evt.consume();
+        }
+        if(txtDiaA.getText().length()>=2 && caracter != KeyEvent.VK_BACK_SPACE){
+        evt.consume();
+        }
+    }//GEN-LAST:event_txtDiaAKeyTyped
+
+    private void txtMesAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtMesAKeyTyped
+        char caracter = evt.getKeyChar();
+        if(!Character.isDigit(caracter) && caracter!= KeyEvent.VK_BACK_SPACE){
+            evt.consume();
+        }
+        if(txtMesA.getText().length()>=2 && caracter != KeyEvent.VK_BACK_SPACE){
+        evt.consume();
+        }
+    }//GEN-LAST:event_txtMesAKeyTyped
+
+    private void txtAnioAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAnioAKeyTyped
+        char caracter = evt.getKeyChar();
+        if(!Character.isDigit(caracter) && caracter!= KeyEvent.VK_BACK_SPACE){
+            evt.consume();
+        }
+        if(txtAnioA.getText().length()>=4 && caracter != KeyEvent.VK_BACK_SPACE){
+        evt.consume();
+        }
+    }//GEN-LAST:event_txtAnioAKeyTyped
+
+    private void txtTarjetasTotalesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtTarjetasTotalesKeyTyped
+              char caracter = evt.getKeyChar();
+        if(!Character.isDigit(caracter) && caracter!= KeyEvent.VK_BACK_SPACE){
+            evt.consume();
+        }
+        
+    }//GEN-LAST:event_txtTarjetasTotalesKeyTyped
     
     //funcion tabla jugadores 
    public void ActualizarTablaJugadores(ArrayList<Jugador> Lista){
@@ -1752,12 +1878,12 @@ private List<Jugador> m;
         //</editor-fold>
 
         /* Create and display the form */
-       
-        java.awt.EventQueue.invokeLater(new Runnable() {
+       java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Dashboard().setVisible(true);
             }
         });
+        
         
     }
    
@@ -1769,11 +1895,17 @@ private List<Jugador> m;
     public javax.swing.JComboBox<String> BoxPosiciones;
     public javax.swing.JLabel MensajeErrorAmarillas;
     public javax.swing.JLabel MensajeErrorApellido;
+    public javax.swing.JLabel MensajeErrorApellidoA;
     public javax.swing.JLabel MensajeErrorFecha;
+    public javax.swing.JLabel MensajeErrorFechaA;
     public javax.swing.JLabel MensajeErrorGoles;
     public javax.swing.JLabel MensajeErrorNacionalidad;
+    public javax.swing.JLabel MensajeErrorNacionalidadA;
     public javax.swing.JLabel MensajeErrorNombre;
+    public javax.swing.JLabel MensajeErrorNombreA;
     public javax.swing.JLabel MensajeErrorRojas;
+    public javax.swing.JLabel MensajeErrorTarTotales;
+    private javax.swing.JPanel MostrarArbitro;
     private javax.swing.JPanel MostrarJugadores;
     private javax.swing.JPanel PanelInformacion;
     private javax.swing.JPanel PanelIngreso;
@@ -1790,7 +1922,7 @@ private List<Jugador> m;
     private javax.swing.JButton btnJugadores1;
     private javax.swing.JButton btnJugadores2;
     private javax.swing.JButton btnJugadores3;
-    private javax.swing.JButton btnMenu;
+    private javax.swing.JButton btnSalir;
     private java.awt.Canvas canvas1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1826,6 +1958,7 @@ private List<Jugador> m;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
@@ -1837,31 +1970,27 @@ private List<Jugador> m;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    public javax.swing.JLabel lblErrorApellido2;
-    public javax.swing.JLabel lblErrorFecha;
-    public javax.swing.JLabel lblErrorNacionalidad2;
-    public javax.swing.JLabel lblErrorNombre2;
-    public javax.swing.JLabel lblErrorTarjetasTotales;
+    private javax.swing.JTable mostrarArbitro;
     private javax.swing.JPanel panelIngresoArbitro;
     private javax.swing.JPanel panelIngresoJugador;
     private javax.swing.JPanel panelMenu;
     private javax.swing.JPanel panelMenu1;
     private javax.swing.JTable tablaJugadores;
     public javax.swing.JTextField txtAnio;
-    public javax.swing.JTextField txtAnio2;
+    public javax.swing.JTextField txtAnioA;
     public javax.swing.JTextField txtApellido;
-    public javax.swing.JTextField txtApellido2;
+    public javax.swing.JTextField txtApellido1;
     public javax.swing.JTextField txtCantidadAmarillas;
     public javax.swing.JTextField txtCantidadGoles;
     public javax.swing.JTextField txtCantidadRojas;
     public javax.swing.JTextField txtDia;
-    public javax.swing.JTextField txtDia2;
+    public javax.swing.JTextField txtDiaA;
     public javax.swing.JTextField txtMes;
-    public javax.swing.JTextField txtMes2;
+    public javax.swing.JTextField txtMesA;
     public javax.swing.JTextField txtNacionalidad;
-    public javax.swing.JTextField txtNacionalidad2;
+    public javax.swing.JTextField txtNacionalidad1;
     public javax.swing.JTextField txtNombre;
-    public javax.swing.JTextField txtNombre2;
+    public javax.swing.JTextField txtNombre1;
     public javax.swing.JTextField txtTarjetasTotales;
     // End of variables declaration//GEN-END:variables
 }

@@ -334,7 +334,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="177" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="jLabel1" min="-2" pref="388" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -393,7 +393,7 @@
                       <Component id="btnArbitros" min="-2" pref="34" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnArbitros3" min="-2" pref="39" max="-2" attributes="0"/>
-                      <EmptySpace pref="135" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jSeparator10" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
@@ -589,7 +589,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="700" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1044" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -1223,14 +1223,18 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="canvas1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
+                          </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="39" pref="39" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jSeparator9" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jSeparator8" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jSeparator8" alignment="0" pref="688" max="32767" attributes="0"/>
-                                          <Component id="jSeparator7" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jSeparator9" alignment="0" max="32767" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1239,64 +1243,66 @@
                                                       <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="jLabel34" alignment="0" min="-2" pref="104" max="-2" attributes="0"/>
-                                                          <Component id="txtNombre2" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                                          <Component id="txtNombre1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
                                                           <Component id="jLabel36" alignment="0" min="-2" max="-2" attributes="0"/>
                                                           <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="txtDia2" min="-2" pref="40" max="-2" attributes="0"/>
+                                                              <Component id="txtDiaA" min="-2" pref="40" max="-2" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Component id="jLabel42" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="txtMes2" min="-2" pref="40" max="-2" attributes="0"/>
+                                                              <Component id="txtMesA" min="-2" pref="40" max="-2" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
                                                               <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace max="-2" attributes="0"/>
-                                                              <Component id="txtAnio2" min="-2" pref="40" max="-2" attributes="0"/>
+                                                              <Component id="txtAnioA" min="-2" pref="40" max="-2" attributes="0"/>
                                                           </Group>
-                                                          <Component id="lblErrorNombre2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="lblErrorFecha" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="MensajeErrorNombreA" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="MensajeErrorFechaA" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace pref="39" max="32767" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="jLabel35" alignment="0" min="-2" max="-2" attributes="0"/>
                                                           <Component id="jLabel37" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="txtNacionalidad2" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                                          <Component id="txtApellido2" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                                          <Component id="lblErrorApellido2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="lblErrorNacionalidad2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="txtNacionalidad1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                                          <Component id="txtApellido1" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                                          <Component id="MensajeErrorApellidoA" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="MensajeErrorNacionalidadA" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="lblErrorTarjetasTotales" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                                              <Component id="txtTarjetasTotales" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
-                                                              <Component id="BoxInternacional" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
-                                                              <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="jLabel39" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
-                                                              <Group type="102" alignment="0" attributes="0">
-                                                                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
-                                                                  <Component id="btnMenu" min="-2" pref="85" max="-2" attributes="0"/>
-                                                                  <EmptySpace max="32767" attributes="0"/>
-                                                                  <Component id="botonCargarArbitro" min="-2" pref="85" max="-2" attributes="0"/>
-                                                                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                                          <Group type="102" alignment="0" attributes="0">
+                                                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                                                              <Component id="btnSalir" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="224" max="-2" attributes="0"/>
+                                                              <Component id="botonCargarArbitro" min="-2" pref="85" max="-2" attributes="0"/>
+                                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                          </Group>
+                                                          <Group type="102" attributes="0">
+                                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                                  <Component id="MensajeErrorTarTotales" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="txtTarjetasTotales" alignment="0" min="-2" pref="200" max="-2" attributes="0"/>
+                                                                  <Component id="BoxInternacional" alignment="0" min="-2" pref="91" max="-2" attributes="0"/>
+                                                                  <Component id="jLabel40" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="jLabel39" alignment="0" min="-2" pref="127" max="-2" attributes="0"/>
                                                               </Group>
+                                                              <EmptySpace max="32767" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                   </Group>
                                               </Group>
+                                              <EmptySpace pref="208" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="0" pref="186" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="canvas1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jSeparator7" max="32767" attributes="0"/>
                           </Group>
                           <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
@@ -1310,8 +1316,8 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                              <Component id="jSeparator7" min="-2" pref="10" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
+                              <Component id="jSeparator7" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
@@ -1325,15 +1331,15 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="txtNombre2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="txtApellido2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtNombre1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="txtApellido1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblErrorNombre2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblErrorApellido2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MensajeErrorNombreA" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MensajeErrorApellidoA" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -1342,20 +1348,20 @@
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="txtDia2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtDiaA" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel42" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="txtMes2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtMesA" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel32" alignment="3" min="-2" pref="37" max="-2" attributes="0"/>
-                                  <Component id="txtAnio2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="txtNacionalidad2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtAnioA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNacionalidad1" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblErrorFecha" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblErrorNacionalidad2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="MensajeErrorFechaA" min="-2" max="-2" attributes="0"/>
+                                  <Component id="MensajeErrorNacionalidadA" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                              <Component id="jSeparator8" min="-2" pref="3" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+                              <Component id="jSeparator8" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
                                   <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1364,7 +1370,7 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="txtTarjetasTotales" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblErrorTarjetasTotales" min="-2" max="-2" attributes="0"/>
+                              <Component id="MensajeErrorTarTotales" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                               <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1376,7 +1382,7 @@
                               <Component id="jSeparator9" min="-2" pref="9" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="btnMenu" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                  <Component id="btnSalir" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                   <Component id="botonCargarArbitro" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1418,17 +1424,18 @@
                         <Property name="text" type="java.lang.String" value="Nombre"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtNombre2">
+                    <Component class="javax.swing.JTextField" name="txtNombre1">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombre2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNombre1ActionPerformed"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtDia2">
+                    <Component class="javax.swing.JTextField" name="txtDiaA">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDia2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtDiaAActionPerformed"/>
+                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtDiaAKeyTyped"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -1482,6 +1489,9 @@
                           <Font name="Segoe UI" size="14" style="1"/>
                         </Property>
                       </Properties>
+                      <Events>
+                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtTarjetasTotalesKeyTyped"/>
+                      </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
@@ -1494,12 +1504,12 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonCargarArbitroActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnMenu">
+                    <Component class="javax.swing.JButton" name="btnSalir">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="Menu"/>
+                        <Property name="text" type="java.lang.String" value="Salir"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMenuActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSalirActionPerformed"/>
                       </Events>
                     </Component>
                     <Component class="javax.swing.JSeparator" name="jSeparator9">
@@ -1526,33 +1536,35 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtNacionalidad2">
+                    <Component class="javax.swing.JTextField" name="txtNacionalidad1">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNacionalidad2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNacionalidad1ActionPerformed"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtApellido2">
+                    <Component class="javax.swing.JTextField" name="txtApellido1">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtApellido2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtApellido1ActionPerformed"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtAnio2">
+                    <Component class="javax.swing.JTextField" name="txtAnioA">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAnio2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAnioAActionPerformed"/>
+                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtAnioAKeyTyped"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="txtMes2">
+                    <Component class="javax.swing.JTextField" name="txtMesA">
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMes2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtMesAActionPerformed"/>
+                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtMesAKeyTyped"/>
                       </Events>
                       <AuxValues>
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -1574,7 +1586,7 @@
                         <Property name="text" type="java.lang.String" value="/"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="lblErrorNombre2">
+                    <Component class="javax.swing.JLabel" name="MensajeErrorNombreA">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -1585,7 +1597,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="lblErrorApellido2">
+                    <Component class="javax.swing.JLabel" name="MensajeErrorApellidoA">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -1596,7 +1608,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="lblErrorFecha">
+                    <Component class="javax.swing.JLabel" name="MensajeErrorFechaA">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -1607,7 +1619,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="lblErrorNacionalidad2">
+                    <Component class="javax.swing.JLabel" name="MensajeErrorNacionalidadA">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -1618,7 +1630,7 @@
                         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
                       </AuxValues>
                     </Component>
-                    <Component class="javax.swing.JLabel" name="lblErrorTarjetasTotales">
+                    <Component class="javax.swing.JLabel" name="MensajeErrorTarTotales">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Segoe UI" size="12" style="1"/>
@@ -1645,11 +1657,11 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="931" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="628" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" pref="919" max="32767" attributes="0"/>
+                              <Component id="jScrollPane2" pref="616" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1657,11 +1669,11 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="700" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1044" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
-                              <Component id="jScrollPane2" pref="485" max="32767" attributes="0"/>
+                              <Component id="jScrollPane2" pref="829" max="32767" attributes="0"/>
                               <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -1696,6 +1708,92 @@
                             <Column editable="false" title="TarjetasAmarillas" type="java.lang.Object"/>
                             <Column editable="false" title="TarjetasRojas" type="java.lang.Object"/>
                           </Table>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="MostrarArbitro">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="MostrarArbitro"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jScrollPane1" alignment="0" pref="702" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="628" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTable" name="mostrarArbitro">
+                      <Properties>
+                        <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                          <Table columnCount="6" rowCount="4">
+                            <Column editable="true" title="Nombre" type="java.lang.Object"/>
+                            <Column editable="true" title="Apellido" type="java.lang.Object"/>
+                            <Column editable="true" title="Nacionalidad" type="java.lang.Object"/>
+                            <Column editable="true" title="Nacimiento" type="java.lang.Object"/>
+                            <Column editable="true" title="Cantidad De Tarjetas" type="java.lang.Object"/>
+                            <Column editable="true" title="Internacional" type="java.lang.Object"/>
+                          </Table>
+                        </Property>
+                        <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                          <TableColumnModel selectionModel="0">
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                            <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                              <Title/>
+                              <Editor/>
+                              <Renderer/>
+                            </Column>
+                          </TableColumnModel>
+                        </Property>
+                        <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                          <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                         </Property>
                       </Properties>
                     </Component>
