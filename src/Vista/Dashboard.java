@@ -12,6 +12,7 @@ import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -28,9 +29,11 @@ public class Dashboard extends javax.swing.JFrame {
      */
     public Dashboard() {
         initComponents();
+        this.setExtendedState(this.MAXIMIZED_BOTH);
     }
         public Dashboard(ControladorJugador m,ControladorArbitro p ) {
              initComponents();
+             this.setExtendedState(this.MAXIMIZED_BOTH);
              this.controladorJugador=m;
              this.controladorArbitro=p;
        this.panelIngresoJugador.setVisible(false);
@@ -64,11 +67,11 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnJugadores1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        jSeparator4 = new javax.swing.JSeparator();
         btnArbitros3 = new javax.swing.JButton();
         jSeparator6 = new javax.swing.JSeparator();
         jLabel21 = new javax.swing.JLabel();
         jSeparator10 = new javax.swing.JSeparator();
+        jSeparator11 = new javax.swing.JSeparator();
         jPanel5 = new javax.swing.JPanel();
         PanelInformacion = new javax.swing.JPanel();
         panelIngresoJugador = new javax.swing.JPanel();
@@ -358,8 +361,6 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("Jugador");
 
-        jSeparator4.setForeground(new java.awt.Color(153, 153, 153));
-
         btnArbitros3.setBackground(new java.awt.Color(204, 255, 255));
         btnArbitros3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnArbitros3.setForeground(new java.awt.Color(51, 51, 51));
@@ -392,8 +393,6 @@ public class Dashboard extends javax.swing.JFrame {
                     .addGroup(panelMenuLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator4)
-                            .addComponent(jSeparator6)
                             .addComponent(jSeparator10)
                             .addGroup(panelMenuLayout.createSequentialGroup()
                                 .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -402,7 +401,9 @@ public class Dashboard extends javax.swing.JFrame {
                                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))))
-                    .addComponent(botonVistaEquipos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(botonVistaEquipos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jSeparator6)
+                    .addComponent(jSeparator11))
                 .addContainerGap())
             .addGroup(panelMenuLayout.createSequentialGroup()
                 .addContainerGap()
@@ -414,29 +415,29 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(panelMenuLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(96, 96, 96)
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnJugadores1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnArbitros, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnArbitros3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 135, Short.MAX_VALUE)
                 .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonVistaEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(260, 260, 260))
+                .addGap(366, 366, 366))
         );
 
         jPanel5.setBackground(new java.awt.Color(255, 0, 51));
@@ -508,6 +509,11 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
         botonSalir.setText("Salir");
+        botonSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonSalirActionPerformed(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel12.setText("Goles");
@@ -1129,7 +1135,7 @@ public class Dashboard extends javax.swing.JFrame {
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BackgroundLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE))
         );
@@ -1146,11 +1152,11 @@ public class Dashboard extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -1572,8 +1578,8 @@ if (rojas.isEmpty()) {
 
         
         
-        String a= BoxPosiciones.getItemAt(WIDTH);
-        String b= BoxEquipo.getItemAt(WIDTH);
+        String a= (String) BoxPosiciones.getSelectedItem();
+       String b = (String) BoxEquipo.getSelectedItem();
         String c=diaTexto+"/"+mesTexto+"/"+anioTexto ;
        // int fecha= Integer.parseInt(c);
 
@@ -1601,7 +1607,16 @@ if (rojas.isEmpty()) {
         txtNacionalidad.setText("");
         txtCantidadGoles.setText("");
         txtCantidadRojas.setText("");
-        //txtTarjetasTotales.setText("");
+        //Lo mismo pero con el color de fondo
+        txtDia.setBackground(Color.WHITE);
+        txtAnio.setBackground(Color.WHITE);
+        txtMes.setBackground(Color.WHITE);
+        txtCantidadAmarillas.setBackground(Color.WHITE);
+        txtCantidadGoles.setBackground(Color.WHITE);
+        txtNacionalidad.setBackground(Color.WHITE);
+        txtNombre.setBackground(Color.WHITE);
+        txtApellido.setBackground(Color.WHITE);
+        txtCantidadRojas.setBackground(Color.WHITE);
     }//GEN-LAST:event_botonCargarJugadorActionPerformed
 
     private void txtCantidadAmarillasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadAmarillasKeyTyped
@@ -1620,7 +1635,7 @@ if (rojas.isEmpty()) {
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btnArbitros3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbitros3ActionPerformed
-              CardLayout cl = (CardLayout) jPanel5.getLayout();
+        CardLayout cl = (CardLayout) jPanel5.getLayout();
         cl.show(jPanel5, "MostrarJugadores");
     }//GEN-LAST:event_btnArbitros3ActionPerformed
 
@@ -1649,6 +1664,40 @@ private List<Jugador> m;
     private void BoxPosicionesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_BoxPosicionesKeyTyped
       char c= evt.getKeyChar();
     }//GEN-LAST:event_BoxPosicionesKeyTyped
+
+    private void botonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirActionPerformed
+       //Eliminacion de contenido en recuadros de texto
+        txtDia.setText("");
+        txtMes.setText("");
+        txtAnio.setText("");
+        txtApellido.setText("");
+        txtNombre.setText("");
+        txtNacionalidad.setText("");
+        txtTarjetasTotales.setText("");
+        //Lo mismo pero con los mensajes de error
+        MensajeErrorAmarillas.setText("");
+        MensajeErrorApellido.setText("");
+        MensajeErrorFecha.setText("");
+        MensajeErrorGoles.setText("");
+        MensajeErrorNacionalidad.setText("");
+        MensajeErrorNombre.setText("");
+        MensajeErrorRojas.setText("");
+        
+        //Lo mismo pero con el color de fondo
+        txtDia.setBackground(Color.WHITE);
+        txtAnio.setBackground(Color.WHITE);
+        txtMes.setBackground(Color.WHITE);
+        txtCantidadAmarillas.setBackground(Color.WHITE);
+        txtCantidadGoles.setBackground(Color.WHITE);
+        txtNacionalidad.setBackground(Color.WHITE);
+        txtNombre.setBackground(Color.WHITE);
+        txtApellido.setBackground(Color.WHITE);
+        txtCantidadRojas.setBackground(Color.WHITE);
+        
+        //Abro la venta de precentacion    
+        CardLayout cl = (CardLayout) jPanel5.getLayout();
+        cl.show(jPanel5, "PanelInfo");
+    }//GEN-LAST:event_botonSalirActionPerformed
     
     //funcion tabla jugadores 
    public void ActualizarTablaJugadores(ArrayList<Jugador> Lista){
@@ -1780,9 +1829,9 @@ private List<Jugador> m;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
