@@ -16,37 +16,39 @@ public class ControladorArbitro {
     List <Arbitro> listaArbitros; 
     private Arbitro arbitro;
 
-    public ControladorArbitro(List<Arbitro> listaArbitros) {
-        this.listaArbitros = listaArbitros;
-        this.arbitro=new Arbitro();
-    }
+public ControladorArbitro(List<Arbitro> listaArbitros) {
+    this.listaArbitros = listaArbitros;
+    this.arbitro=new Arbitro();
+ }
  
-    public ControladorArbitro() {
-        this.listaArbitros=new ArrayList<>();
-        this.arbitro=new Arbitro();
-    }
-    public void colocarNombre(String n){
-this.arbitro.setNombre(n);
+ public ControladorArbitro() {
+ }
+public void colocarNombre(String n){
+    this.arbitro.setNombre(n);
 }
 public void colocarApellido(String n){
-this.arbitro.setApellido(n);
+    this.arbitro.setApellido(n);
 }
 public void colocarNacimiento(String n){
-this.arbitro.setNacimiento(n);
+    this.arbitro.setNacimiento(n);
 }//Recordar: Instanciar fecha en vista
+
 public void colocarNacionalidad(String n){
-this.arbitro.setNacionalidad(n);
+    this.arbitro.setNacionalidad(n);
 }
  
 public void colocarTarjetasTotales(int n){
-this.arbitro.setTarjetasTotales(n);
+    this.arbitro.setTarjetasTotales(n);
 }
 public void colocarInternacional(boolean n){
 this.arbitro.setInternacional(n);
 }
+public List<Arbitro> pasarListaArbitro(){
+    return listaArbitros;
+}
 public void AgregarArbitroALista(){
-listaArbitros.add(arbitro);
-this.arbitro=new Arbitro();
+    listaArbitros.add(arbitro);
+    this.arbitro=new Arbitro();
 }
 //
 
