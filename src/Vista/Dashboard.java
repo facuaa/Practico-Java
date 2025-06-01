@@ -477,6 +477,11 @@ public class Dashboard extends javax.swing.JFrame {
                 txtNombreActionPerformed(evt);
             }
         });
+        txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombreKeyTyped(evt);
+            }
+        });
 
         txtCantidadAmarillas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -526,10 +531,20 @@ public class Dashboard extends javax.swing.JFrame {
                 txtNacionalidadActionPerformed(evt);
             }
         });
+        txtNacionalidad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNacionalidadKeyTyped(evt);
+            }
+        });
 
         txtApellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtApellidoActionPerformed(evt);
+            }
+        });
+        txtApellido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellidoKeyTyped(evt);
             }
         });
 
@@ -691,8 +706,6 @@ public class Dashboard extends javax.swing.JFrame {
                                         .addComponent(jLabel10)
                                         .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addGroup(PanelIngresoLayout.createSequentialGroup()
-                                                .addGap(17, 17, 17)
-                                                .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(botonCargarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(22, 22, 22))
@@ -705,7 +718,9 @@ public class Dashboard extends javax.swing.JFrame {
                                                     .addComponent(txtCantidadGoles, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addGroup(PanelIngresoLayout.createSequentialGroup()
                                                         .addGap(6, 6, 6)
-                                                        .addComponent(MensajeErrorGoles)))
+                                                        .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(MensajeErrorGoles))))
                                                 .addGap(58, 58, 58)
                                                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jLabel17)
@@ -801,12 +816,13 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(txtCantidadRojas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MensajeErrorRojas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 51, Short.MAX_VALUE)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botonCargarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PanelIngresoLayout.createSequentialGroup()
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botonCargarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
             .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelIngresoLayout.createSequentialGroup()
@@ -845,6 +861,11 @@ public class Dashboard extends javax.swing.JFrame {
         txtNombre1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombre1ActionPerformed(evt);
+            }
+        });
+        txtNombre1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNombre1KeyTyped(evt);
             }
         });
 
@@ -905,10 +926,20 @@ public class Dashboard extends javax.swing.JFrame {
                 txtNacionalidad1ActionPerformed(evt);
             }
         });
+        txtNacionalidad1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtNacionalidad1KeyTyped(evt);
+            }
+        });
 
         txtApellido1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtApellido1ActionPerformed(evt);
+            }
+        });
+        txtApellido1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtApellido1KeyTyped(evt);
             }
         });
 
@@ -1008,14 +1039,14 @@ public class Dashboard extends javax.swing.JFrame {
                                                 .addGap(5, 5, 5)
                                                 .addComponent(btnSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(224, 224, 224)
-                                                .addComponent(botonCargarArbitro, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, Short.MAX_VALUE))
+                                                .addComponent(botonCargarArbitro, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addComponent(MensajeErrorTarTotales)
                                             .addComponent(txtTarjetasTotales, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(BoxInternacional, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel40)
-                                            .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 226, Short.MAX_VALUE)))
+                                            .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)))
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
@@ -1080,7 +1111,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(BoxInternacional, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(canvas1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1098,7 +1129,7 @@ public class Dashboard extends javax.swing.JFrame {
         panelIngresoArbitro.setLayout(panelIngresoArbitroLayout);
         panelIngresoArbitroLayout.setHorizontalGroup(
             panelIngresoArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 931, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 889, Short.MAX_VALUE)
         );
         panelIngresoArbitroLayout.setVerticalGroup(
             panelIngresoArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1106,6 +1137,8 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        jPanel2.getAccessibleContext().setAccessibleName("PanelArbitro");
 
         jPanel5.add(panelIngresoArbitro, "cargarArbitro");
 
@@ -1199,7 +1232,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(panelMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 628, Short.MAX_VALUE))
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 628, Short.MAX_VALUE))
         );
         BackgroundLayout.setVerticalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1262,7 +1295,33 @@ public class Dashboard extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNacionalidad1ActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-
+      //Eliminacion de contenido en recuadros de texto
+        txtDiaA.setText("");
+        txtMesA.setText("");
+        txtAnioA.setText("");
+        txtApellido1.setText("");
+        txtNombre1.setText("");
+        txtNacionalidad1.setText("");
+        txtTarjetasTotales.setText("");
+        //Lo mismo pero con los mensajes de error
+        MensajeErrorApellidoA.setText("");
+        MensajeErrorFechaA.setText("");
+        MensajeErrorNacionalidadA.setText("");
+        MensajeErrorNombreA.setText("");
+        MensajeErrorTarTotales.setText("");
+        
+        //Lo mismo pero con el color de fondo
+        txtDiaA.setBackground(Color.WHITE);
+        txtAnioA.setBackground(Color.WHITE);
+        txtMesA.setBackground(Color.WHITE);
+        txtNacionalidad1.setBackground(Color.WHITE);
+        txtNombre1.setBackground(Color.WHITE);
+        txtApellido1.setBackground(Color.WHITE);
+        txtTarjetasTotales.setBackground(Color.WHITE);
+        
+        //Abro la venta de precentacion    
+        CardLayout cl = (CardLayout) jPanel5.getLayout();
+        cl.show(jPanel5, "PanelInfo");
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void botonCargarArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCargarArbitroActionPerformed
@@ -1402,17 +1461,30 @@ if (cantTarjetasTexto.isEmpty()) {
         controladorArbitro.colocarTarjetasTotales(cantT);
         controladorArbitro.colocarNacionalidad(nacionalidad);
         //insertar jugador a la lista
-        controladorArbitro.AgregarArbitroALista();
-        JOptionPane.showMessageDialog(this, "Se cargo el Arbitro correctamente");
+      
 
         //borrar texto
-        txtDia.setText("");
-        txtMes.setText("");
-        txtAnio.setText("");
-        txtApellido.setText("");
-        txtNombre.setText("");
-        txtNacionalidad.setText("");
+        txtDiaA.setText("");
+        txtMesA.setText("");
+        txtAnioA.setText("");
+        txtApellido1.setText("");
+        txtNombre1.setText("");
+        txtNacionalidad1.setText("");
         txtTarjetasTotales.setText("");
+        MensajeErrorFechaA.setText("");
+        MensajeErrorTarTotales.setText("");
+  
+        //Lo mismo pero con el color de fondo
+        txtDiaA.setBackground(Color.WHITE);
+        txtAnioA.setBackground(Color.WHITE);
+        txtMesA.setBackground(Color.WHITE);
+        txtNacionalidad1.setBackground(Color.WHITE);
+        txtNombre1.setBackground(Color.WHITE);
+        txtApellido1.setBackground(Color.WHITE);
+        txtTarjetasTotales.setBackground(Color.WHITE);
+        
+          controladorArbitro.AgregarArbitroALista();
+        JOptionPane.showMessageDialog(this, "Se cargo el Arbitro correctamente");
     }//GEN-LAST:event_botonCargarArbitroActionPerformed
 
     private void txtDiaAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDiaAActionPerformed
@@ -1830,6 +1902,43 @@ private List<Jugador> m;
         }
         
     }//GEN-LAST:event_txtTarjetasTotalesKeyTyped
+
+    private void txtNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombreKeyTyped
+       char caracter = evt.getKeyChar();
+        if(Character.isDigit(caracter)){
+        evt.consume();
+        }
+    }//GEN-LAST:event_txtNombreKeyTyped
+
+    private void txtApellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellidoKeyTyped
+             char caracter = evt.getKeyChar();
+        if(Character.isDigit(caracter)){
+        evt.consume();}
+    }//GEN-LAST:event_txtApellidoKeyTyped
+
+    private void txtNacionalidadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNacionalidadKeyTyped
+              char caracter = evt.getKeyChar();
+        if(Character.isDigit(caracter)){
+        evt.consume();}
+    }//GEN-LAST:event_txtNacionalidadKeyTyped
+
+    private void txtNombre1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNombre1KeyTyped
+                   char caracter = evt.getKeyChar();
+        if(Character.isDigit(caracter)){
+        evt.consume();}
+    }//GEN-LAST:event_txtNombre1KeyTyped
+
+    private void txtApellido1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtApellido1KeyTyped
+                  char caracter = evt.getKeyChar();
+        if(Character.isDigit(caracter)){
+        evt.consume();}
+    }//GEN-LAST:event_txtApellido1KeyTyped
+
+    private void txtNacionalidad1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtNacionalidad1KeyTyped
+                    char caracter = evt.getKeyChar();
+        if(Character.isDigit(caracter)){
+        evt.consume();}
+    }//GEN-LAST:event_txtNacionalidad1KeyTyped
     
     //funcion tabla jugadores 
    public void ActualizarTablaJugadores(ArrayList<Jugador> Lista){
