@@ -9,10 +9,8 @@ import Modelo.Arbitro;
 import Modelo.Jugador;
 import Vista.Dashboard;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.ArrayList;
@@ -23,10 +21,10 @@ import java.util.ArrayList;
         List<Jugador> listaJugador = new ArrayList<>();
         ControladorJugador controladorJugador = new ControladorJugador(listaJugador);
         ControladorArbitro controladorArbitro = new ControladorArbitro(listaArbitro);
-        Dashboard vistaGeneral = new Dashboard(controladorJugador, controladorArbitro);
+         File jugadorArchivo = new File("data/Jugadores.txt");
+        Dashboard vistaGeneral = new Dashboard(controladorJugador, controladorArbitro,jugadorArchivo);
         
         // Precargar Jugadores
-        File jugadorArchivo = new File("data/Jugadores.txt");
         if (jugadorArchivo.exists()) {
             try (BufferedReader br = new BufferedReader(new FileReader(jugadorArchivo))) {
                 String linea;
@@ -83,14 +81,6 @@ import java.util.ArrayList;
 
      
         vistaGeneral.setVisible(true);
-
-        
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(jugadorArchivo, true))) {
-            
-            
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
         
  
     }

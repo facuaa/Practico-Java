@@ -11,6 +11,10 @@ import Modelo.Jugador;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.awt.event.KeyEvent;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -24,6 +28,7 @@ import javax.swing.table.DefaultTableModel;
 public class Dashboard extends javax.swing.JFrame {
    private ControladorJugador controladorJugador;
    private ControladorArbitro controladorArbitro;
+   private File jugadorArchivo;
     /**
      * Creates new form Dashboard
      */
@@ -32,11 +37,12 @@ public class Dashboard extends javax.swing.JFrame {
         this.setExtendedState(this.MAXIMIZED_BOTH);
        
     }
-        public Dashboard(ControladorJugador m,ControladorArbitro p ) {
+        public Dashboard(ControladorJugador m,ControladorArbitro p ,File a) {
              initComponents();
              this.setExtendedState(this.MAXIMIZED_BOTH);
              this.controladorJugador=m;
              this.controladorArbitro=p;
+             this.jugadorArchivo=a;
        this.panelIngresoJugador.setVisible(false);
     }
     /**
@@ -1804,6 +1810,31 @@ if (rojas.isEmpty()) {
         txtNombre.setBackground(Color.WHITE);
         txtApellido.setBackground(Color.WHITE);
         txtCantidadRojas.setBackground(Color.WHITE);
+         try (BufferedWriter writer = new BufferedWriter(new FileWriter(jugadorArchivo,true))) {
+            
+                writer.write( b);
+                writer.newLine();
+                writer.write(nombre);
+                writer.newLine();
+                writer.write(apellido);
+                writer.newLine();
+                writer.write(c);
+                writer.newLine();
+                writer.write(nacionalidad);
+                writer.newLine();
+                writer.write(a);
+                writer.newLine();
+                writer.write(goles);
+                writer.newLine();
+                writer.write(amarillas);
+                writer.newLine();
+                writer.write(rojas);
+                writer.newLine();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }//GEN-LAST:event_botonCargarJugadorActionPerformed
 
     private void txtCantidadAmarillasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadAmarillasKeyTyped
