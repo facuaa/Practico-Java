@@ -63,7 +63,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnJugadores = new javax.swing.JButton();
         btnArbitros = new javax.swing.JButton();
-        botonVistaEquipos = new javax.swing.JButton();
+        botonSalirPrincipal = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         btnJugadores1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -72,6 +72,7 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jSeparator10 = new javax.swing.JSeparator();
         jSeparator11 = new javax.swing.JSeparator();
+        botonVistaEquipos2 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         PanelInformacion = new javax.swing.JPanel();
         panelIngresoJugador = new javax.swing.JPanel();
@@ -332,15 +333,15 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
-        botonVistaEquipos.setBackground(new java.awt.Color(204, 255, 255));
-        botonVistaEquipos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        botonVistaEquipos.setForeground(new java.awt.Color(51, 51, 51));
-        botonVistaEquipos.setText("Etc");
-        botonVistaEquipos.setBorder(null);
-        botonVistaEquipos.setBorderPainted(false);
-        botonVistaEquipos.addActionListener(new java.awt.event.ActionListener() {
+        botonSalirPrincipal.setBackground(new java.awt.Color(204, 255, 255));
+        botonSalirPrincipal.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        botonSalirPrincipal.setForeground(new java.awt.Color(51, 51, 51));
+        botonSalirPrincipal.setText("Salir");
+        botonSalirPrincipal.setBorder(null);
+        botonSalirPrincipal.setBorderPainted(false);
+        botonSalirPrincipal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonVistaEquiposActionPerformed(evt);
+                botonSalirPrincipalActionPerformed(evt);
             }
         });
 
@@ -380,6 +381,18 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel21.setForeground(new java.awt.Color(51, 51, 51));
         jLabel21.setText("Otros");
 
+        botonVistaEquipos2.setBackground(new java.awt.Color(204, 255, 255));
+        botonVistaEquipos2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        botonVistaEquipos2.setForeground(new java.awt.Color(51, 51, 51));
+        botonVistaEquipos2.setText("Etc");
+        botonVistaEquipos2.setBorder(null);
+        botonVistaEquipos2.setBorderPainted(false);
+        botonVistaEquipos2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVistaEquipos2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
         panelMenu.setLayout(panelMenuLayout);
         panelMenuLayout.setHorizontalGroup(
@@ -404,7 +417,7 @@ public class Dashboard extends javax.swing.JFrame {
                                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))))
-                    .addComponent(botonVistaEquipos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonSalirPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jSeparator6)
                     .addComponent(jSeparator11))
                 .addContainerGap())
@@ -412,6 +425,11 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelMenuLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(botonVistaEquipos2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         panelMenuLayout.setVerticalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -438,9 +456,14 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(botonVistaEquipos, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(366, 366, 366))
+                .addGap(333, 333, 333)
+                .addComponent(botonSalirPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39))
+            .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
+                    .addContainerGap(522, Short.MAX_VALUE)
+                    .addComponent(botonVistaEquipos2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(356, 356, 356)))
         );
 
         jPanel5.setBackground(new java.awt.Color(255, 0, 51));
@@ -1046,7 +1069,7 @@ public class Dashboard extends javax.swing.JFrame {
                                             .addComponent(jLabel40)
                                             .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(0, 0, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addContainerGap())))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
@@ -1129,7 +1152,7 @@ public class Dashboard extends javax.swing.JFrame {
         panelIngresoArbitro.setLayout(panelIngresoArbitroLayout);
         panelIngresoArbitroLayout.setHorizontalGroup(
             panelIngresoArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 889, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 931, Short.MAX_VALUE)
         );
         panelIngresoArbitroLayout.setVerticalGroup(
             panelIngresoArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1169,9 +1192,9 @@ public class Dashboard extends javax.swing.JFrame {
         MostrarJugadores.setLayout(MostrarJugadoresLayout);
         MostrarJugadoresLayout.setHorizontalGroup(
             MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 931, Short.MAX_VALUE)
+            .addGap(0, 1307, Short.MAX_VALUE)
             .addGroup(MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 931, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1307, Short.MAX_VALUE))
         );
         MostrarJugadoresLayout.setVerticalGroup(
             MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1809,9 +1832,22 @@ if (rojas.isEmpty()) {
         cl.show(jPanel5, "cargarJugador");
     }//GEN-LAST:event_btnJugadores1ActionPerformed
 
-    private void botonVistaEquiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVistaEquiposActionPerformed
+    private void botonSalirPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirPrincipalActionPerformed
+    
+        int opcion = JOptionPane.showConfirmDialog(
+                null,
+                "¿Estás seguro que querés salir?",
+                "Confirmar salida",
+                JOptionPane.YES_NO_OPTION
+        );
 
-    }//GEN-LAST:event_botonVistaEquiposActionPerformed
+        if (opcion == JOptionPane.YES_OPTION) {
+            System.exit(0); 
+        } else {
+            System.out.println("Cancelado por el usuario.");
+        }
+    
+    }//GEN-LAST:event_botonSalirPrincipalActionPerformed
 
     private void btnArbitrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArbitrosActionPerformed
     CardLayout cl = (CardLayout) jPanel5.getLayout();
@@ -1939,6 +1975,10 @@ private List<Jugador> m;
         if(Character.isDigit(caracter)){
         evt.consume();}
     }//GEN-LAST:event_txtNacionalidad1KeyTyped
+
+    private void botonVistaEquipos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVistaEquipos2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonVistaEquipos2ActionPerformed
     
     //funcion tabla jugadores 
    public void ActualizarTablaJugadores(ArrayList<Jugador> Lista){
@@ -2053,8 +2093,9 @@ private List<Jugador> m;
     private javax.swing.JButton botonCargarArbitro;
     private javax.swing.JButton botonCargarJugador;
     private javax.swing.JButton botonSalir;
-    private javax.swing.JButton botonVistaEquipos;
+    private javax.swing.JButton botonSalirPrincipal;
     private javax.swing.JButton botonVistaEquipos1;
+    private javax.swing.JButton botonVistaEquipos2;
     private javax.swing.JButton btnArbitros;
     private javax.swing.JButton btnArbitros1;
     private javax.swing.JButton btnArbitros2;

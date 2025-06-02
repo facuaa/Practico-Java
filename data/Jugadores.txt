@@ -1,0 +1,90 @@
+Boca Juniors
+Edinson
+Cavani
+14/2/1987
+Uruguay
+Delantero centro
+10
+5
+2
+Boca Juniors
+Luis
+Advíncula
+2/3/1990
+Peru
+Lateral derecho
+3
+4
+7
+Boca Juniors
+Carlos Palacios
+Nuñes
+20/7/2000
+Chile
+Enganche
+5
+2
+3
+Boca Juniors
+Marcos
+Rojo
+20/3/1990
+Argentina
+Defensor central
+1
+9
+5
+Boca Juniors
+Miguel
+Merentiel
+24/2/1996
+Uruguay
+Enganche
+22
+1
+2
+River Plate
+Franco
+Armani
+16/10/1986
+Argentina
+Arquero
+0
+2
+3
+River Plate
+German
+Pezzela
+27/6/1991
+Argentina
+Defensor central
+0
+2
+5
+River Plate
+Paulo
+Diaz
+25/8/1994
+Chile
+Defensor central
+0
+5
+3
+River Plate
+Miguel
+Borja
+26/1/1993
+Colombia
+Delantero centro
+8
+2
+3
+River Plate
+Gonzalo
+Montiel
+1/1/1997
+Argentina
+Lateral derecho
+5
+3
+1
