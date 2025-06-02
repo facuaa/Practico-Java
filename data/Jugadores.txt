@@ -17,8 +17,8 @@ Lateral derecho
 4
 7
 Boca Juniors
-Carlos Palacios
-Nuñes
+Carlos
+Palacios
 20/7/2000
 Chile
 Enganche
@@ -88,3 +88,363 @@ Lateral derecho
 5
 3
 1
+Independiente
+Luciano
+Cabral
+26/4/1995
+Chile
+Volante central
+3
+2
+0
+Independiente
+Felipe
+Loyola
+9/11/2000
+Chile
+Volante por derecha
+15
+8
+3
+Independiente
+Kevin
+Lomonaco
+8/1/2002
+Argentina
+Defensor central
+5
+8
+9
+Independiente
+Alvaro
+Angulo
+6/3/1997
+Colombia
+Lateral izquierdo
+0
+3
+8
+Independiente
+Santiago
+Montiel
+22/11/2000
+Argentina
+Defensor central
+3
+2
+5
+Racing Club
+Richard
+Sanchez
+29/3/1986
+Paraguay
+Volante por izquierda
+3
+8
+11
+Racing Club
+Adrian Emmanuel
+Martinez
+7/7/1992
+Argentina
+Delantero centro
+7
+3
+2
+Racing Club
+Gaston
+Martirena
+5/1/2000
+Uruguay
+Lateral derecho
+8
+3
+6
+Racing Club
+Luciano
+Vietto
+5/12/1993
+Argentina
+Segundo delantero
+37
+3
+6
+Racing Club
+Matias
+Zaracho
+10/3/1998
+Argentina
+Volante central
+8
+9
+15
+San Lorenzo
+Ezequiel
+Cerutti
+17/1/1992
+Argentina
+Segundo delantero
+7
+5
+9
+San Lorenzo
+Jose
+Devecchi
+9/7/1995
+Argentina
+Arquero
+0
+6
+9
+San Lorenzo
+Elian Mateo
+Irala
+6/7/2004
+Chile
+Volante central
+9
+9
+7
+San Lorenzo
+Manuel
+Isaurralde
+31/1/1999
+Argentina
+Volante por derecha
+6
+9
+21
+San Lorenzo
+Ezequiel
+Herrera
+22/1/2003
+Argentino
+Defensor central
+3
+2
+15
+Velez Sarsfield
+Alvaro
+Montoro
+17/4/2007
+Argentina
+Volante central
+3
+5
+7
+Velez Sarsfield
+Valentin
+Gomez
+26/6/2003
+Peru
+Lateral derecho
+3
+6
+7
+Velez Sarsfield
+Maher
+Carrizo
+19/2/2006
+Mexico
+Defensor central
+3
+8
+9
+Velez Sarsfield
+Braian
+Romero
+15/7/1991
+Argentina
+Delantero centro
+14
+8
+4
+Velez Sarsfield
+Claudio
+Baeza
+23/12/1993
+Chile
+Volante central
+2
+3
+7
+Rosario Central
+Jorge
+Broun
+26/5/1986
+Argentina
+Arquero
+0
+4
+9
+Rosario Central
+Maximiliano
+Lovera
+9/5/1999
+Peru
+Delantero centro
+21
+5
+7
+Rosario Central
+Miguel
+Barbieri
+24/8/1993
+Argentina
+Defensor central
+3
+20
+9
+Rosario Central
+Kevin
+Ortiz
+18/10/2000
+Argentina
+Volante por izquierda
+25
+2
+3
+Rosario Central
+Facundo
+Mallo
+16/1/1995
+Colombia
+Defensor central
+0
+8
+25
+Newells Old Boys
+Ever
+Banega
+29/6/1988
+Argentina
+Volante por derecha
+32
+2
+1
+Newells Old Boys
+Mateo
+Silvetti
+14/1/2006
+Argentina
+Segundo delantero
+7
+8
+3
+Newells Old Boys
+Victor
+Cuesta
+19/11/1998
+Argentina
+Defensor central
+4
+8
+12
+Newells Old Boys
+Luciano
+Herrera
+31/5/1996
+Peru
+Defensor central
+7
+5
+0
+Newells Old Boys
+Valentino
+Acuna
+27/1/2006
+Cile
+Volante por izquierda
+3
+20
+2
+Estudiantes de la Plata
+Ramiro
+Funes Mori
+5/3/1991
+Argentina
+Defensor central
+3
+5
+8
+Estudiantes de la Plata
+Ezequiel
+Piovi
+20/8/1992
+Argentina
+Volante central
+5
+7
+8
+Estudiantes de la Plata
+Tiago
+Palacios
+28/3/2001
+Uruguay
+Segundo delantero
+7
+8
+9
+Estudiantes de la Plata
+Santiago
+Ascacibar
+25/2/1997
+Chile
+Volante por izquierda
+5
+8
+12
+Estudiantes de la Plata
+Facundo
+Farias
+28/8/2002
+Argentina
+Delantero centro
+7
+8
+15
+Huracan
+Hernan
+Galindez
+30/3/1987
+Argentina
+Arquero
+7
+3
+2
+Huracan
+Ramon
+Avila
+14/10/1989
+Argentina
+Delantero centro
+5
+6
+8
+Huracan
+Leonardo
+Sequeira
+26/4/1995
+Chile
+Segundo delantero
+7
+4
+9
+Huracan
+Matias
+Tissera
+6/9/1996
+Argentina
+Delantero centro
+4
+9
+2
+Huracan
+Eric Ivan
+Ramirez
+21/9/1996
+Colombia
+Lateral izquierdo
+4
+5
+9
