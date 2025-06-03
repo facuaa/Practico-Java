@@ -1874,9 +1874,7 @@ if (rojas.isEmpty()) {
 
         if (opcion == JOptionPane.YES_OPTION) {
             System.exit(0); 
-        } else {
-            System.out.println("Cancelado por el usuario.");
-        }
+        } 
     
     }//GEN-LAST:event_botonSalirPrincipalActionPerformed
 

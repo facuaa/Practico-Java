@@ -22,6 +22,7 @@ import java.util.ArrayList;
         ControladorJugador controladorJugador = new ControladorJugador(listaJugador);
         ControladorArbitro controladorArbitro = new ControladorArbitro(listaArbitro);
          File jugadorArchivo = new File("data/Jugadores.txt");
+         File arbitroArchivo = new File("data/Arbitros.txt");
         Dashboard vistaGeneral = new Dashboard(controladorJugador, controladorArbitro,jugadorArchivo);
         
         // Precargar Jugadores
@@ -74,14 +75,57 @@ import java.util.ArrayList;
     listaJugador.add(temp);
 }
 
-            } catch (IOException e) {
+            } catch (IOException e) {//captura todas las excepciones de tipo de apertura y cierre de archivos o stream(??
                 e.printStackTrace();
             }
         }
+        
+        if(arbitroArchivo.exists()){
+        try(BufferedReader brA = new BufferedReader(new FileReader(arbitroArchivo))){
+     
+        while (true) {
+            String nombre = brA.readLine();
+            if (nombre == null) break;
+            
+            String apellido = brA.readLine();
+            if (apellido == null) break;
 
+            String fecha = brA.readLine();
+            if (fecha == null) break;
+
+            String nacionalidad = brA.readLine();
+            if (nacionalidad == null) break;
+            
+            String cantidadTarjetas = brA.readLine();
+            if (cantidadTarjetas == null) break;
+            
+            String internacional = brA.readLine();
+            if (internacional == null) break;
+            
+            Arbitro tempA= new Arbitro();
+            
+            tempA.setNombre(nombre);
+            tempA.setApellido(apellido);
+            tempA.setNacimiento(fecha);
+            tempA.setNacionalidad(nacionalidad);
+           // tempA.setTarjetasTotales(Integer.parseInt(fecha));
+           if(internacional.equals("sí")){
+            tempA.setInternacional(true);
+           }else{
+           tempA.setInternacional(false);
+           }
+         
+           listaArbitro.add(tempA);
+        }
+        }catch (IOException e) {
+         e.printStackTrace();
+        }
      
         vistaGeneral.setVisible(true);
         
  
     }
    }
+    }
+   
+
