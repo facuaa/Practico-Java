@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Controlador;
-
+//controlador de la ultima version con precargar arbitros
 import Modelo.Jugador;
 import java.util.ArrayList;
 import java.util.List;
@@ -104,4 +104,55 @@ public int catidadJugadoresPosicion(String pos){
     }
     return cont;
 }
+
+public void eliminarJugador(Jugador j, int indice){
+    if (j != null) {
+        // Buscar por igualdad de contenido
+        for (int i = 0; i < listaJugadores.size(); i++) {
+            Jugador actual = listaJugadores.get(i);
+            if (actual.getNombre().equals(j.getNombre()) &&
+                actual.getApellido().equals(j.getApellido()) &&
+                actual.getNacimiento().equals(j.getNacimiento()) &&
+                actual.getClubActual().equals(j.getClubActual())) {
+                listaJugadores.remove(i);
+                break;
+            }
+        }
+    } else if (indice >= 0 && indice < listaJugadores.size()) {
+        listaJugadores.remove(indice);
+    }
+}
+public int verificarCantidadJugadores(String equipo){
+    int jugadoresDelClub=0;
+    for(Jugador j: listaJugadores){
+        String club= j.getClubActual();
+        System.out.println("club:"+ club);
+        if(j.getClubActual().equals(equipo)){
+            jugadoresDelClub++;
+        }
+    }
+    System.out.println("La cantidad de jugadores es:"+jugadoresDelClub);
+    if (jugadoresDelClub <= 5) {
+        return -1;
+    } else if (jugadoresDelClub > 7) { 
+        return 0;
+    } else { //cubre el caso donde 5 <= jugadoresDelClub <= 7
+        return 1; 
+    }
+   
+}
+    
+public List<Jugador> getListaJugador(){//genera una copia inmutable de la lista
+    return List.copyOf(listaJugadores);
+}
+public void modificarJugador(String nom, String goles, String tarAmarillas, String posicion){
+    for(Jugador Jugador : listaJugadores){
+            if (Jugador != null && jugador.getNombre() != null && jugador.getNombre().equals(nom)) {
+                Jugador.setGoles(goles);
+                Jugador.setTarjetasAmarillas(tarAmarillas);
+                Jugador.setPosicion(posicion);
+            }
+    }
+}
+
 }

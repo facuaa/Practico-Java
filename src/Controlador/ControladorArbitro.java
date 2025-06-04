@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Controlador;
-
+//controlador de la ultima version con precargar arbitros
 import Modelo.Arbitro; 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +51,9 @@ public void AgregarArbitroALista(){
     this.arbitro=new Arbitro();
 }
 //
+public List<Arbitro> getListaArbitros(){//genera una copia inmutable de la lista
+    return List.copyOf(listaArbitros);
+}
 
 
 //Filtra los arbitros internacionales
@@ -72,4 +75,9 @@ if(internacional.getInternacional()){
     return  arbitroInt;
 }
 }
+
+public void eliminarArbitro(int arbitro) {
+        listaArbitros.remove(arbitro);
+    }
+
 }
