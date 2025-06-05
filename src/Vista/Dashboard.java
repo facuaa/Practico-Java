@@ -2798,9 +2798,9 @@ private List<Jugador> m;
                         return false; 
                 }
             }
-        };
-         
-               // --- Llenar la tabla con datos ---
+        }; 
+              
+         // --- Llenar la tabla con datos ---
         ArrayList<Arbitro> listaArbitrosActual = new ArrayList<>(controladorArbitro.pasarListaArbitro());
         for (Arbitro arb : listaArbitrosActual) {
             try {
@@ -2819,9 +2819,8 @@ private List<Jugador> m;
                
             }
         }
-         
-         
         
+          tablaEliminarArbitro.setModel(modeloTabla); 
         //escuchador que detecta los cambios de la pinchi tabla y logica de lo que pasa cuando se modifican las filas        
            modeloTabla.addTableModelListener((TableModelEvent e) -> {
                if (e.getType() == TableModelEvent.UPDATE) {
