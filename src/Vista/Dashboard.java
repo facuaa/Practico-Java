@@ -2816,89 +2816,85 @@ private List<Jugador> m;
                 System.err.println("Advertencia: Un árbitro tiene datos nulos. Fila no agregada correctamente. " + npe.getMessage());
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Error al añadir árbitro a la tabla: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-                ex.printStackTrace();
+               
             }
         }
          
          
         
         //escuchador que detecta los cambios de la pinchi tabla y logica de lo que pasa cuando se modifican las filas        
-           modeloTabla.addTableModelListener(new TableModelListener() {
-            @Override
-            public void tableChanged(TableModelEvent e) {
-                if (e.getType() == TableModelEvent.UPDATE) {
-                    int fila = e.getFirstRow();
-                    int columna = e.getColumn();
-
-                    // verifica si la fila y columna son válidas y si es una de las columnas editables
-                    if (fila != TableModelEvent.HEADER_ROW && columna != TableModelEvent.ALL_COLUMNS &&
-                        (columna == 4 || columna == 5)) { 
-
-                        DefaultTableModel modeloActual = (DefaultTableModel) e.getSource(); // se crea modelo actual para evitar conflicto con modeloTabla si fuera necesario
-                        try {
-                            Object newValue = modeloActual.getValueAt(fila, columna);
-                            System.out.println("Celda modificada en Fila: " + fila + ", Columna: " + columna + ", Nuevo Valor: " + newValue);
-
-                            // Obtener el árbitro directamente de la lista actual del controlador
-                            ArrayList<Arbitro> listaActualDelControlador = new ArrayList<>(controladorArbitro.pasarListaArbitro());
-                            if (fila >= listaActualDelControlador.size() || fila < 0) {
-                                throw new IndexOutOfBoundsException("Índice de fila fuera de rango en la lista del controlador.");
-                            }
-                            Arbitro arbitroAModificar = listaActualDelControlador.get(fila);
-
-                            // Actualizar las propiedades del objeto Arbitro con el nuevo valor
-                            switch (columna) {
-                                case 4: // Tarjetas Totales (Integer)
-                                    if (newValue instanceof Integer) {
-                                        arbitroAModificar.setTarjetasTotales((Integer) newValue);
-                                    } else if (newValue instanceof String) {
-                                        // Intenta parsear si el editor permite entrada de texto
-                                        arbitroAModificar.setTarjetasTotales(Integer.parseInt((String) newValue));
-                                    }
-                                    break;
-                                case 5: // ¿Es Internacional? (Boolean)
-                                    if (newValue instanceof Boolean) {
-                                        arbitroAModificar.setInternacional((Boolean) newValue);
-                                    } else if (newValue instanceof String) {
-                                        // Si el usuario pudo escribir "true" o "false" directamente
-                                        arbitroAModificar.setInternacional(Boolean.parseBoolean((String) newValue));
-                                    }
-                                    break;
-                            }
-
-                            controladorArbitro.actualizarArbitro(arbitroAModificar);
-                            JOptionPane.showMessageDialog(null, "Árbitro actualizado con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-
-                        } catch (IndexOutOfBoundsException ex) {
-                            JOptionPane.showMessageDialog(null, "Error de índice al actualizar árbitro: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-                            ex.printStackTrace();
-                            // se revierten el valor en la celda si hay un problema con el índice
-                            Arbitro original = controladorArbitro.getListaArbitros().get(fila);
-                            if (columna == 3) modeloActual.setValueAt(original.getNacionalidad(), fila, columna);
-                            if (columna == 4) modeloActual.setValueAt(original.getTarjetasTotales(), fila, columna);
-                            if (columna == 5) modeloActual.setValueAt(original.getInternacional(), fila, columna);
-                        } catch (NumberFormatException ex) {
-                            JOptionPane.showMessageDialog(null, "Error: Ingrese un número válido para 'Tarjetas Totales'.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
-                            ex.printStackTrace();
-                            // Revertir el valor en la celda si el formato es incorrecto
-                            Arbitro original = controladorArbitro.getListaArbitros().get(fila);
-                            modeloActual.setValueAt(original.getTarjetasTotales(), fila, columna);
-                        } catch (ClassCastException ex) {
-                            JOptionPane.showMessageDialog(null, "Error de tipo de dato al actualizar la celda. " + ex.getMessage(), "Error de Conversión", JOptionPane.ERROR_MESSAGE);
-                            ex.printStackTrace();
-                            // Revertir el valor en la celda si la conversión falla
-                            Arbitro original = controladorArbitro.getListaArbitros().get(fila);
-                            if (columna == 3) modeloActual.setValueAt(original.getNacionalidad(), fila, columna);
-                            if (columna == 4) modeloActual.setValueAt(original.getTarjetasTotales(), fila, columna);
-                            if (columna == 5) modeloActual.setValueAt(original.getInternacional(), fila, columna);
-                        } catch (Exception ex) {
-                            JOptionPane.showMessageDialog(null, "Error inesperado al procesar el cambio: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-                            ex.printStackTrace();
-                        }
-                    }
-                }
-            }
-        });
+           modeloTabla.addTableModelListener((TableModelEvent e) -> {
+               if (e.getType() == TableModelEvent.UPDATE) {
+                   int fila = e.getFirstRow();
+                   int columna = e.getColumn();
+                   
+                   // verifica si la fila y columna son válidas y si es una de las columnas editables
+                   if (fila != TableModelEvent.HEADER_ROW && columna != TableModelEvent.ALL_COLUMNS &&
+                           (columna == 4 || columna == 5)) {
+                       
+                       DefaultTableModel modeloActual = (DefaultTableModel) e.getSource(); // se crea modelo actual para evitar conflicto con modeloTabla 
+                       try {
+                           Object newValue = modeloActual.getValueAt(fila, columna);
+                           System.out.println("Celda modificada en Fila: " + fila + ", Columna: " + columna + ", Nuevo Valor: " + newValue);
+                          
+                           ArrayList<Arbitro> listaActualDelControlador = new ArrayList<>(controladorArbitro.pasarListaArbitro());
+                           if (fila >= listaActualDelControlador.size() || fila < 0) {
+                               throw new IndexOutOfBoundsException("Índice de fila fuera de rango en la lista del controlador.");
+                           }
+                           Arbitro arbitroAModificar = listaActualDelControlador.get(fila);
+                           
+                           // actualizar las propiedades del objeto Arbitro con el nuevo valor
+                           switch (columna) {
+                               case 4: // Tarjetas Totales (Integer)
+                                   if (newValue instanceof Integer) {
+                                       arbitroAModificar.setTarjetasTotales((Integer) newValue);
+                                   } else if (newValue instanceof String) {
+                                       // Intenta parsear si el editor permite entrada de texto
+                                       arbitroAModificar.setTarjetasTotales(Integer.parseInt((String) newValue));
+                                   }
+                                   break;
+                               case 5: // ¿Es Internacional? (Boolean)
+                                   if (newValue instanceof Boolean) {
+                                       arbitroAModificar.setInternacional((Boolean) newValue);
+                                   } else if (newValue instanceof String) {
+                                       // Si el usuario pudo escribir "true" o "false" directamente
+                                       arbitroAModificar.setInternacional(Boolean.parseBoolean((String) newValue));
+                                   }
+                                   break;
+                           }
+                           
+                           controladorArbitro.actualizarArbitro(arbitroAModificar);
+                           JOptionPane.showMessageDialog(null, "Árbitro actualizado con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+                           
+                       } catch (IndexOutOfBoundsException ex) {
+                           JOptionPane.showMessageDialog(null, "Error de índice al actualizar árbitro: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                           
+                           // se revierten el valor en la celda si hay un problema con el índice
+                           Arbitro original = controladorArbitro.getListaArbitros().get(fila);
+                           if (columna == 3) modeloActual.setValueAt(original.getNacionalidad(), fila, columna);
+                           if (columna == 4) modeloActual.setValueAt(original.getTarjetasTotales(), fila, columna);
+                           if (columna == 5) modeloActual.setValueAt(original.getInternacional(), fila, columna);
+                       } catch (NumberFormatException ex) {
+                           JOptionPane.showMessageDialog(null, "Error: Ingrese un número válido para 'Tarjetas Totales'.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
+                           
+                           // Revertir el valor en la celda si el formato es incorrecto
+                           Arbitro original = controladorArbitro.getListaArbitros().get(fila);
+                           modeloActual.setValueAt(original.getTarjetasTotales(), fila, columna);
+                       } catch (ClassCastException ex) {
+                           JOptionPane.showMessageDialog(null, "Error de tipo de dato al actualizar la celda. " + ex.getMessage(), "Error de Conversión", JOptionPane.ERROR_MESSAGE);
+                           
+                           // Revertir el valor en la celda si la conversión falla
+                           Arbitro original = controladorArbitro.getListaArbitros().get(fila);
+                           if (columna == 3) modeloActual.setValueAt(original.getNacionalidad(), fila, columna);
+                           if (columna == 4) modeloActual.setValueAt(original.getTarjetasTotales(), fila, columna);
+                           if (columna == 5) modeloActual.setValueAt(original.getInternacional(), fila, columna);
+                       } catch (Exception ex) {
+                           JOptionPane.showMessageDialog(null, "Error inesperado al procesar el cambio: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                           
+                       }
+                   }
+               }
+         });
            
           
       
