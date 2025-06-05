@@ -76,8 +76,63 @@ if(internacional.getInternacional()){
 }
 }
 
-public void eliminarArbitro(int arbitro) {
-        listaArbitros.remove(arbitro);
+public void eliminarArbitro(Arbitro j, int indice) {
+    if(j!= null){
+      for (int i = 0; i < listaArbitros.size(); i++) {
+            Arbitro actual = listaArbitros.get(i);
+            if (actual.getNombre().equals(j.getNombre()) &&
+                actual.getApellido().equals(j.getApellido()) &&
+                actual.getNacimiento().equals(j.getNacimiento()) &&
+                actual.getTarjetasTotales()==j.getTarjetasTotales() &&
+                actual.getInternacional()== j.getInternacional()){
+                listaArbitros.remove(i);
+                break;
+            }
+        }
+    }else if (indice >= 0 && indice < listaArbitros.size()) {
+        listaArbitros.remove(indice);
     }
+}
+
+ public void actualizarArbitro(Arbitro arbitroActualizado) {
+        if (arbitroActualizado == null) {
+            System.err.println("Error: El árbitro a actualizar es nulo.");
+            return;
+        }
+
+        try {
+            boolean encontrado = false;
+            for (int i = 0; i < listaArbitros.size(); i++) {
+                Arbitro actual = listaArbitros.get(i);
+                // Como no lo tienes explícitamente, usaremos Nombre y Apellido
+                // (asumiendo que son únicos para fines de este ejemplo).
+                // Podrías añadir más criterios si es necesario para asegurar la unicidad.
+                if (actual.getNombre().equals(arbitroActualizado.getNombre()) &&
+                    actual.getApellido().equals(arbitroActualizado.getApellido()) &&
+                    actual.getNacionalidad().equals(arbitroActualizado.getNacionalidad())&&
+                    actual.getTarjetasTotales()== arbitroActualizado.getTarjetasTotales() &&
+                    actual.getInternacional() == arbitroActualizado.getInternacional()) {
+                    // Reemplazar el objeto completo en la lista es una forma sencilla:
+                    listaArbitros.set(i, arbitroActualizado); // Reemplaza el objeto antiguo por el nuevo (modificado)
+                    encontrado = true;
+                    System.out.println("Árbitro actualizado en el controlador: " + arbitroActualizado.getNombre() + " " + arbitroActualizado.getApellido() +
+                                       " - Tarjetas: " + arbitroActualizado.getTarjetasTotales() + ", Internacional: " + arbitroActualizado.getInternacional());
+                    break; // Salimos del bucle una vez que lo encontramos y actualizamos
+                }
+            }
+
+            if (!encontrado) {
+                System.out.println("Advertencia: No se encontró el árbitro para actualizar en el controlador: " +
+                                   arbitroActualizado.getNombre() + " " + arbitroActualizado.getApellido() +
+                                   ". No se realizó ninguna actualización.");
+                // Opcional: Podrías lanzar una excepción o notificar a la UI que la actualización falló
+            }
+        } catch (Exception ex) {
+            System.err.println("Error inesperado al intentar actualizar el árbitro en el controlador: " + ex.getMessage());
+            ex.printStackTrace();
+            // Opcional: Lanzar una excepción específica o propagarla
+        }
+    }
+
 
 }

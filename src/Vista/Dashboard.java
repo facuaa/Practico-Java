@@ -24,6 +24,8 @@ import java.util.stream.Collectors;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
@@ -96,6 +98,10 @@ public class Dashboard extends javax.swing.JFrame {
         btnMenuModificarJugador = new javax.swing.JButton();
         btnMenuEliminarArbitro = new javax.swing.JButton();
         btnMenuModificarArbitro = new javax.swing.JButton();
+        botonVistaEquipos3 = new javax.swing.JButton();
+        botonVistaEquipos4 = new javax.swing.JButton();
+        botonVistaEquipos5 = new javax.swing.JButton();
+        botonVistaEquipos6 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         PanelInformacion = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
@@ -214,6 +220,12 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel44 = new javax.swing.JLabel();
         btnCargrModifJugadores = new javax.swing.JButton();
         ModificarArbitro = new javax.swing.JPanel();
+        background = new javax.swing.JPanel();
+        jLabel45 = new javax.swing.JLabel();
+        jSeparator12 = new javax.swing.JSeparator();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tablaEliminarArbitro = new javax.swing.JTable();
+        canJugadoresPEquipo = new javax.swing.JPanel();
 
         panelMenu1.setBackground(new java.awt.Color(255, 255, 255));
         panelMenu1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
@@ -446,7 +458,7 @@ public class Dashboard extends javax.swing.JFrame {
         botonVistaEquipos2.setBackground(new java.awt.Color(204, 255, 255));
         botonVistaEquipos2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         botonVistaEquipos2.setForeground(new java.awt.Color(51, 51, 51));
-        botonVistaEquipos2.setText("Etc");
+        botonVistaEquipos2.setText("Jugadores que superan ciertos goles");
         botonVistaEquipos2.setBorder(null);
         botonVistaEquipos2.setBorderPainted(false);
         botonVistaEquipos2.addActionListener(new java.awt.event.ActionListener() {
@@ -497,13 +509,66 @@ public class Dashboard extends javax.swing.JFrame {
         btnMenuModificarArbitro.setText("Modificar Arbitro");
         btnMenuModificarArbitro.setBorder(null);
         btnMenuModificarArbitro.setBorderPainted(false);
+        btnMenuModificarArbitro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuModificarArbitroActionPerformed(evt);
+            }
+        });
+
+        botonVistaEquipos3.setBackground(new java.awt.Color(204, 255, 255));
+        botonVistaEquipos3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        botonVistaEquipos3.setForeground(new java.awt.Color(51, 51, 51));
+        botonVistaEquipos3.setText("Cantidad de jugadores por equipo");
+        botonVistaEquipos3.setBorder(null);
+        botonVistaEquipos3.setBorderPainted(false);
+        botonVistaEquipos3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVistaEquipos3ActionPerformed(evt);
+            }
+        });
+
+        botonVistaEquipos4.setBackground(new java.awt.Color(204, 255, 255));
+        botonVistaEquipos4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        botonVistaEquipos4.setForeground(new java.awt.Color(51, 51, 51));
+        botonVistaEquipos4.setText("Cantidad de jugadores por posicion");
+        botonVistaEquipos4.setBorder(null);
+        botonVistaEquipos4.setBorderPainted(false);
+        botonVistaEquipos4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVistaEquipos4ActionPerformed(evt);
+            }
+        });
+
+        botonVistaEquipos5.setBackground(new java.awt.Color(204, 255, 255));
+        botonVistaEquipos5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        botonVistaEquipos5.setForeground(new java.awt.Color(51, 51, 51));
+        botonVistaEquipos5.setText("Filtrar Arbitros");
+        botonVistaEquipos5.setBorder(null);
+        botonVistaEquipos5.setBorderPainted(false);
+        botonVistaEquipos5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVistaEquipos5ActionPerformed(evt);
+            }
+        });
+
+        botonVistaEquipos6.setBackground(new java.awt.Color(204, 255, 255));
+        botonVistaEquipos6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        botonVistaEquipos6.setForeground(new java.awt.Color(51, 51, 51));
+        botonVistaEquipos6.setText("Jugador con más expulsiones");
+        botonVistaEquipos6.setBorder(null);
+        botonVistaEquipos6.setBorderPainted(false);
+        botonVistaEquipos6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVistaEquipos6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelMenuLayout = new javax.swing.GroupLayout(panelMenu);
         panelMenu.setLayout(panelMenuLayout);
         panelMenuLayout.setHorizontalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 6, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(panelMenuLayout.createSequentialGroup()
                 .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -519,19 +584,22 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(btnArbitros3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnMenuEliminarArbitro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnMenuModificarArbitro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonVistaEquipos2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonVistaEquipos4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panelMenuLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
-                                .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 211, Short.MAX_VALUE))
-                            .addComponent(botonVistaEquipos2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(panelMenuLayout.createSequentialGroup()
-                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(botonVistaEquipos5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(botonVistaEquipos6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
+            .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
+                    .addComponent(botonVistaEquipos3, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         panelMenuLayout.setVerticalGroup(
             panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -566,17 +634,28 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jSeparator10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel21)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(62, 62, 62)
                 .addComponent(botonVistaEquipos2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(218, 218, 218)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonVistaEquipos5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonVistaEquipos6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonVistaEquipos4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
                 .addComponent(botonSalirPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39))
+            .addGroup(panelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMenuLayout.createSequentialGroup()
+                    .addContainerGap(715, Short.MAX_VALUE)
+                    .addComponent(botonVistaEquipos3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(286, 286, 286)))
         );
 
         jPanel5.setBackground(new java.awt.Color(255, 0, 51));
         jPanel5.setLayout(new java.awt.CardLayout());
 
-        jLabel22.setText("Nueva ver de commit facu");
+        jLabel22.setText(":>");
 
         javax.swing.GroupLayout PanelInformacionLayout = new javax.swing.GroupLayout(PanelInformacion);
         PanelInformacion.setLayout(PanelInformacionLayout);
@@ -1402,18 +1481,20 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator4)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 829, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnEliminarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 829, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(46, 46, 46))
+                        .addComponent(jLabel23)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel24)
-                            .addComponent(combEquiposElimJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel23))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(combEquiposElimJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnEliminarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(46, 46, 46))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1421,13 +1502,16 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(jLabel23)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
-                .addComponent(jLabel24)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(combEquiposElimJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEliminarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                        .addComponent(jLabel24)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(combEquiposElimJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnEliminarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54))
@@ -1447,7 +1531,7 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(EliminarJugadorLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(330, Short.MAX_VALUE))
         );
 
         jPanel5.add(EliminarJugador, "eliminarJugador");
@@ -1501,11 +1585,11 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel46)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnEliminarArbitro2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout EliminarArbitroLayout = new javax.swing.GroupLayout(EliminarArbitro);
@@ -1522,7 +1606,7 @@ public class Dashboard extends javax.swing.JFrame {
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel5.add(EliminarArbitro, "card8");
+        jPanel5.add(EliminarArbitro, "Eliminar Arbitro");
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setPreferredSize(new java.awt.Dimension(931, 700));
@@ -1667,18 +1751,74 @@ public class Dashboard extends javax.swing.JFrame {
 
         jPanel5.add(ModificarJugador, "ModificarJugador");
 
+        background.setBackground(new java.awt.Color(255, 255, 255));
+        background.setPreferredSize(new java.awt.Dimension(919, 660));
+
+        jLabel45.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
+        jLabel45.setText("Modificar Arbitro");
+
+        tablaEliminarArbitro.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane4.setViewportView(tablaEliminarArbitro);
+
+        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
+        background.setLayout(backgroundLayout);
+        backgroundLayout.setHorizontalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 844, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 844, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        backgroundLayout.setVerticalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(120, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout ModificarArbitroLayout = new javax.swing.GroupLayout(ModificarArbitro);
         ModificarArbitro.setLayout(ModificarArbitroLayout);
         ModificarArbitroLayout.setHorizontalGroup(
             ModificarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 628, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 972, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         ModificarArbitroLayout.setVerticalGroup(
             ModificarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        jPanel5.add(ModificarArbitro, "ModificarArbitro");
+
+        javax.swing.GroupLayout canJugadoresPEquipoLayout = new javax.swing.GroupLayout(canJugadoresPEquipo);
+        canJugadoresPEquipo.setLayout(canJugadoresPEquipoLayout);
+        canJugadoresPEquipoLayout.setHorizontalGroup(
+            canJugadoresPEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 628, Short.MAX_VALUE)
+        );
+        canJugadoresPEquipoLayout.setVerticalGroup(
+            canJugadoresPEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1044, Short.MAX_VALUE)
         );
 
-        jPanel5.add(ModificarArbitro, "card10");
+        jPanel5.add(canJugadoresPEquipo, "card11");
 
         javax.swing.GroupLayout BackgroundLayout = new javax.swing.GroupLayout(Background);
         Background.setLayout(BackgroundLayout);
@@ -2433,7 +2573,7 @@ private List<Jugador> m;
     }//GEN-LAST:event_txtNacionalidad1KeyTyped
 
     private void botonVistaEquipos2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVistaEquipos2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_botonVistaEquipos2ActionPerformed
 
     private void btnMenuEliminarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuEliminarJugadorActionPerformed
@@ -2605,15 +2745,174 @@ private List<Jugador> m;
     }//GEN-LAST:event_btnCargrModifJugadoresActionPerformed
 
     private void btnEliminarArbitro2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarArbitro2ActionPerformed
-        int eliminarFila= tablaEliminarArbitro.getSelectedRow();
+        int eliminarFila= tablaEliminarArbitro1 .getSelectedRow();
 
         if(eliminarFila >=0){
-            controladorArbitro.eliminarArbitro(eliminarFila);
+            controladorArbitro.eliminarArbitro(null,eliminarFila);
             llenarTablaEliminarArbitro();
         }else{
             JOptionPane.showMessageDialog(this, "Seleccione un arbitro", " ", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_btnEliminarArbitro2ActionPerformed
+
+    private void btnMenuModificarArbitroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuModificarArbitroActionPerformed
+        try{
+        llenarTablaModificarArbitro();
+        CardLayout cl = (CardLayout) jPanel5.getLayout();
+        cl.show(jPanel5, "ModificarArbitro");
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Error al preparar la sección de modificación de árbitros: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            //e.printStackTrace(); pongo stack para depuracion? 
+        }
+    }//GEN-LAST:event_btnMenuModificarArbitroActionPerformed
+
+    private void botonVistaEquipos3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVistaEquipos3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonVistaEquipos3ActionPerformed
+
+    private void botonVistaEquipos4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVistaEquipos4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonVistaEquipos4ActionPerformed
+
+    private void botonVistaEquipos5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVistaEquipos5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonVistaEquipos5ActionPerformed
+
+    private void botonVistaEquipos6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVistaEquipos6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonVistaEquipos6ActionPerformed
+    
+    //----------------------------------METODOS DE MODIFICAR ARBITRO------------------------------       
+    public void llenarTablaModificarArbitro(){
+         String[] columnNames = {"Nombre", "Apellido", "Nacimiento", "Nacionalidad", "Tarjetas Totales", "¿Es Internacional?"};
+         DefaultTableModel modeloTabla = new DefaultTableModel(columnNames, 0) { 
+             //para no poder modificar las celdas
+            @Override
+            public boolean isCellEditable(int row, int column) {                
+                switch (column) {
+                    case 4: // columna "Tarjetas Totales"
+                        return true; 
+                    case 5: // Columna "¿Es Internacional?" (asumiendo que es un booleano para cambiar)
+                        return true; 
+                    default:
+                        return false; 
+                }
+            }
+        };
+         
+               // --- Llenar la tabla con datos ---
+        ArrayList<Arbitro> listaArbitrosActual = new ArrayList<>(controladorArbitro.pasarListaArbitro());
+        for (Arbitro arb : listaArbitrosActual) {
+            try {
+                modeloTabla.addRow(new Object[]{
+                    arb.getNombre(),
+                    arb.getApellido(),
+                    arb.getNacimiento(),
+                    arb.getNacionalidad(),
+                    arb.getTarjetasTotales(),
+                    arb.getInternacional()
+                });
+            } catch (NullPointerException npe) {
+                System.err.println("Advertencia: Un árbitro tiene datos nulos. Fila no agregada correctamente. " + npe.getMessage());
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Error al añadir árbitro a la tabla: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                ex.printStackTrace();
+            }
+        }
+         
+         
+        
+        //escuchador que detecta los cambios de la pinchi tabla y logica de lo que pasa cuando se modifican las filas        
+           modeloTabla.addTableModelListener(new TableModelListener() {
+            @Override
+            public void tableChanged(TableModelEvent e) {
+                if (e.getType() == TableModelEvent.UPDATE) {
+                    int fila = e.getFirstRow();
+                    int columna = e.getColumn();
+
+                    // verifica si la fila y columna son válidas y si es una de las columnas editables
+                    if (fila != TableModelEvent.HEADER_ROW && columna != TableModelEvent.ALL_COLUMNS &&
+                        (columna == 4 || columna == 5)) { 
+
+                        DefaultTableModel modeloActual = (DefaultTableModel) e.getSource(); // se crea modelo actual para evitar conflicto con modeloTabla si fuera necesario
+                        try {
+                            Object newValue = modeloActual.getValueAt(fila, columna);
+                            System.out.println("Celda modificada en Fila: " + fila + ", Columna: " + columna + ", Nuevo Valor: " + newValue);
+
+                            // Obtener el árbitro directamente de la lista actual del controlador
+                            ArrayList<Arbitro> listaActualDelControlador = new ArrayList<>(controladorArbitro.pasarListaArbitro());
+                            if (fila >= listaActualDelControlador.size() || fila < 0) {
+                                throw new IndexOutOfBoundsException("Índice de fila fuera de rango en la lista del controlador.");
+                            }
+                            Arbitro arbitroAModificar = listaActualDelControlador.get(fila);
+
+                            // Actualizar las propiedades del objeto Arbitro con el nuevo valor
+                            switch (columna) {
+                                case 4: // Tarjetas Totales (Integer)
+                                    if (newValue instanceof Integer) {
+                                        arbitroAModificar.setTarjetasTotales((Integer) newValue);
+                                    } else if (newValue instanceof String) {
+                                        // Intenta parsear si el editor permite entrada de texto
+                                        arbitroAModificar.setTarjetasTotales(Integer.parseInt((String) newValue));
+                                    }
+                                    break;
+                                case 5: // ¿Es Internacional? (Boolean)
+                                    if (newValue instanceof Boolean) {
+                                        arbitroAModificar.setInternacional((Boolean) newValue);
+                                    } else if (newValue instanceof String) {
+                                        // Si el usuario pudo escribir "true" o "false" directamente
+                                        arbitroAModificar.setInternacional(Boolean.parseBoolean((String) newValue));
+                                    }
+                                    break;
+                            }
+
+                            controladorArbitro.actualizarArbitro(arbitroAModificar);
+                            JOptionPane.showMessageDialog(null, "Árbitro actualizado con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+
+                        } catch (IndexOutOfBoundsException ex) {
+                            JOptionPane.showMessageDialog(null, "Error de índice al actualizar árbitro: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                            ex.printStackTrace();
+                            // se revierten el valor en la celda si hay un problema con el índice
+                            Arbitro original = controladorArbitro.getListaArbitros().get(fila);
+                            if (columna == 3) modeloActual.setValueAt(original.getNacionalidad(), fila, columna);
+                            if (columna == 4) modeloActual.setValueAt(original.getTarjetasTotales(), fila, columna);
+                            if (columna == 5) modeloActual.setValueAt(original.getInternacional(), fila, columna);
+                        } catch (NumberFormatException ex) {
+                            JOptionPane.showMessageDialog(null, "Error: Ingrese un número válido para 'Tarjetas Totales'.", "Error de Formato", JOptionPane.ERROR_MESSAGE);
+                            ex.printStackTrace();
+                            // Revertir el valor en la celda si el formato es incorrecto
+                            Arbitro original = controladorArbitro.getListaArbitros().get(fila);
+                            modeloActual.setValueAt(original.getTarjetasTotales(), fila, columna);
+                        } catch (ClassCastException ex) {
+                            JOptionPane.showMessageDialog(null, "Error de tipo de dato al actualizar la celda. " + ex.getMessage(), "Error de Conversión", JOptionPane.ERROR_MESSAGE);
+                            ex.printStackTrace();
+                            // Revertir el valor en la celda si la conversión falla
+                            Arbitro original = controladorArbitro.getListaArbitros().get(fila);
+                            if (columna == 3) modeloActual.setValueAt(original.getNacionalidad(), fila, columna);
+                            if (columna == 4) modeloActual.setValueAt(original.getTarjetasTotales(), fila, columna);
+                            if (columna == 5) modeloActual.setValueAt(original.getInternacional(), fila, columna);
+                        } catch (Exception ex) {
+                            JOptionPane.showMessageDialog(null, "Error inesperado al procesar el cambio: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                            ex.printStackTrace();
+                        }
+                    }
+                }
+            }
+        });
+           
+          
+      
+    }
+    
+
+
+        
+    
+
+    
+    
+    
+    //----------------------------------METODOS DE MODIFICAR ARBITRO------------------------------
     
       //--------------------------------METODOS DE MODIFICAR JUGADOR-------------------------------
        private void inicializarComboEquipos(){
@@ -2716,9 +3015,9 @@ private List<Jugador> m;
    //----------------------------------METODOS DE ELIMINAR ARBITRO----------------------------------------
      public void llenarTablaEliminarArbitro(){
         DefaultTableModel modeloTabla= new DefaultTableModel(new String[]{"Nombre", "Apellido", "Nacimiento", "Nacionalidad", "Tarjetas totales", "¿Es internacional?"}, controladorArbitro.getListaArbitros().size());
-        tablaEliminarArbitro.setModel(modeloTabla);
+        tablaEliminarArbitro1.setModel(modeloTabla);
         
-        TableModel modeloDatos= tablaEliminarArbitro.getModel();
+        TableModel modeloDatos= tablaEliminarArbitro1.getModel();
         ArrayList<Arbitro> listaArbitros= new ArrayList<>(controladorArbitro.pasarListaArbitro());
         for (int i=0; i<controladorArbitro.getListaArbitros().size();i++){
             Arbitro ar= listaArbitros.get(i);
@@ -2848,18 +3147,22 @@ private List<Jugador> m;
     private javax.swing.JPanel MostrarJugadores;
     private javax.swing.JPanel PanelInformacion;
     private javax.swing.JPanel PanelIngreso;
+    private javax.swing.JPanel background;
     private javax.swing.JButton botonCargarArbitro;
     private javax.swing.JButton botonCargarJugador;
     private javax.swing.JButton botonSalir;
     private javax.swing.JButton botonSalirPrincipal;
     private javax.swing.JButton botonVistaEquipos1;
     private javax.swing.JButton botonVistaEquipos2;
+    private javax.swing.JButton botonVistaEquipos3;
+    private javax.swing.JButton botonVistaEquipos4;
+    private javax.swing.JButton botonVistaEquipos5;
+    private javax.swing.JButton botonVistaEquipos6;
     private javax.swing.JButton btnArbitros;
     private javax.swing.JButton btnArbitros1;
     private javax.swing.JButton btnArbitros2;
     private javax.swing.JButton btnArbitros3;
     private javax.swing.JButton btnCargrModifJugadores;
-    private javax.swing.JButton btnEliminarArbitro1;
     private javax.swing.JButton btnEliminarArbitro2;
     private javax.swing.JButton btnEliminarJugador;
     private javax.swing.JButton btnJugadores;
@@ -2871,6 +3174,7 @@ private List<Jugador> m;
     private javax.swing.JButton btnMenuModificarArbitro;
     private javax.swing.JButton btnMenuModificarJugador;
     private javax.swing.JButton btnSalir;
+    private javax.swing.JPanel canJugadoresPEquipo;
     private java.awt.Canvas canvas1;
     private javax.swing.JComboBox<String> cmBoxNombreModificarJugador;
     private javax.swing.JComboBox<String> cmBoxPosicionModifJugadores;
@@ -2924,7 +3228,6 @@ private List<Jugador> m;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
