@@ -61,10 +61,10 @@ listaJugadores.add(jugador);
 this.jugador=new Jugador();
 }
 //contar cantidad de jugadores de un equipo 
-public int contarCantidadDeJugadores (List<Jugador> a, String busq){
+public int contarCantidadDeJugadores (String busq){//lista viene en clase
 int cont=0;//contador de jugadores 
-for(int i=0; i<=a.size();i++){
-    Jugador temp= a.get(i);// obtiene el elemento en i de la lisyta
+for(int i=0; i<listaJugadores.size();i++){
+    Jugador temp= listaJugadores.get(i);// obtiene el elemento en i de la lisyta
     if(busq.equals(temp.getClubActual())){//compara los string         
         cont++;
 }
