@@ -145,14 +145,18 @@ public int verificarCantidadJugadores(String equipo){
 public List<Jugador> getListaJugador(){//genera una copia inmutable de la lista
     return List.copyOf(listaJugadores);
 }
-public void modificarJugador(String nom, String goles, String tarAmarillas, String posicion){
-    for(Jugador Jugador : listaJugadores){
-            if (Jugador != null && jugador.getNombre() != null && jugador.getNombre().equals(nom)) {
-                Jugador.setGoles(goles);
-                Jugador.setTarjetasAmarillas(tarAmarillas);
-                Jugador.setPosicion(posicion);
-            }
+public void modificarJugador(String nomCompletoJugador, String goles, String tarAmarillas, String posicion){
+    for(Jugador jugador : listaJugadores){
+        String nombreActualCompleto = jugador.getNombre() + " " + jugador.getApellido();
+
+        if (jugador != null && nombreActualCompleto.equals(nomCompletoJugador)) {
+            jugador.setGoles(goles);
+            jugador.setTarjetasAmarillas(tarAmarillas);
+            jugador.setPosicion(posicion);
+            break;
+        }
     }
+  
 }
 
 }

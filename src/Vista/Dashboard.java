@@ -30,10 +30,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
 
-/**
- *
- * @author petu
- */
+
 public class Dashboard extends javax.swing.JFrame {
    private ControladorJugador controladorJugador;
    private ControladorArbitro controladorArbitro;
@@ -104,7 +101,7 @@ public class Dashboard extends javax.swing.JFrame {
         botonVistaEquipos6 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         PanelInformacion = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
         panelIngresoJugador = new javax.swing.JPanel();
         PanelIngreso = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
@@ -660,23 +657,35 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel5.setBackground(new java.awt.Color(255, 0, 51));
         jPanel5.setLayout(new java.awt.CardLayout());
 
-        jLabel22.setText(":>");
+        PanelInformacion.setPreferredSize(new java.awt.Dimension(1391, 1502));
+
+        jPanel7.setBackground(new java.awt.Color(0, 255, 51));
+        jPanel7.setForeground(new java.awt.Color(153, 255, 153));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1115, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 853, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout PanelInformacionLayout = new javax.swing.GroupLayout(PanelInformacion);
         PanelInformacion.setLayout(PanelInformacionLayout);
         PanelInformacionLayout.setHorizontalGroup(
             PanelInformacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelInformacionLayout.createSequentialGroup()
-                .addGap(223, 223, 223)
-                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1297, Short.MAX_VALUE))
         );
         PanelInformacionLayout.setVerticalGroup(
             PanelInformacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelInformacionLayout.createSequentialGroup()
-                .addGap(362, 362, 362)
-                .addComponent(jLabel22)
-                .addContainerGap(666, Short.MAX_VALUE))
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 649, Short.MAX_VALUE))
         );
 
         jPanel5.add(PanelInformacion, "PanelInfo");
@@ -1740,7 +1749,7 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(spinnerGolesModifJugador, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(btnCargrModifJugadores)
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout ModificarJugadorLayout = new javax.swing.GroupLayout(ModificarJugador);
@@ -1835,7 +1844,7 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(293, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(comEquiposCanJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel47))
@@ -1869,7 +1878,7 @@ public class Dashboard extends javax.swing.JFrame {
         canJugadoresPEquipoLayout.setHorizontalGroup(
             canJugadoresPEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(canJugadoresPEquipoLayout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 911, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 632, Short.MAX_VALUE)
                 .addContainerGap())
         );
         canJugadoresPEquipoLayout.setVerticalGroup(
@@ -2774,10 +2783,25 @@ private List<Jugador> m;
                 String posicionJugador= jugadorSeleccionado.getPosicion();
                 cmBoxPosicionModifJugadores.setSelectedItem(posicionJugador);
                 txtApellidoModificarJugador.setText(jugadorSeleccionado.getApellido());
-                txtBornModifJugador.setText(jugadorSeleccionado.getNacimiento());
+                txtBornModifJugador.setText(jugadorSeleccionado.getNacimiento());                
                 txtTarRojasModifJugador.setText(jugadorSeleccionado.getTarjetasRojas());
-                spinnerTarAmarModifJugador.setValue(jugadorSeleccionado.getTarjetasAmarillas());
-                spinnerGolesModifJugador.setValue(jugadorSeleccionado.getGoles());
+                try {
+                // Asumiendo que getTarjetasAmarillas() retorna un String que representa un número
+                int tarjetasAmarillas = Integer.parseInt(jugadorSeleccionado.getTarjetasAmarillas());
+                spinnerTarAmarModifJugador.setValue(tarjetasAmarillas);
+            } catch (NumberFormatException e) {
+                System.err.println("Error al convertir Tarjetas Amarillas a número: " + e.getMessage());
+                spinnerTarAmarModifJugador.setValue(0); // Valor por defecto en caso de error
+            }
+
+            try {
+                // Asumiendo que getGoles() retorna un String que representa un número
+                int goles = Integer.parseInt(jugadorSeleccionado.getGoles());
+                spinnerGolesModifJugador.setValue(goles);
+            } catch (NumberFormatException e) {
+                System.err.println("Error al convertir Goles a número: " + e.getMessage());
+                spinnerGolesModifJugador.setValue(0); // Valor por defecto en caso de error
+            }
             } else {
                 limpiarDetallesJugador();
             }
@@ -2795,11 +2819,16 @@ private List<Jugador> m;
         //solo cargar posicion, goles y tarjetas amarillas
         String nombreJugadorSeleccionado = (String) cmBoxNombreModificarJugador.getSelectedItem();
         if (nombreJugadorSeleccionado != null && !nombreJugadorSeleccionado.startsWith("--")) {
-            String tarAmarillas= (String)spinnerTarAmarModifJugador.getValue();
-            String goles= (String)spinnerGolesModifJugador.getValue();
+            Integer tarAmarillasInt = (Integer) spinnerTarAmarModifJugador.getValue();
+            String tarAmarillas = String.valueOf(tarAmarillasInt); //convierte a string
+
+            Integer golesInt = (Integer) spinnerGolesModifJugador.getValue();
+            String goles = String.valueOf(golesInt); // convierte a string
+
             String posicion= (String)cmBoxPosicionModifJugadores.getSelectedItem();
             controladorJugador.modificarJugador(nombreJugadorSeleccionado, goles, tarAmarillas, posicion);
             JOptionPane.showMessageDialog(this, "Se modifico el jugador correctamente");
+            limpiarDetallesJugador();
         }else limpiarDetallesJugador();
     }//GEN-LAST:event_btnCargrModifJugadoresActionPerformed
 
@@ -3273,7 +3302,6 @@ private List<Jugador> m;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -3313,6 +3341,7 @@ private List<Jugador> m;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
