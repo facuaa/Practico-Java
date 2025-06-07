@@ -73,32 +73,39 @@ return cont;
 }
  
 //jugadores que superan cierta cantidad de goles 
-/*public List cantidadGolesJugador(int g){
+public List cantidadGolesJugador(){
     int cont;
+    int g=20;
     List<Jugador> listaJugadoresConGoles= new ArrayList<>();
     for(Jugador jugadorActual : listaJugadores){
-       if(jugadorActual.getGoles() >= g){
+        int a=Integer.parseInt(jugadorActual.getGoles());
+       if(a>= g){
            listaJugadoresConGoles.add(jugadorActual);
        }  
     }
     return listaJugadoresConGoles;
-}*/
+}
+
 //Jugador con mas expulsiones
-/*public Jugador JugadorMasExpulsiones(List<Jugador> m){
-    Jugador jug=new Jugador();
- for(int i=0;i<=m.size();i++){
-     if(m.get(i).getTarjetasRojas() > jug.getTarjetasRojas()){
-        jug=m.get(i);
+public Jugador JugadorMasExpulsiones(){
+    Jugador jug = new Jugador("","","","","","","","","0");
+    int b,c;
+    c=Integer.parseInt(jug.getTarjetasRojas());
+ for(int i=0;i<=listaJugadores.size();i++){
+     b=Integer.parseInt(listaJugadores.get(i).getTarjetasRojas());
+     if(b>c){
+         jug=listaJugadores.get(i);
+     } else {
      }
  }
     return jug;
-}*/
+}
 
 //cantidad de jugadores por posicion
 public int catidadJugadoresPosicion(String pos){
     int cont=0;
     for(Jugador jugadorPosicion: listaJugadores){
-        if(jugadorPosicion.equals(pos)){
+        if(pos.equals(jugadorPosicion.getPosicion())){
             cont++;
         }
     }
