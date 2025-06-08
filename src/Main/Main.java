@@ -24,7 +24,7 @@ import java.util.ArrayList;
          File jugadorArchivo = new File("data/Jugadores.txt");
          File arbitroArchivo = new File("data/Arbitros.txt");
         Dashboard vistaGeneral = new Dashboard(controladorJugador, controladorArbitro,jugadorArchivo);
-        
+    
         // Precargar Jugadores
         if (jugadorArchivo.exists()) {
             try (BufferedReader br = new BufferedReader(new FileReader(jugadorArchivo))) {
