@@ -30,12 +30,14 @@ import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import javax.swing.table.TableRowSorter;
+import jdk.jshell.spi.ExecutionControl;
 
 
 public class Dashboard extends javax.swing.JFrame {
    private ControladorJugador controladorJugador;
    private ControladorArbitro controladorArbitro;
    private File jugadorArchivo;
+   private File arbitroArchivo;
    private TableRowSorter sorter;
    private DefaultComboBoxModel<String> modeloEquipos;//Modelo del combo box de equipos de modificar jugador
    private boolean seActualizaComboBox= false;
@@ -51,13 +53,14 @@ public class Dashboard extends javax.swing.JFrame {
         spinnerGolesModifJugador.setModel(new javax.swing.SpinnerNumberModel(0, 0, 9999, 1));
 
     }
-        public Dashboard(ControladorJugador m,ControladorArbitro p ,File a) {
+        public Dashboard(ControladorJugador m,ControladorArbitro p ,File a,File b) {
              this.setUndecorated(true); 
              initComponents();
              this.setExtendedState(this.MAXIMIZED_BOTH);
              this.controladorJugador=m;
              this.controladorArbitro=p;
              this.jugadorArchivo=a;
+             this.arbitroArchivo=b;
        this.panelIngresoJugador.setVisible(false);
     }
     /**
@@ -2331,6 +2334,7 @@ public class Dashboard extends javax.swing.JFrame {
 
     private void botonSalirPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSalirPrincipalActionPerformed
          List<Jugador> listaJ=(ArrayList<Jugador>)controladorJugador.pasarListaJugador();
+         List<Arbitro> listaA=(ArrayList<Arbitro>)controladorArbitro.pasarListaArbitro();
         int opcion = JOptionPane.showConfirmDialog(
                 null,
                 "¿Estás seguro que querés salir?",
@@ -2339,6 +2343,29 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         if (opcion == JOptionPane.YES_OPTION) {
+            try(BufferedWriter escribir = new BufferedWriter(new FileWriter(arbitroArchivo,false))){
+                for(Arbitro n: listaA){
+                escribir.write(n.getNombre());
+                escribir.newLine();
+                escribir.write(n.getApellido());
+                escribir.newLine();
+                escribir.write(n.getNacimiento());
+                escribir.newLine();
+                escribir.write(n.getNacionalidad());
+                escribir.newLine();
+                escribir.write(Integer.toString(n.getTarjetasTotales()));
+                escribir.newLine();
+                if(n.getInternacional()){
+                escribir.write("Si");
+                escribir.newLine();
+                }else{
+                escribir.write("No");
+                escribir.newLine();
+                }
+                }
+            }catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Error al actualizar el archivo Arbitros.txt");
+            }
              try (BufferedWriter writer = new BufferedWriter(new FileWriter(jugadorArchivo,false))) {
            for(Jugador n: listaJ){
             writer.write( n.getClubActual());
@@ -3277,8 +3304,9 @@ private List<Jugador> m;
             a1 = true;
         } else {
             a1 = false;}
-
-        String fecha= txtDiaA+"/"+txtMesA+"/"+txtAnioA;
+ 
+        String fecha= diaTexto+"/"+mesTexto+"/"+anioTexto;
+        
         int cantT = Integer.parseInt(cantTarjetasTexto);
         controladorArbitro.colocarNombre(nombre);
         controladorArbitro.colocarApellido(apellido);

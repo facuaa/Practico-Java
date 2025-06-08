@@ -23,7 +23,7 @@ import java.util.ArrayList;
         ControladorArbitro controladorArbitro = new ControladorArbitro(listaArbitro);
          File jugadorArchivo = new File("data/Jugadores.txt");
          File arbitroArchivo = new File("data/Arbitros.txt");
-        Dashboard vistaGeneral = new Dashboard(controladorJugador, controladorArbitro,jugadorArchivo);
+        Dashboard vistaGeneral = new Dashboard(controladorJugador, controladorArbitro,jugadorArchivo,arbitroArchivo);
     
         // Precargar Jugadores
         if (jugadorArchivo.exists()) {
@@ -101,6 +101,7 @@ import java.util.ArrayList;
             
             String internacional = brA.readLine();
             if (internacional == null) break;
+           
             
             Arbitro tempA= new Arbitro();
             
@@ -108,8 +109,9 @@ import java.util.ArrayList;
             tempA.setApellido(apellido);
             tempA.setNacimiento(fecha);
             tempA.setNacionalidad(nacionalidad);
-           // tempA.setTarjetasTotales(Integer.parseInt(fecha));
-           if(internacional.equals("sí")){
+            int d=Integer.parseInt(cantidadTarjetas);
+           tempA.setTarjetasTotales(d);
+           if(internacional.equals("Si")){
             tempA.setInternacional(true);
            }else{
            tempA.setInternacional(false);
