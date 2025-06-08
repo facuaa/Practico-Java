@@ -88,18 +88,30 @@ public List cantidadGolesJugador(){
 
 //Jugador con mas expulsiones
 public Jugador JugadorMasExpulsiones(){
-    Jugador jug = new Jugador("","","","","","","","","0");
-    int b,c;
-    c=Integer.parseInt(jug.getTarjetasRojas());
- for(int i=0;i<=listaJugadores.size();i++){
-     b=Integer.parseInt(listaJugadores.get(i).getTarjetasRojas());
-     if(b>c){
-         jug=listaJugadores.get(i);
-     } else {
+    Jugador temp = new Jugador();
+    int maxCant,nuevaCant;
+     try {
+            maxCant = Integer.parseInt(listaJugadores.get(0).getTarjetasRojas());
+        } catch (NumberFormatException e) {
+            System.err.println("Advertencia: Mal funcionamiento en la asignacon de Cantidad de tarjetas Rojas");
+            maxCant = 0;
+        }
+    temp=listaJugadores.get(0);
+ for(Jugador a : listaJugadores){
+     nuevaCant=Integer.parseInt(a.getTarjetasRojas());
+     if(maxCant>=nuevaCant){
+         continue;
+     }else{
+      maxCant=nuevaCant;
+      temp=a;
      }
+     
+     }
+    return temp;
  }
-    return jug;
-}
+     
+
+
 
 //cantidad de jugadores por posicion
 public int catidadJugadoresPosicion(String pos){
