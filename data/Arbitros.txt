@@ -1,150 +1,114 @@
-José María
-Sánchez Martínez
+Jose Maria
+Sanchez Martinez
 3/10/1983
 Checoslovaquia
-117
-sí
+12
+Si
 Juan Luis
 Pulido Santana
 3/6/1983
-Español
-113
-no
+Espanol
+15
+No
 Mateo
 Busquets Ferrer
 26/2/1987
-Español
-113
-sí
+Espanol
+25
+No
 Alejandro
-Muñiz Ruiz
+Muniz Ruiz
 13/3/1991
-Español
-111
-no
+Espanol
+25
+No
 Guillermo
-Cuadra Fernández
+Cuadra Fernandez
 25/4/1984
 Inglaterra
-108
-sí
-Jesús
+36
+No
+Jesus
 Gil Manzano
 4/2/1984
 Francia
-91
-no
-César
+35
+Si
+Cesar
 Soto Grado
 16/11/1980
 Checoslovaquia
-118
-sí
-Francisco José
-Hernández Maeso
+39
+Si
+Francisco Jose
+Hernandez Maeso
 6/4/1985
 Paraguay
-84
-sí
-Víctor
-García Verdura
+52
+Si
+Victor
+Garcia Verdura
 11/9/1992
 Español
-82
-sí
+2
+No
 Jorge
-Figueroa Vázquez
+Figueroa Vazquez
 15/10/1980
-Español
-105
-sí
+Espanol
+2
+No
 Isidro
-Díaz de Mera
+Diaz de Mera
 28/9/1989
 Argentina
-99
-sí
+12
+No
 Ricardo
 De Burgos Bengoetxea
 16/3/1986
 Uruguay
-81
-sí
+0
+No
 Mario
-Melero López
+Melero Lopez
 2/7/1979
-Español
-74
-no
-José Luis
+Espanol
+3
+No
+Jose Luis
 Munuera Montero
 19/5/1984
 Mexico
-102
-sí
+0
+No
 Antonio
 Mateu Lahoz
 12/3/1977
 Honduras
-95
-sí
+25
+No
 Eduardo
 Prieto Iglesias
 17/6/1981
-Español
-88
-no
+Espanol
+12
+No
 Carlos
 Del Cerro Grande
 13/3/1976
 Argentina
-90
-sí
+3
+No
 David
-Medié Jiménez
+Medie Jimenez
 30/12/1984
 Español
-85
-no
+0
+Si
 Javier
 Alberola Rojas
 13/4/1991
 Estados Unidos
-57
-sí
-Adrián
-Cordero Vega
-21/7/1974
-Español
-71
-no
-Pablo
-González Fuertes
-6/1/1980
-Israel
-94
-sí
-Antonio
-Hernández Hernández
-10/11/1982
-Chile
-103
-sí
-José
-Martínez Munuera
-19/7/1982
-Chile
-85
-no
-Valentín
-Pizarro Gómez
-22/2/1981
-Español
-89
-sí
-Santiago
-Jaime Latre
-13/1/1979
-Uruguay
-92
-no
+0
+Si
