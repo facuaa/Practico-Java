@@ -275,12 +275,15 @@ public class Dashboard extends javax.swing.JFrame {
         posicionBoton = new javax.swing.JToggleButton();
         jLabel64 = new javax.swing.JLabel();
         jSeparator15 = new javax.swing.JSeparator();
+        jLabel65 = new javax.swing.JLabel();
         filtrarArbitro = new javax.swing.JPanel();
         boxInternacional2 = new javax.swing.JComboBox<>();
         jLabel49 = new javax.swing.JLabel();
         jScrollPane6 = new javax.swing.JScrollPane();
         tablaArbitros2 = new javax.swing.JTable();
         filtrarArbitro1 = new javax.swing.JToggleButton();
+        jLabel66 = new javax.swing.JLabel();
+        jSeparator16 = new javax.swing.JSeparator();
         jugadorMasTarjetasRojas = new javax.swing.JPanel();
         jLabel50 = new javax.swing.JLabel();
         ConsultaMasRojas = new javax.swing.JToggleButton();
@@ -301,10 +304,16 @@ public class Dashboard extends javax.swing.JFrame {
         txtCantAmarillasExp = new javax.swing.JTextField();
         txtCantGolesExp = new javax.swing.JTextField();
         txtNombreExp = new javax.swing.JTextField();
+        jLabel67 = new javax.swing.JLabel();
+        jSeparator17 = new javax.swing.JSeparator();
+        jSeparator18 = new javax.swing.JSeparator();
         jugadorConGoles = new javax.swing.JPanel();
         jLabel51 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
         tablaJugadores3 = new javax.swing.JTable();
+        jLabel68 = new javax.swing.JLabel();
+        jSeparator19 = new javax.swing.JSeparator();
+        jLabel70 = new javax.swing.JLabel();
 
         panelMenu1.setBackground(new java.awt.Color(255, 255, 255));
         panelMenu1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 2, true));
@@ -2201,9 +2210,9 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(151, 151, 151)
+                        .addGap(121, 121, 121)
                         .addComponent(jLabel47)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(42, 42, 42)
                         .addComponent(comEquiposCanJugadores, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(txtcanJugadoresEquipo))
@@ -2217,7 +2226,7 @@ public class Dashboard extends javax.swing.JFrame {
         canJugadoresPEquipo.setLayout(canJugadoresPEquipoLayout);
         canJugadoresPEquipoLayout.setHorizontalGroup(
             canJugadoresPEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 958, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 1087, Short.MAX_VALUE)
         );
         canJugadoresPEquipoLayout.setVerticalGroup(
             canJugadoresPEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2256,29 +2265,30 @@ public class Dashboard extends javax.swing.JFrame {
         });
 
         jLabel64.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel64.setText("Consultas especiales");
+        jLabel64.setText("Consultas específicas");
 
         javax.swing.GroupLayout jugadoresPosicionLayout = new javax.swing.GroupLayout(jugadoresPosicion);
         jugadoresPosicion.setLayout(jugadoresPosicionLayout);
         jugadoresPosicionLayout.setHorizontalGroup(
             jugadoresPosicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jugadoresPosicionLayout.createSequentialGroup()
-                .addGap(777, 777, 777)
                 .addGroup(jugadoresPosicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jugadoresPosicionLayout.createSequentialGroup()
-                        .addComponent(posicionBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jugadoresPosicionLayout.createSequentialGroup()
-                        .addGroup(jugadoresPosicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGap(70, 70, 70)
+                        .addGroup(jugadoresPosicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 1095, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jugadoresPosicionLayout.createSequentialGroup()
+                        .addGap(135, 135, 135)
+                        .addGroup(jugadoresPosicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(seleccionarPosicion, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(821, 821, 821))))
-            .addGroup(jugadoresPosicionLayout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addGroup(jugadoresPosicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 1095, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(posicionBoton, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jugadoresPosicionLayout.createSequentialGroup()
+                .addGap(153, 153, 153)
+                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jugadoresPosicionLayout.setVerticalGroup(
             jugadoresPosicionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2287,18 +2297,19 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(jLabel64)
                 .addGap(18, 18, 18)
                 .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(210, 210, 210)
-                .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(65, 65, 65)
+                .addComponent(jLabel65)
+                .addGap(83, 83, 83)
+                .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(seleccionarPosicion, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(303, 303, 303)
-                .addComponent(posicionBoton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(408, 408, 408))
+                .addGap(61, 61, 61)
+                .addComponent(posicionBoton, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
+                .addGap(220, 220, 220))
         );
 
         jPanel5.add(jugadoresPosicion, "cantidadPosicion");
 
-        filtrarArbitro.setBackground(new java.awt.Color(255, 255, 255));
         filtrarArbitro.setPreferredSize(new java.awt.Dimension(800, 800));
 
         boxInternacional2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Si", "No" }));
@@ -2342,34 +2353,51 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
 
+        jLabel66.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel66.setText("Consultas Específicas");
+
         javax.swing.GroupLayout filtrarArbitroLayout = new javax.swing.GroupLayout(filtrarArbitro);
         filtrarArbitro.setLayout(filtrarArbitroLayout);
         filtrarArbitroLayout.setHorizontalGroup(
             filtrarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane6)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, filtrarArbitroLayout.createSequentialGroup()
+                .addGap(0, 320, Short.MAX_VALUE)
+                .addComponent(boxInternacional2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82)
+                .addComponent(filtrarArbitro1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(392, 392, 392))
             .addGroup(filtrarArbitroLayout.createSequentialGroup()
                 .addGroup(filtrarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(filtrarArbitroLayout.createSequentialGroup()
-                        .addGap(209, 209, 209)
-                        .addComponent(boxInternacional2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(filtrarArbitro1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(60, 60, 60)
+                        .addGroup(filtrarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel66)
+                            .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 893, Short.MAX_VALUE)
+                            .addComponent(jSeparator16)))
                     .addGroup(filtrarArbitroLayout.createSequentialGroup()
-                        .addGap(312, 312, 312)
+                        .addGap(448, 448, 448)
                         .addComponent(jLabel49)))
-                .addContainerGap(567, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         filtrarArbitroLayout.setVerticalGroup(
             filtrarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(filtrarArbitroLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(filtrarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(boxInternacional2)
-                    .addComponent(filtrarArbitro1, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                .addGap(42, 42, 42)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 903, Short.MAX_VALUE))
+                .addGap(41, 41, 41)
+                .addComponent(jLabel66)
+                .addGroup(filtrarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(filtrarArbitroLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabel49, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(filtrarArbitroLayout.createSequentialGroup()
+                        .addGap(137, 137, 137)
+                        .addGroup(filtrarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(boxInternacional2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(filtrarArbitro1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(63, 63, 63)
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(481, Short.MAX_VALUE))
         );
 
         jPanel5.add(filtrarArbitro, "filtrarArbitro");
@@ -2405,14 +2433,19 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel56.setText("Nacimiento:");
 
         txtApellidoExp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtApellidoExp.setEnabled(false);
 
         txtFechaExp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtFechaExp.setEnabled(false);
 
         txtNacionalidadExp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtNacionalidadExp.setEnabled(false);
 
         txtNombreEquipoExp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtNombreEquipoExp.setRequestFocusEnabled(false);
 
         txtCantRojasExp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtCantRojasExp.setEnabled(false);
 
         Salir.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         Salir.setForeground(new java.awt.Color(51, 51, 51));
@@ -2433,109 +2466,119 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel59.setText("Cantidad De Rojas:");
 
         txtCantAmarillasExp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtCantAmarillasExp.setEnabled(false);
 
         txtCantGolesExp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtCantGolesExp.setEnabled(false);
 
         txtNombreExp.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtNombreExp.setEnabled(false);
+
+        jLabel67.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel67.setText("Consultas específicas ");
 
         javax.swing.GroupLayout jugadorMasTarjetasRojasLayout = new javax.swing.GroupLayout(jugadorMasTarjetasRojas);
         jugadorMasTarjetasRojas.setLayout(jugadorMasTarjetasRojasLayout);
         jugadorMasTarjetasRojasLayout.setHorizontalGroup(
             jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jugadorMasTarjetasRojasLayout.createSequentialGroup()
-                .addContainerGap(104, Short.MAX_VALUE)
+            .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
                 .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
+                        .addGap(40, 40, 40)
+                        .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel67)
+                            .addComponent(jSeparator17, javax.swing.GroupLayout.DEFAULT_SIZE, 1002, Short.MAX_VALUE)
+                            .addComponent(jSeparator18)))
+                    .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
+                        .addGap(293, 293, 293)
+                        .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
+                                .addGap(24, 24, 24)
+                                .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtNombreExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtApellidoExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtFechaExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtNacionalidadExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
+                                        .addGap(82, 82, 82)
+                                        .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jugadorMasTarjetasRojasLayout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel55, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabel58, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(31, 31, 31)
+                                .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtNombreEquipoExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtCantGolesExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtCantRojasExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtCantAmarillasExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
+                        .addGap(391, 391, 391)
+                        .addComponent(ConsultaMasRojas, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
+                        .addGap(162, 162, 162)
                         .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNombreEquipoExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
-                                .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtFechaExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNacionalidadExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNombreExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
-                                        .addGap(54, 54, 54)
-                                        .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jugadorMasTarjetasRojasLayout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtCantRojasExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtCantGolesExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
-                                .addComponent(txtApellidoExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(54, 54, 54)
-                                .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtCantAmarillasExp, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
-                        .addComponent(ConsultaMasRojas, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(202, 202, 202))
+                        .addGap(478, 478, 478)
+                        .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(349, Short.MAX_VALUE))
         );
         jugadorMasTarjetasRojasLayout.setVerticalGroup(
             jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jugadorMasTarjetasRojasLayout.createSequentialGroup()
-                .addContainerGap(191, Short.MAX_VALUE)
-                .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jugadorMasTarjetasRojasLayout.createSequentialGroup()
-                        .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ConsultaMasRojas, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(90, 90, 90)
-                        .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNombreExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(31, 31, 31))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jugadorMasTarjetasRojasLayout.createSequentialGroup()
-                        .addGap(219, 219, 219)
-                        .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCantRojasExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(29, 29, 29)))
+                .addGap(40, 40, 40)
+                .addComponent(jLabel67)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator17, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addComponent(ConsultaMasRojas, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
                 .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNombreExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtCantRojasExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(46, 46, 46)
+                .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtApellidoExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCantAmarillasExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel57, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
+                    .addComponent(txtCantAmarillasExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(51, 51, 51)
                 .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtFechaExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel58, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtCantGolesExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addGap(55, 55, 55)
                 .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel53, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtNacionalidadExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jugadorMasTarjetasRojasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtNacionalidadExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNombreEquipoExp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(336, 336, 336))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                .addComponent(jSeparator18, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Salir, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(240, 240, 240))
         );
 
         jPanel5.add(jugadorMasTarjetasRojas, "card14");
 
         jugadorConGoles.setPreferredSize(new java.awt.Dimension(900, 700));
 
-        jLabel51.setFont(new java.awt.Font("Segoe UI Light", 0, 24)); // NOI18N
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel51.setText("Jugadores que superan los 20 goles marcados");
 
         tablaJugadores3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2561,23 +2604,46 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jScrollPane7.setViewportView(tablaJugadores3);
 
+        jLabel68.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel68.setText("Constultas específicas");
+
+        jLabel70.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pelota chiquita.png"))); // NOI18N
+
         javax.swing.GroupLayout jugadorConGolesLayout = new javax.swing.GroupLayout(jugadorConGoles);
         jugadorConGoles.setLayout(jugadorConGolesLayout);
         jugadorConGolesLayout.setHorizontalGroup(
             jugadorConGolesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jugadorConGolesLayout.createSequentialGroup()
-                .addGap(202, 202, 202)
-                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(44, 44, 44)
+                .addGroup(jugadorConGolesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel68)
+                    .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, 825, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jugadorConGolesLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel70)
+                .addGap(91, 91, 91)
+                .addComponent(jLabel51)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jugadorConGolesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 774, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(147, 147, 147))
         );
         jugadorConGolesLayout.setVerticalGroup(
             jugadorConGolesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jugadorConGolesLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(jLabel68)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator19, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addGroup(jugadorConGolesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel51, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 974, Short.MAX_VALUE))
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(126, Short.MAX_VALUE))
         );
 
         jPanel5.add(jugadorConGoles, "card15");
@@ -3582,7 +3648,12 @@ private List<Jugador> m;
     }//GEN-LAST:event_btnMenuOtros2MouseExited
 
     private void btnMenuOtros2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuOtros2ActionPerformed
-
+    try{ ActualizarTablaJugadores3((ArrayList<Jugador>) controladorJugador.cantidadGolesJugador());
+       }catch(Exception e){
+       JOptionPane.showMessageDialog(this, "Error al cargar tabla");
+       }
+        CardLayout cl = (CardLayout) jPanel5.getLayout();
+        cl.show(jPanel5, "card15");
     }//GEN-LAST:event_btnMenuOtros2ActionPerformed
 
     private void btnMenuEliminarJugadorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuEliminarJugadorMouseEntered
@@ -3707,7 +3778,8 @@ private List<Jugador> m;
     }//GEN-LAST:event_btnMenuOtros5MouseExited
 
     private void btnMenuOtros5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuOtros5ActionPerformed
-        // TODO add your handling code here:
+          CardLayout cl = (CardLayout) jPanel5.getLayout();
+          cl.show(jPanel5, "cantidadPosicion");
     }//GEN-LAST:event_btnMenuOtros5ActionPerformed
 
     private void btnMenuOtros3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuOtros3MouseEntered
@@ -3719,7 +3791,8 @@ private List<Jugador> m;
     }//GEN-LAST:event_btnMenuOtros3MouseExited
 
     private void btnMenuOtros3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuOtros3ActionPerformed
-        // TODO add your handling code here:
+         CardLayout cl = (CardLayout) jPanel5.getLayout();
+          cl.show(jPanel5, "filtrarArbitro");
     }//GEN-LAST:event_btnMenuOtros3ActionPerformed
 
     private void btnMenuOtros4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnMenuOtros4MouseEntered
@@ -3731,7 +3804,8 @@ private List<Jugador> m;
     }//GEN-LAST:event_btnMenuOtros4MouseExited
 
     private void btnMenuOtros4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenuOtros4ActionPerformed
-        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) jPanel5.getLayout();
+        cl.show(jPanel5, "card14");
     }//GEN-LAST:event_btnMenuOtros4ActionPerformed
 
     private void panelMenuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelMenuMouseEntered
@@ -4260,7 +4334,12 @@ public void ActualizarTablaJugadores3(ArrayList<Jugador> Lista){
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -4285,6 +4364,10 @@ public void ActualizarTablaJugadores3(ArrayList<Jugador> Lista){
     private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator15;
+    private javax.swing.JSeparator jSeparator16;
+    private javax.swing.JSeparator jSeparator17;
+    private javax.swing.JSeparator jSeparator18;
+    private javax.swing.JSeparator jSeparator19;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
