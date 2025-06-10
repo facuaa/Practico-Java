@@ -855,7 +855,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(btnMenuOtros5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(134, 134, 134)
                 .addComponent(btnMenuSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         jPanel5.setBackground(new java.awt.Color(255, 0, 51));
@@ -863,7 +863,6 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel5.setLayout(new java.awt.CardLayout());
 
         PanelInformacion.setBackground(new java.awt.Color(0, 0, 0));
-        PanelInformacion.setForeground(new java.awt.Color(0, 0, 0));
         PanelInformacion.setPreferredSize(new java.awt.Dimension(1391, 1502));
 
         foto1.setPreferredSize(new java.awt.Dimension(1391, 1502));
@@ -1227,7 +1226,7 @@ public class Dashboard extends javax.swing.JFrame {
                                                     .addComponent(BoxEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                     .addComponent(MensajeErrorGoles))
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
                                                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addComponent(jLabel17)
                                                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1236,31 +1235,31 @@ public class Dashboard extends javax.swing.JFrame {
                                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10)
                                     .addGroup(PanelIngresoLayout.createSequentialGroup()
-                                        .addGap(288, 288, 288)
+                                        .addGap(212, 212, 212)
                                         .addComponent(botonSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(235, 235, 235)
+                                        .addGap(205, 205, 205)
                                         .addComponent(botonCargarJugador, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 463, Short.MAX_VALUE))))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(PanelIngresoLayout.createSequentialGroup()
                         .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanelIngresoLayout.createSequentialGroup()
-                                .addGap(613, 613, 613)
-                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(PanelIngresoLayout.createSequentialGroup()
                                 .addGap(659, 659, 659)
                                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(MensajeErrorAmarillas)
-                                    .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(txtCantidadAmarillas, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(txtCantidadRojas, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(MensajeErrorRojas)))))
+                                    .addComponent(txtCantidadAmarillas, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelIngresoLayout.createSequentialGroup()
                                 .addContainerGap()
                                 .addComponent(BoxPosiciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(PanelIngresoLayout.createSequentialGroup()
+                .addGap(447, 447, 447)
+                .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(MensajeErrorRojas)
+                    .addComponent(txtCantidadRojas, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(PanelIngresoLayout.createSequentialGroup()
                     .addGap(49, 49, 49)
@@ -1314,8 +1313,8 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel10)
                 .addGap(42, 42, 42)
-                .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
+                .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel11))
                 .addGap(18, 18, 18)
                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1333,13 +1332,13 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(MensajeErrorGoles)
                     .addComponent(MensajeErrorAmarillas))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 205, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtCantidadRojas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(MensajeErrorRojas)
-                .addGap(219, 219, 219)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(PanelIngresoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1350,7 +1349,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(PanelIngresoLayout.createSequentialGroup()
                     .addGap(34, 34, 34)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(1431, Short.MAX_VALUE)))
+                    .addContainerGap(775, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout panelIngresoJugadorLayout = new javax.swing.GroupLayout(panelIngresoJugador);
@@ -1361,7 +1360,9 @@ public class Dashboard extends javax.swing.JFrame {
         );
         panelIngresoJugadorLayout.setVerticalGroup(
             panelIngresoJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(PanelIngreso, javax.swing.GroupLayout.DEFAULT_SIZE, 1242, Short.MAX_VALUE)
+            .addGroup(panelIngresoJugadorLayout.createSequentialGroup()
+                .addComponent(PanelIngreso, javax.swing.GroupLayout.PREFERRED_SIZE, 846, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 247, Short.MAX_VALUE))
         );
 
         jPanel5.add(panelIngresoJugador, "cargarJugador");
@@ -1664,7 +1665,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
         panelIngresoArbitroLayout.setVerticalGroup(
             panelIngresoArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1242, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 1093, Short.MAX_VALUE)
         );
 
         jPanel2.getAccessibleContext().setAccessibleName("PanelArbitro");
@@ -1709,9 +1710,9 @@ public class Dashboard extends javax.swing.JFrame {
         );
         MostrarJugadoresLayout.setVerticalGroup(
             MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1242, Short.MAX_VALUE)
+            .addGap(0, 1093, Short.MAX_VALUE)
             .addGroup(MostrarJugadoresLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1242, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1093, Short.MAX_VALUE))
         );
 
         jPanel5.add(MostrarJugadores, "MostrarJugadores");
@@ -1751,9 +1752,9 @@ public class Dashboard extends javax.swing.JFrame {
         );
         MostrarArbitroLayout.setVerticalGroup(
             MostrarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1242, Short.MAX_VALUE)
+            .addGap(0, 1093, Short.MAX_VALUE)
             .addGroup(MostrarArbitroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1242, Short.MAX_VALUE))
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1093, Short.MAX_VALUE))
         );
 
         jPanel5.add(MostrarArbitro, "MostrarArbitro");
@@ -1845,7 +1846,7 @@ public class Dashboard extends javax.swing.JFrame {
             EliminarJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EliminarJugadorLayout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 517, Short.MAX_VALUE))
+                .addGap(0, 368, Short.MAX_VALUE))
         );
 
         jPanel5.add(EliminarJugador, "eliminarJugador");
@@ -1899,7 +1900,7 @@ public class Dashboard extends javax.swing.JFrame {
                 .addComponent(btnEliminarArbitro2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(641, Short.MAX_VALUE))
+                .addContainerGap(492, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout EliminarArbitroLayout = new javax.swing.GroupLayout(EliminarArbitro);
@@ -2113,7 +2114,7 @@ public class Dashboard extends javax.swing.JFrame {
             ModificarJugadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ModificarJugadorLayout.createSequentialGroup()
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 804, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 438, Short.MAX_VALUE))
+                .addGap(0, 289, Short.MAX_VALUE))
         );
 
         jPanel5.add(ModificarJugador, "ModificarJugador");
@@ -2253,7 +2254,7 @@ public class Dashboard extends javax.swing.JFrame {
             canJugadoresPEquipoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(canJugadoresPEquipoLayout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 559, Short.MAX_VALUE))
+                .addGap(0, 410, Short.MAX_VALUE))
         );
 
         jPanel5.add(canJugadoresPEquipo, "CantidadDeJugadoresPorEquipo");
@@ -2337,7 +2338,7 @@ public class Dashboard extends javax.swing.JFrame {
                         .addGap(40, 40, 40)
                         .addComponent(posicion1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel69))
-                .addContainerGap(544, Short.MAX_VALUE))
+                .addContainerGap(395, Short.MAX_VALUE))
         );
 
         jPanel5.add(jugadoresPosicion, "cantidadPosicion");
@@ -2436,7 +2437,7 @@ public class Dashboard extends javax.swing.JFrame {
                     .addComponent(jLabel71))
                 .addGap(39, 39, 39)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(518, Short.MAX_VALUE))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
 
         jPanel5.add(filtrarArbitro, "filtrarArbitro");
@@ -2693,7 +2694,7 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(521, Short.MAX_VALUE))
+                .addContainerGap(372, Short.MAX_VALUE))
         );
 
         jPanel5.add(jugadorConGoles, "card15");
@@ -2709,7 +2710,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
         BackgroundLayout.setVerticalGroup(
             BackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 1242, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
             .addComponent(panelMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
@@ -2718,12 +2719,12 @@ public class Dashboard extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, 1856, Short.MAX_VALUE)
+                .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, 1856, Short.MAX_VALUE)
                 .addContainerGap(30, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, 1042, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, 1093, Short.MAX_VALUE)
         );
 
         pack();
@@ -2942,51 +2943,58 @@ private List<Jugador> m;
     }//GEN-LAST:event_btnEliminarArbitro2ActionPerformed
 
     private void btnEliminarJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarJugadorActionPerformed
-        String equipoSeleccionado= (String)combEquiposElimJugador.getSelectedItem();
-        int eliminarFila= tablaEliminarJugador.getSelectedRow();
+        String equipoSeleccionado= (String)combEquiposElimJugador.getSelectedItem(); 
+        int eliminarFilaVisible= tablaEliminarJugador.getSelectedRow();  // Fila seleccionada en la vista
         int sePuede= controladorJugador.verificarCantidadJugadores(equipoSeleccionado);
 
         if(sePuede==1 ){//se puede eliminar
-            int opcion=JOptionPane.showConfirmDialog(this, "¿Esta seguro quequiere eliminar el jugador?", "Elija una opcion", 0);//si: 0 no:1
+            int opcion=JOptionPane.showConfirmDialog(this, "¿Esta seguro que quiere eliminar el jugador?", "Elija una opcion", 0);//si: 0 no:1
             if(opcion==0){//opcion si
                 if(equipoSeleccionado!= null && equipoSeleccionado.equals("Todos")){//si no filtra la lista, se elimina con indice
 
-                    controladorJugador.eliminarJugador(null, eliminarFila);
-                    llenarTablaEliminarJugador();
+                    // Obtener el índice del modelo, no de la vista (si hay un sorter activo)
+                    int filaRealEnModelo = tablaEliminarJugador.convertRowIndexToModel(eliminarFilaVisible);
+                    controladorJugador.eliminarJugador(null, filaRealEnModelo); 
+                    llenarTablaEliminarJugador(); 
 
                 }
                 else{//el usuario filtro la lista
-                    TableModel modeloTablaFiltrada= tablaEliminarJugador.getModel();
-                    Jugador eliminar= new Jugador();
-                    eliminar.setClubActual((String) modeloTablaFiltrada.getValueAt(eliminarFila, 0));
-                    eliminar.setNombre((String)modeloTablaFiltrada.getValueAt(eliminarFila, 1));
-                    eliminar.setApellido((String)modeloTablaFiltrada.getValueAt(eliminarFila, 2));
-                    eliminar.setNacimiento((String)modeloTablaFiltrada.getValueAt(eliminarFila, 3));
-                    eliminar.setNacionalidad((String)modeloTablaFiltrada.getValueAt(eliminarFila, 4));
-                    eliminar.setTarjetasAmarillas((String)modeloTablaFiltrada.getValueAt(eliminarFila, 5));
-                    eliminar.setTarjetasRojas((String)modeloTablaFiltrada.getValueAt(eliminarFila, 6));
-                    eliminar.setGoles((String)modeloTablaFiltrada.getValueAt(eliminarFila, 7));
-                    controladorJugador.eliminarJugador(eliminar, 1);
-                    llenarTablaFiltradaEliminarJugador(equipoSeleccionado);
+                    
+                   
+                    TableModel modeloTablaFiltrada= tablaEliminarJugador.getModel(); 
+                    Jugador eliminar= new Jugador(); 
+                     
+                    // El RowSorter se encarga de que getValueAt con este índice visible acceda al dato correcto del modelo subyacente.
+                    eliminar.setClubActual((String) modeloTablaFiltrada.getValueAt(eliminarFilaVisible, 0)); 
+                    eliminar.setNombre((String)modeloTablaFiltrada.getValueAt(eliminarFilaVisible, 1)); 
+                    eliminar.setApellido((String)modeloTablaFiltrada.getValueAt(eliminarFilaVisible, 2)); 
+                    eliminar.setNacimiento((String)modeloTablaFiltrada.getValueAt(eliminarFilaVisible, 3)); 
+                    eliminar.setNacionalidad((String)modeloTablaFiltrada.getValueAt(eliminarFilaVisible, 4)); 
+                    eliminar.setTarjetasAmarillas((String)modeloTablaFiltrada.getValueAt(eliminarFilaVisible, 5)); 
+                    eliminar.setTarjetasRojas((String)modeloTablaFiltrada.getValueAt(eliminarFilaVisible, 6)); 
+                    eliminar.setGoles((String)modeloTablaFiltrada.getValueAt(eliminarFilaVisible, 7)); 
+                    
+                    controladorJugador.eliminarJugador(eliminar, -1); 
+                    llenarTablaFiltradaEliminarJugador(equipoSeleccionado); 
                 }
             }
         }else if(sePuede== -1){//no se puede eliminar
-            JOptionPane.showMessageDialog(this, "No se puede eliminar el jugador.Equipo con cantidad de jugadores menor a 5"," ", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "No se puede eliminar el jugador.Equipo con cantidad de jugadores menor a 5"," ", JOptionPane.ERROR_MESSAGE); 
         }
     }//GEN-LAST:event_btnEliminarJugadorActionPerformed
 
     private void combEquiposElimJugadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combEquiposElimJugadorActionPerformed
-        System.out.println("Entra en el boton");
-
+            
         String equipoSeleccionado = (String) combEquiposElimJugador.getSelectedItem();
-        int columnaEquipo = 0;
-        if (equipoSeleccionado != null && !equipoSeleccionado.equals("Todos")) {
-            System.out.println("no es igualalaewpieawo");
-            sorter.setRowFilter(RowFilter.regexFilter("(?i)" + equipoSeleccionado, columnaEquipo));
-        } else {
-            //si selecciona todos o no aplica filtro no pasa nada
-            sorter.setRowFilter(null);//sino se aplica ningun filtro no
-        }
+    
+    if (equipoSeleccionado != null && !equipoSeleccionado.equals("Todos")) {
+        System.out.println("Cargando tabla filtrada por: " + equipoSeleccionado);
+        llenarTablaFiltradaEliminarJugador(equipoSeleccionado); // Recarga la tabla con los jugadores del equipo
+    } else {
+        System.out.println("Cargando tabla completa (Todos los jugadores)");
+        llenarTablaEliminarJugador(); // Recarga la tabla con todos los jugadores
+    }
+
     }//GEN-LAST:event_combEquiposElimJugadorActionPerformed
 
     private void txtCantidadGolesKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtCantidadGolesKeyTyped
@@ -4070,61 +4078,78 @@ private List<Jugador> m;
    
    //-------------------------------FIN METODOS MODIFICAR JUGADOR-------------------------------
     //----------------------------------Eliminar jugador metodos----------------------------
-    public void llenarTablaEliminarJugador(){
-       DefaultTableModel modeloTabla= new DefaultTableModel(new String[]{"Club", "Nombre", "Villa", "Nacimiento", "Nacionalidad", "Tarjetas Amarillas", "Tarjetas Rojas", "Goles"}, controladorJugador.getListaJugador().size());
-       tablaEliminarJugador.setModel(modeloTabla);
-       
-       TableModel modeloDatos= tablaEliminarJugador.getModel();
-       ArrayList<Jugador> listaJugadores= new ArrayList<>(controladorJugador.pasarListaJugador());
-       for(int i=0; i<listaJugadores.size(); i++){
-           Jugador jg= listaJugadores.get(i);
-           modeloDatos.setValueAt(jg.getClubActual(), i, 0);
-           modeloDatos.setValueAt(jg.getNombre(), i, 1);
-           modeloDatos.setValueAt(jg.getApellido(), i, 2);
-           modeloDatos.setValueAt(jg.getNacimiento(), i, 3);
-           modeloDatos.setValueAt(jg.getNacionalidad(), i, 4);
-           modeloDatos.setValueAt(jg.getTarjetasAmarillas(), i, 5);
-           modeloDatos.setValueAt(jg.getTarjetasRojas(), i, 6);
-           modeloDatos.setValueAt(jg.getGoles(), i, 7);  
-       }
+     public void llenarTablaEliminarJugador(){
+      DefaultTableModel modeloTabla = new DefaultTableModel(
+        new String[]{"Club", "Nombre", "Villa", "Nacimiento", "Nacionalidad", "Tarjetas Amarillas", "Tarjetas Rojas", "Goles"},
+        0
+    );
+    tablaEliminarJugador.setModel(modeloTabla);
+
+    // Reinicializa el sorter con el NUEVO modelo
+    sorter = new TableRowSorter<>(modeloTabla); 
+    tablaEliminarJugador.setRowSorter(sorter);
+
+    ArrayList<Jugador> listaJugadores = new ArrayList<>(controladorJugador.pasarListaJugador());
+    for(Jugador jg : listaJugadores){
+        Object[] filaNueva = new Object[]{
+            jg.getClubActual(),
+            jg.getNombre(),
+            jg.getApellido(),
+            jg.getNacimiento(),
+            jg.getNacionalidad(),
+            jg.getTarjetasAmarillas(),
+            jg.getTarjetasRojas(),
+            jg.getGoles()
+        };
+        modeloTabla.addRow(filaNueva); 
+    }
    }
   
    public void llenarTablaFiltradaEliminarJugador(String equipo){
-       DefaultTableModel modeloTabla= new DefaultTableModel(new String[]{"Club", "Nombre", "Apellido", "Nacimiento", "Nacionalidad", "Tarjetas Amarillas", "Tarjetas Rojas", "Goles"}, controladorJugador.getListaJugador().size());
-       tablaEliminarJugador.setModel(modeloTabla);
+      DefaultTableModel modeloTabla = new DefaultTableModel(
+        new String[]{"Club", "Nombre", "Apellido", "Nacimiento", "Nacionalidad", "Tarjetas Amarillas", "Tarjetas Rojas", "Goles"},
+        0
+    );
+    tablaEliminarJugador.setModel(modeloTabla);
 
-       TableModel modeloDatos= tablaEliminarJugador.getModel();
-       ArrayList<Jugador> listaJugadores= new ArrayList<>(controladorJugador.pasarListaJugador());
-       for(int i=0; i<listaJugadores.size(); i++){
-           Jugador jg= listaJugadores.get(i);
-           if(jg.getClubActual().equals(equipo)){
-           modeloDatos.setValueAt(jg.getClubActual(), i, 0);
-           modeloDatos.setValueAt(jg.getNombre(), i, 1);
-           modeloDatos.setValueAt(jg.getApellido(), i, 2);
-           modeloDatos.setValueAt(jg.getNacimiento(), i, 3);
-           modeloDatos.setValueAt(jg.getNacionalidad(), i, 4);
-           modeloDatos.setValueAt(jg.getTarjetasAmarillas(), i, 5);
-           modeloDatos.setValueAt(jg.getTarjetasRojas(), i, 6);
-           modeloDatos.setValueAt(jg.getGoles(), i, 7);
-           }
-           
-       }
+    // Reinicializa el sorter con el NUEVO modelo
+    sorter = new TableRowSorter<>(modeloTabla);
+    tablaEliminarJugador.setRowSorter(sorter);
+
+    ArrayList<Jugador> listaJugadores = new ArrayList<>(controladorJugador.pasarListaJugador());
+    for(Jugador jg : listaJugadores){
+        if(jg.getClubActual().equals(equipo)){
+            Object[] filaNueva = new Object[]{
+                jg.getClubActual(),
+                jg.getNombre(),
+                jg.getApellido(),
+                jg.getNacimiento(),
+                jg.getNacionalidad(),
+                jg.getTarjetasAmarillas(),
+                jg.getTarjetasRojas(),
+                jg.getGoles()
+            };
+            modeloTabla.addRow(filaNueva);
+        }
+    }
+    
+    if (equipo != null && !equipo.equals("Todos")) {
+        sorter.setRowFilter(RowFilter.regexFilter("(?i)" + equipo, 0)); // Aplica el filtro en la columna 0 (Club)
+    } else {
+        sorter.setRowFilter(null);
+    }
    }
    
        public void inicializarComponentes(){
-       llenarTablaEliminarJugador();
-       DefaultTableModel model= (DefaultTableModel)tablaEliminarJugador.getModel();
-       
-       //inicializa el sorter
-       sorter = new TableRowSorter<>(model);
-       tablaEliminarJugador.setRowSorter(sorter);
-       
-       //Action listener del combo box, se activa cuando se selecciona un elemento
-       combEquiposElimJugador.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                combEquiposElimJugadorActionPerformed(evt);
-            }
-        });
+        // Llama a llenarTablaEliminarJugador la primera vez que se inicializa
+        llenarTablaEliminarJugador(); // Este método ahora se encarga de crear el modelo y el sorter
+
+        // Action listener del combo box, se activa cuando se selecciona un elemento
+        combEquiposElimJugador.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent evt) {
+            combEquiposElimJugadorActionPerformed(evt);
+        }
+    });
    }
    
    //---------------------------------FIN ELIMINAR JUGADOR METODOS----------------------------------------
