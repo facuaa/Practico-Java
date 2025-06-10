@@ -80,7 +80,7 @@ Jose Luis
 Munuera Montero
 19/5/1984
 Mexico
-0
+15
 No
 Antonio
 Mateu Lahoz
@@ -104,7 +104,7 @@ David
 Medie Jimenez
 30/12/1984
 Español
-0
+150
 Si
 Javier
 Alberola Rojas

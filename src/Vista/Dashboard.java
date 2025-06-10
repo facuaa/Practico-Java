@@ -23,6 +23,11 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -51,6 +56,7 @@ public class Dashboard extends javax.swing.JFrame {
     public Dashboard() {
         this.setUndecorated(true);
         initComponents();
+        initMusica();
         this.setExtendedState(this.MAXIMIZED_BOTH);
         spinnerTarAmarModifJugador.setModel(new javax.swing.SpinnerNumberModel(0, 0, 999, 1));
         spinnerGolesModifJugador.setModel(new javax.swing.SpinnerNumberModel(0, 0, 9999, 1));
@@ -74,6 +80,7 @@ public class Dashboard extends javax.swing.JFrame {
              this.setUndecorated(true); 
              initComponents();
              initFotos();
+             initMusica();
              this.setExtendedState(this.MAXIMIZED_BOTH);
              this.controladorJugador=m;
              this.controladorArbitro=p;
@@ -4430,7 +4437,31 @@ public void ActualizarTablaJugadores3(ArrayList<Jugador> Lista){
             modelo.addRow(fila);
         }
     }
-     
+     public class ReproductorMusica {
+    Clip clip;
+
+    public void reproducirMusica(String ruta) {
+        try {
+            AudioInputStream audio = AudioSystem.getAudioInputStream(getClass().getResource(ruta));
+            clip = AudioSystem.getClip();
+            clip.open(audio);
+            clip.loop(Clip.LOOP_CONTINUOUSLY); // Para que suene en bucle
+            clip.start();
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void detenerMusica() {
+        if (clip != null && clip.isRunning()) {
+            clip.stop();
+        }
+    }
+}
+  public void initMusica(){
+  ReproductorMusica musica = new ReproductorMusica();
+    musica.reproducirMusica("/resources/boca.wav");
+  }  
       public static String strToHTML(String texto){
          return "<html><p>"+texto+"</p></html>";
      }
