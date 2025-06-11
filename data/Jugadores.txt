@@ -30,9 +30,9 @@ Marcos
 Rojo
 20/3/1990
 Argentina
-Defensor central
-1
-9
+Arquero
+11
+10
 5
 Boca Juniors
 Miguel
@@ -435,9 +435,9 @@ Matias
 Tissera
 6/9/1996
 Argentina
-Delantero centro
-4
-9
+Volante por izquierda
+14
+19
 2
 Huracan
 Eric Ivan
@@ -448,3 +448,21 @@ Lateral izquierdo
 4
 5
 9
+Boca Juniors
+LORENA
+BAIGORRIA
+4/8/1978
+ARJENTINA
+Arquero
+0
+0
+0
+Boca Juniors
+ESCUDERO
+CECILIA
+02/02/2012
+HARGENTINA
+Volante por izquierda
+0
+12
+2

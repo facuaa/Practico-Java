@@ -1,9 +1,3 @@
-Jose Maria
-Sanchez Martinez
-3/10/1983
-Checoslovaquia
-12
-Si
 Juan Luis
 Pulido Santana
 3/6/1983
@@ -34,17 +28,11 @@ Gil Manzano
 Francia
 35
 Si
-Cesar
-Soto Grado
-16/11/1980
-Checoslovaquia
-39
-Si
 Francisco Jose
 Hernandez Maeso
 6/4/1985
 Paraguay
-52
+5
 Si
 Victor
 Garcia Verdura
@@ -104,11 +92,23 @@ David
 Medie Jimenez
 30/12/1984
 Español
-150
+15
 Si
 Javier
 Alberola Rojas
 13/4/1991
 Estados Unidos
-0
+10
 Si
+LUCIANO
+ESCUDERO
+26/12/1998
+ARJENTINA
+1
+Si
+EZEQUIEL
+ESCUDERO
+29/2/2005
+VRASIL
+0
+No
